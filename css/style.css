@@ -74,12 +74,13 @@ p {
     .l_info .m_title ul {
       display: flex; }
       .l_info .m_title ul li + li {
-        margin-left: 15px; }
+        margin-left: 5px;
+        line-height: 1; }
         .l_info .m_title ul li + li:before {
           display: inline-block;
           padding-right: 25px;
-          content: "|";
-          color: #999; }
+          content: ">";
+          color: #bbb; }
   .l_info.active {
     margin-left: 250px; }
 
@@ -142,7 +143,7 @@ p {
     padding-left: 275px;
     transition: all 0.2s ease-in-out; }
   .main .jumbotron {
-    padding: 15px 30px 30px !important;
+    padding: 15px 30px 30px !important !important;
     border: 1px solid #dfe8f1;
     border-radius: 3px;
     background-color: #fff; }
@@ -171,7 +172,12 @@ ul.list {
       content: "|";
       color: #999; }
 
-.mt40 {
-  margin-top: 40px; }
+table.inline-table {
+  display: inline-table; }
+  table.inline-table td:hover,
+  table.inline-table th:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.01);
+    color: #444; }
 
 /*# sourceMappingURL=style.css.map */

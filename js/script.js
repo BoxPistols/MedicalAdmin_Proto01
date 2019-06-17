@@ -16,3 +16,16 @@ menutoggle.addEventListener("click", function(e) {
     menutoggle.querySelector("i").classList.add("fa-bars");
   }
 });
+
+/*
+  Sort
+  https://mdbootstrap.com/docs/jquery/tables/search/
+  https://datatables.net/examples/advanced_init/length_menu.html
+*/
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        // "order": [[ 1, "desc" ]]
+         "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]]
+    } );
+} );
