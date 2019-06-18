@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin UI</title>
+
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel='stylesheet' href='css/bootstrap.min.css'>
+  <link rel='stylesheet' href='css/font.css'>
+  <!-- <link rel='stylesheet' href='css/font-awesome.min.css'> -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <a href="#" id="menu-toggle" class="">
+      <i class="fa fa-bars"></i>
+      <span>Menu</span>
+    </a>
+    <div class="logo">
+      <a href="index.html">
+        Admin Board UI Search
+      </a>
+    </div>
+
+    <div class="l_info">
+      <div class="m_title">
+        <ul>
+          <!-- <li><a href="">NavParent</a></li>
+          <li><a href="">NavChild</a></li> -->
+          <li class="active">検索画面</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
+      <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
+      <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
+      <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+      <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+  </div>
+
+  <!-- Content -->
+  <div class="main">
+    <div class="hipsum">
+      <div class="jumbotron">
+        <h1 class="m_title lv3">User information</h1>
+
+        <div class="l_user-info">
+          <table id="" class="display table inline-table table-responsive-lg table-hover table-sm table-striped table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th>User ID</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Blood</th>
+                <th>HLA</th>
+                <th>Condition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>P0000321</td>
+                <td>Male</td>
+                <td>20-29</td>
+                <td>B</td>
+                <td>HLA</td>
+                <td>Lorem ipsum dolor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h1 class="m_title lv3 mt-4">Previous fixed</h1>
+
+        <form>
+          <div class="container">
+            <div class="form-row">
+
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Selecter A</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">Selecter B</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row mt-3">
+              <div class="col-6">
+                <input type="text" class="form-control " placeholder="Other" style="width:100%;">
+              </div>
+            </div>
+
+            <div class="row mt-3 d-flex justify-content-center">
+              <div class="col-6">
+
+                <a href="result.html">
+                <button type="button" class="btn btn-primary btn-lg" value="検索する">
+                  検索する
+                </button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <!-- ///// -->
+
+      </div>
+      <div class="footer text-center">
+        <p>footer</p>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

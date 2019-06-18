@@ -25,13 +25,17 @@ p {
   background: lightblue;
   line-height: 50px;
 
-  .logo {
-    // text-transform: uppercase;
+  .logo a {
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
     font-size: 1.4em;
     letter-spacing: 1px;
   }
 }
 
+.logo{
+  line-height: 3em;
+}
 #menu-toggle {
   display: block;
   float: left;
@@ -83,16 +87,16 @@ p {
   width: 100%;
   margin-left: 60px;
   color: #666;
-  background: rgba(0,0,0, .04);
+  background: #e0e0e0;
   padding-left: 15px;
   transition: all 0.2s ease-in-out;
 
   .m_title {
+    display: inline-flex;
+    align-items: center;
+
     font-size: 0.9em;
     line-height: 1.2;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
 
     ul {
       display: inline-flex;
@@ -204,7 +208,7 @@ p {
   }
 
   .jumbotron {
-    padding: 20px 30px 20px!important;
+    padding: 20px 30px 20px!important !important;
     border: 1px solid #dfe8f1;
     border-radius: 3px;
     background-color: #fff;
