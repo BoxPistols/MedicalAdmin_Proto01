@@ -25,6 +25,7 @@ menutoggle.addEventListener("click", function(e) {
 
 $(document).ready(function() {
     $('#example').DataTable( {
+        stateSave: true,
         // "order": [[ 1, "desc" ]]
          "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]]
     } );
