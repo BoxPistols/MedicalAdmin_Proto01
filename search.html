@@ -22,8 +22,7 @@
       <span>Menu</span>
     </a>
     <div class="logo">
-      <a href="index.html">
-        患者/ドナーマッチング
+      <a href="index.html">患者/ドナー検索システム
       </a>
     </div>
 
@@ -32,7 +31,8 @@
         <ul>
           <!-- <li><a href="">NavParent</a></li>
           <li><a href="">NavChild</a></li> -->
-          <li class="active">患者ID情報/ドナー検索</li>
+          <li class="active">
+            患者ID情報/ドナー検索</li>
         </ul>
       </div>
     </div>
@@ -40,6 +40,7 @@
 
   <div class="sidebar">
     <ul>
+      <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
       <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
       <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
       <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
@@ -51,79 +52,132 @@
   <div class="main">
     <div class="hipsum">
       <div class="jumbotron">
-        <h1 class="m_title lv3">患者ID情報</h1>
+        <h2 class="m_title lv3">患者ID情報</h2>
 
-        <div class="l_user-info">
-          <table id="" class="display table inline-table table-responsive-lg table-hover table-sm table-striped table-bordered">
-            <thead class="thead-dark">
-              <tr>
-                <th>患者ID</th>
-                <th>性別</th>
-                <th>年齢</th>
-                <th>血液型</th>
-                <th>病状（大分類）</th>
-                <th>病状（小分類）</th>
-                <th>HLA（A-C-B-DR-DQ-DP）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>P0000321</td>
-                <td>男</td>
-                <td>28</td>
-                <td>A+</td>
-                <td>Other lymphoma</td>
-                <td>びまん性大細胞型B細胞性リンパ球</td>
-                <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="container mt-3">
+          <div class="l_user-info">
+            <table id="" class="display table inline-table table-responsive-lg table-sm table-striped table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th>患者ID</th>
+                  <th>性別</th>
+                  <th>年齢</th>
+                  <th>血液型</th>
+                  <th>病状（大分類）</th>
+                  <th>病状（小分類）</th>
+                  <th>HLA（A-C-B-DR-DQ-DP）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>P0000321</td>
+                  <td>男</td>
+                  <td>28</td>
+                  <td>A+</td>
+                  <td>Other lymphoma</td>
+                  <td style="max-width:200px;">A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                  <td style="max-width:200px;">びまん性大細胞型B細胞性リンパ球</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <h1 class="m_title lv3 mt-4">Previous fixed</h1>
-
+        <h2 class="m_title lv3 mt-4">前処置</h2>
         <form>
-          <div class="container">
+          <div class="container mt-3">
             <div class="form-row">
 
-              <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Selecter A</label>
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">骨髄</label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">RIC</option>
+                  <option value="2">MAC</option>
                 </select>
               </div>
 
-              <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">Selecter B</label>
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">移放射線療法</label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">あり</option>
+                  <option value="2">なし</option>
                 </select>
               </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">移植前処置</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">CY+TBI±</option>
+                  <option value="2" selected>Other TBI regimen</option>
+                  <option value="3">BY＋CY±</option>
+                  <option value="4">Other non TBI</option>
+                  <option value="5">FL±TBI±</option>
+                  <option value="6">Other RIST</option>
+                  <option value="9">Missing</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">移植前処置2</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">FL+BU±</option>
+                  <option value="2">FL+CY±</option>
+                  <option value="3" selected>FL+Mel±</option>
+                  <option value="4">Other RIST</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">GVHD予防</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option value="0">無し</option>
+                  <option value="1" selected>CyA+MTX</option>
+                  <option value="2">CyA±</option>
+                  <option value="3">Tac+MTX</option>
+                  <option value="4">Tac±</option>
+                  <option value="5">Other</option>
+                  <option value="9">Missing</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">CSA/TAC</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option value="0">CyA-based</option>
+                  <option value="1" selected>Tac-based</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">体内T細胞除去</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option value="0">なし</option>
+                  <option value="1" selected>あり</option>
+                </select>
+              </div>
+
             </div>
           </div>
 
           <div class="container">
             <div class="row mt-3">
               <div class="col-6">
-                <input type="text" class="form-control " placeholder="Other" style="width:100%;">
+                <label class="" for="inlineFormCustomSelect2">補足</label>
+                <input type="text" class="form-control " placeholder="入力する" style="width:100%;">
               </div>
             </div>
 
-            <div class="row mt-3 d-flex justify-content-center">
-              <div class="col-6">
-
+            <div class="row mt-4">
+              <div class="col-12">
                 <a href="result.html">
-                <button type="button" class="btn btn-primary btn-lg" value="検索する">
-                  検索する
-                </button>
+                  <button type="button" class="btn btn-primary btn-lg" value="検索する">
+                    検索する
+                  </button>
                 </a>
-
               </div>
             </div>
           </div>

@@ -63,6 +63,9 @@ p {
       width: auto;
       transition: all 0.2s ease-in-out; }
 
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 2rem; } }
 .l_info {
   z-index: 1;
   display: block;
@@ -190,5 +193,22 @@ table.inline-table {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.01);
     color: #444; }
+
+.formSection {
+  margin: 0 1rem 1rem 0; }
+  .formSection .custom-select {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 0.375rem 1.5rem 0.35rem 0.5rem;
+    /* padding: 0.375rem 1.75rem 0.375rem 0.75rem; */ }
+    .formSection .custom-select:focus {
+      background-color: #effcfe;
+      outline: none; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b83c2;
+  border-color: #1b83c2; }
 
 /*# sourceMappingURL=style.css.map */
