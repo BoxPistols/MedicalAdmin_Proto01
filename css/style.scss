@@ -292,8 +292,11 @@ table.inline-table {
   }
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   color: #fff;
-  background-color: $color_main;
+  background-color: $color_main!important;
   border-color: $color_main;
 }

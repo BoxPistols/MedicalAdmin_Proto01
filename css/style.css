@@ -206,9 +206,12 @@ table.inline-table {
       background-color: #effcfe;
       outline: none; }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   color: #fff;
-  background-color: #1b83c2;
+  background-color: #1b83c2 !important;
   border-color: #1b83c2; }
 
 /*# sourceMappingURL=style.css.map */
