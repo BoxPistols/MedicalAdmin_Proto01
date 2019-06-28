@@ -66,6 +66,10 @@ p {
 @media (min-width: 576px) {
   .jumbotron {
     padding: 2rem; } }
+.l_user-info {
+  max-width: 1366px;
+  margin: auto; }
+
 .l_info {
   z-index: 1;
   display: block;
@@ -198,6 +202,15 @@ table.inline-table {
       cursor: pointer;
       opacity: 0.85; }
 
+.table_patient table th {
+  background: #fb9900 !important;
+  border-color: darkorange !important; }
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #444;
+  border-color: #32383e; }
+
 .formSection {
   margin: 0 1rem 1rem 0; }
   .formSection .custom-select {
@@ -267,5 +280,14 @@ div.dataTables_wrapper div.dataTables_filter input {
   display: inline-block;
   width: auto;
   min-width: 300px; }
+
+.l_patient-area {
+  border: 1px solid rgba(187, 187, 187, 0.4);
+  background: rgba(255, 242, 222, 0.35);
+  margin-bottom: 40px;
+  padding: 24px 32px 16px;
+  border-radius: 8px; }
+  .l_patient-area h3 {
+    color: #fb9900; }
 
 /*# sourceMappingURL=style.css.map */
