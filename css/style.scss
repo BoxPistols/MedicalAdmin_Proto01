@@ -228,6 +228,7 @@ p {
       margin: 0 0 12px;
       padding: 0;
       font-size: 24px;
+      max-width: 350px;
     }
   }
 
@@ -317,10 +318,11 @@ table.inline-table {
   background-color: $color_success!important;
 }
 
+.btn-outline-warning,
 .btn-outline-warning:hover {
-  color: #ffc107;
+  color: $color_warning;
   background-color: #fff;
-  border-color: #ffc107;
+  border-color: $color_warning;
 }
 
 .btn-outline-info:hover {
@@ -337,4 +339,28 @@ button.adaptation {
     background-color: #23A2B8;
     color: #fff;
   }
+}
+
+.border_section {
+  border: 1px solid rgba(#bbbbbb, 0.4);
+  background-color: rgba(#ffffff, 0.7);
+  padding: 8px 32px 32px 40px;
+  border-radius: 8px;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+  margin: 10px 0 0;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.page-link {
+  color: $color_info;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: $color_info;
+  border-color: $color_info;
 }

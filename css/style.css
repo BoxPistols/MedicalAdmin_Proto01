@@ -164,7 +164,8 @@ p {
     .main .jumbotron h1 {
       margin: 0 0 12px;
       padding: 0;
-      font-size: 24px; }
+      font-size: 24px;
+      max-width: 350px; }
   .main .footer {
     align-self: flex-end;
     padding: 10px;
@@ -223,10 +224,11 @@ table.inline-table {
 .bg-success {
   background-color: #41a759 !important; }
 
+.btn-outline-warning,
 .btn-outline-warning:hover {
-  color: #ffc107;
+  color: #fb9900;
   background-color: #fff;
-  border-color: #ffc107; }
+  border-color: #fb9900; }
 
 .btn-outline-info:hover {
   color: #23A2B8;
@@ -239,5 +241,25 @@ button.adaptation {
   button.adaptation.active {
     background-color: #23A2B8;
     color: #fff; }
+
+.border_section {
+  border: 1px solid rgba(187, 187, 187, 0.4);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 32px 32px 40px;
+  border-radius: 8px; }
+
+div.dataTables_wrapper div.dataTables_paginate {
+  margin: 10px 0 0;
+  white-space: nowrap;
+  text-align: right; }
+
+.page-link {
+  color: #23A2B8; }
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #23A2B8;
+  border-color: #23A2B8; }
 
 /*# sourceMappingURL=style.css.map */
