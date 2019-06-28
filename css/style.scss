@@ -1,4 +1,7 @@
 $color_main: #1b83c2;
+$color_warning: #fb9900;
+$color_success: #41a759;
+$color_info: #23A2B8;
 
 body {
   margin: 0;
@@ -307,11 +310,11 @@ table.inline-table {
 }
 
 .bg-warning {
-  background-color: #fb9900!important;
+  background-color: $color_warning!important;
 }
 
 .bg-success {
-  background-color: #41a759!important;
+  background-color: $color_success!important;
 }
 
 .btn-outline-warning:hover {
@@ -326,9 +329,11 @@ table.inline-table {
   border-color: #23A2B8;
 }
 
+button.adaptation {
+  width: 74px;
+  border: 1px solid $color_info;
 
-button.adaptation{
-  &.active{
+  &.active {
     background-color: #23A2B8;
     color: #fff;
   }

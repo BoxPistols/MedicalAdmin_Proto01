@@ -233,8 +233,11 @@ table.inline-table {
   background-color: #fff;
   border-color: #23A2B8; }
 
-button.adaptation.active {
-  background-color: #23A2B8;
-  color: #fff; }
+button.adaptation {
+  width: 74px;
+  border: 1px solid #23A2B8; }
+  button.adaptation.active {
+    background-color: #23A2B8;
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
