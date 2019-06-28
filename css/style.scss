@@ -24,7 +24,8 @@ p {
   width: 100%;
   height: 50px;
   color: #fff;
-  background: $color_main;
+  // background: $color_main;
+  background: #42586d;
   line-height: 50px;
 
   .logo a {
@@ -265,13 +266,17 @@ ul.list {
 
 table.inline-table {
   display: inline-table;
+  background: #fff;
 
   td,
   th {
+    transition: 0.2s;
+
     &:hover {
       cursor: pointer;
-      background-color: rgba(0,0,0,.01);
-      color: #444;
+      // background-color: rgba(0,0,0,.01);
+      // color: #444;
+      opacity: 0.85;
     }
   }
 }
@@ -293,10 +298,38 @@ table.inline-table {
 }
 
 .btn-primary,
-.btn-primary:hover,
 .btn-primary:active,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary:hover {
   color: #fff;
   background-color: $color_main!important;
   border-color: $color_main;
+}
+
+.bg-warning {
+  background-color: #fb9900!important;
+}
+
+.bg-success {
+  background-color: #41a759!important;
+}
+
+.btn-outline-warning:hover {
+  color: #ffc107;
+  background-color: #fff;
+  border-color: #ffc107;
+}
+
+.btn-outline-info:hover {
+  color: #23A2B8;
+  background-color: #fff;
+  border-color: #23A2B8;
+}
+
+
+button.adaptation{
+  &.active{
+    background-color: #23A2B8;
+    color: #fff;
+  }
 }

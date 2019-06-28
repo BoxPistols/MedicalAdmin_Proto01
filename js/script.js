@@ -24,8 +24,23 @@ menutoggle.addEventListener("click", function(e) {
 */
 
 $(document).ready(function() {
-    $('#example').DataTable( {
-        // "order": [[ 1, "desc" ]]
-         "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]]
-    } );
-} );
+  $('#example').DataTable({
+    // "order": [[ 1, "desc" ]]
+    "lengthMenu": [
+      [5, 10, 15, -1],
+      [5, 10, 15, "All"]
+    ]
+  });
+});
+
+
+
+$('button.adaptation').on('click', function(e) {
+  $elem = $(e.target);
+
+  if ($elem.hasClass('active')) {
+    $elem.removeClass('active');
+  } else {
+    $elem.addClass('active');
+  }
+});
