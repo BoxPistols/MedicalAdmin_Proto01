@@ -34,7 +34,6 @@ $(document).ready(function() {
 });
 
 
-
 $('button.adaptation').on('click', function(e) {
   $elem = $(e.target);
 
