@@ -1,12 +1,30 @@
 $color_main: #1b83c2;
+$color_green: #50a546;
+$bd_green: rgba(91, 128, 99, 0.2);
+@mixin cl_green {
+  color: $color_green;
+}
+@mixin bg_green {
+  border: 1px solid $bd_green;
+}
+
+.cl_green {
+  @include cl_green
+}
+
+.m_colorLine {
+  background-color: #f9ff0494 !important;
+  padding: 0.1em 0.5em;
+}
 
 body {
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  font-family: -apple-system, BlinkMacSystemFont,'Lato', sans-serif;
+  // background: #f5f5f5;
+  background: rgba(235, 255, 240, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
-  color: #002832;
+  color: #334;
 }
 
 ol,
@@ -23,11 +41,18 @@ p {
   line-height: 1.428571429;
 }
 
-.m_hr{
+.m_hr {
   border-top: 1px solid rgba(190, 191, 187, 0.18);
   width: 100%;
   margin-bottom: 1rem;
 }
+
+.lay_Outer {
+  padding: 16px 32px;
+  background: #fff;
+  @include bg_green;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -116,7 +141,7 @@ p {
     display: inline-flex;
     align-items: center;
     font-size: 0.9em;
-    line-height: 1.2;
+    line-height: 1;
 
     ul {
       display: inline-flex;
@@ -256,11 +281,11 @@ p {
   font-weight: 400;
 
   &.lv3 {
-    font-size: 1.85rem;
+    font-size: 1.5em;
   }
 
   &.lv4 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -329,6 +354,10 @@ table.inline-table {
 }
 
 .bg-success {
+  background-color: $color_green!important;
+}
+
+.bg-success {
   background-color: #41a759!important;
 }
 
@@ -336,6 +365,12 @@ table.inline-table {
   color: #ffc107;
   background-color: #fff;
   border-color: #ffc107;
+}
+
+.btn-outline-success:hover {
+  color: #50a546;
+  background-color: #fff;
+  border-color: #50a546;
 }
 
 .btn-outline-info:hover {
@@ -350,6 +385,4 @@ button.adaptation {
     color: #fff;
   }
 }
-
-
 @import "form"
