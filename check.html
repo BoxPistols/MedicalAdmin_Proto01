@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin UI</title>
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel='stylesheet' href='css/bootstrap.min.css'>
+  <link rel='stylesheet' href='css/font.css'>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <a href="#" id="menu-toggle" class="">
+      <i class="fa fa-bars"></i>
+      <span>Menu</span>
+    </a>
+    <div class="logo">
+      <a href="index.html">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg fill="#f3f3f3" width="35pt" height="35pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m44.949 15.27c-7.5977 0-15.195 2.8906-20.988 8.6836v-0.003906c-11.582 11.582-11.582 30.41 0 41.988 10.445 10.449 26.773 11.438 38.375 3.0312l15.758 15.762 6.6328-6.6328-15.758-15.758c8.4141-11.598 7.4219-27.93-3.0312-38.379-5.7891-5.793-13.391-8.6875-20.988-8.6914zm0.003906 3.1016c6.793 0 13.59 2.5977 18.781 7.793 10.387 10.387 10.387 27.176 0 37.562-10.387 10.387-27.18 10.387-37.566 0-10.387-10.387-10.387-27.176 0-37.562 5.1953-5.1953 11.988-7.793 18.785-7.793zm0 3.1484c-6.0039 0-12.004 2.2812-16.574 6.8516-9.1406 9.1406-9.1406 24.008 0 33.145 9.1406 9.1406 24.004 9.1406 33.145 0 9.1406-9.1367 9.1406-24.004 0-33.145-4.5703-4.5703-10.57-6.8516-16.57-6.8516zm0 3.1055c5.1953 0 10.387 1.9844 14.359 5.957 7.9453 7.9453 7.9453 20.781 0 28.727-7.9453 7.9453-20.777 7.9453-28.723 0-7.9453-7.9453-7.9453-20.781 0-28.727 3.9727-3.9727 9.168-5.957 14.363-5.957zm-14.562 6.332v22.203h5.918v6.2383h22.199v-22.199h-5.918v-6.2422zm3.1133 3.1172h15.961v3.125h-13.156v12.836h-2.8047zm5.9297 6.25h15.949v15.961h-15.949zm27.559 24.457 13.316 13.316-2.2148 2.2031-13.312-13.312c0.39062-0.34766 0.78906-0.67578 1.1641-1.0508 0.37109-0.37109 0.69922-0.76953 1.0469-1.1562z"
+            fill-rule="evenodd" />
+        </svg>
+        FITIE
+        <span style="font-size: 14px">- 胚画像による妊娠出産予想システム -</span>
+      </a>
+    </div>
+
+    <div class="l_info">
+      <div class="m_title">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="">
+            IVF情報入力</li>
+          <li class="active">
+            確認画面</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
+      <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
+      <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
+      <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+      <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+    </ul>
+  </div>
+
+  <!-- Content -->
+  <div class="main">
+    <div class="hipsum">
+      <div class="jumbotron" style="background:rgba(255, 249, 240, 0);">
+
+        <div class="container mt-3">
+
+          <form class="lay_form row px-4">
+
+            <div class="lay_title mb-2 mt-2 d-flex align-items-center">
+              <h3 class="row m_title lv3 mt-2 ml-2 mb-1 d-flex align-items-center">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg fill="teal" width="50pt" height="50pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m85.98 17.984c-0.25781 0.011719-0.51172 0.125-0.6875 0.3125-10.969 11.477-29.262 31.652-40.406 43.344l-16.281-12.438c-0.41016-0.38281-1.1523-0.31641-1.4844 0.13281-0.33594 0.44922-0.1875 1.1797 0.29688 1.4609l17 13c0.38281 0.28906 0.97656 0.24609 1.3125-0.09375 11.133-11.648 29.91-32.398 41-44 0.66406-0.99219-0.10938-1.75-0.75-1.7188zm-72.969 7.0312v56c0 0.52344 0.47656 1 1 1h56c0.52344 0 1-0.47656 1-1v-28c0.011719-0.52734-0.47266-1.0156-1-1.0156-0.52734 0-1.0078 0.48438-1 1.0156v27h-54v-54h45c0.52734 0.011719 1.0156-0.47266 1.0156-1s-0.48438-1.0078-1.0156-1h-46c-0.67188 0.019531-0.98828 0.56641-1 1z" />
+                  s </svg>
+                <span class="ml-2 cl_green mr-4">確認画面</span>
+              </h3>
+            </div>
+            <!-- /.lay_title -->
+
+            <div class="container mt-1">
+              <div class="row">
+                <ul class="list-group" style="width: 90%; margin: auto; max-width: 800px;">
+                  <li class="list-group-item">排卵実施: 有り</li>
+                  <li class="list-group-item">排卵時IVFID: A7408</li>
+                  <li class="list-group-item">患者ID: P00000123</li>
+                  <li class="list-group-item">排卵日: 2019/07/25</li>
+                  <li class="list-group-item">年齢: 35</li>
+                  <li class="list-group-item">排卵数: 2</li>
+                  <li class="list-group-item">CD2-3
+                    <ul>
+                      <li class="list-group-item"> EⅡ: xxx</li>
+                      <li class="list-group-item"> LH: xxx</li>
+                    </ul>
+                  </li>
+                  <li class="list-group-item">CD8-10
+                    <ul>
+                      <li class="list-group-item"> EⅡ: xxx</li>
+                      <li class="list-group-item"> LH: xxx</li>
+                    </ul>
+                  </li>
+                  <li class="list-group-item">HCG直前
+                    <ul>
+                      <li class="list-group-item"> EⅡ: xxx</li>
+                      <li class="list-group-item"> LH: xxx</li>
+                      <li class="list-group-item"> AMH: xxx</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="row mt-4">
+                <a href="search.html">
+                  <button type="button" class="btn btn-primary" value="戻る" style="width:240px; margin: 10px auto 20px 190px; padding: .8em 2em">
+                    戻る(修正)
+                  </button>
+                </a>
+                <a href="#">
+                  <button type="button" class="btn btn-success" value="次へ" style="width:240px; margin: 10px auto 20px 190px; padding: .8em 2em">
+                    次へ
+                  </button>
+                </a>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="footer text-center">
+      <p>footer</p>
+    </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="js/script.js"></script>
+  <script>
+    $('button').on('click', function() {
+      $('.modal').modal('show');
+    });
+  </script>
+
+</body>
+
+</html>

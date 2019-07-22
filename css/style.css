@@ -31,8 +31,8 @@ p {
 
 .lay_Outer {
   padding: 16px 32px;
-  background: white;
-  border: 1px solid rgba(91, 128, 99, 0.2); }
+  background: #fafbf8;
+  border: 2px solid rgba(173, 175, 173, 0.93); }
 
 .header {
   position: fixed;
@@ -89,10 +89,6 @@ p {
 @media (min-width: 576px) {
   .jumbotron {
     padding: 2rem; } }
-.l_user-info {
-  max-width: 1366px;
-  margin: auto; }
-
 .l_info {
   z-index: 1;
   display: block;
@@ -106,7 +102,7 @@ p {
   .l_info .m_title {
     display: inline-flex;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1; }
     .l_info .m_title ul {
       display: inline-flex;
@@ -116,7 +112,7 @@ p {
         margin-left: 5px;
         line-height: 1; }
         .l_info .m_title ul li + li:last-child {
-          color: darkgray; }
+          color: #444; }
         .l_info .m_title ul li + li:before {
           display: inline-block;
           padding: 0 5px 0 2px;
@@ -190,8 +186,7 @@ p {
     .main .jumbotron h1 {
       margin: 0 0 12px;
       padding: 0;
-      font-size: 24px;
-      max-width: 350px; }
+      font-size: 24px; }
   .main .footer {
     align-self: flex-end;
     padding: 10px;
@@ -228,14 +223,8 @@ table.inline-table {
       cursor: pointer;
       opacity: 0.85; }
 
-.table_patient table th {
-  background: #fb9900 !important;
-  border-color: darkorange !important; }
-
-.table .thead-dark th {
-  color: #fff;
-  background-color: #444;
-  border-color: #32383e; }
+.table-striped.cl_ye tbody tr:nth-of-type(odd) {
+  background-color: rgba(240, 255, 41, 0.4); }
 
 .formSection {
   margin: 0 1rem 1rem 0; }
@@ -266,11 +255,10 @@ table.inline-table {
 .bg-success {
   background-color: #41a759 !important; }
 
-.btn-outline-warning,
 .btn-outline-warning:hover {
-  color: #fb9900;
+  color: #ffc107;
   background-color: #fff;
-  border-color: #fb9900; }
+  border-color: #ffc107; }
 
 .btn-outline-success:hover {
   color: #50a546;
@@ -282,47 +270,9 @@ table.inline-table {
   background-color: #fff;
   border-color: #23A2B8; }
 
-button.adaptation {
-  width: 74px;
-  border: 1px solid #23A2B8; }
-  button.adaptation.active {
-    background-color: #23A2B8;
-    color: #fff; }
-
-.border_section {
-  border: 1px solid rgba(187, 187, 187, 0.4);
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 8px 32px 32px 40px;
-  border-radius: 8px; }
-
-div.dataTables_wrapper div.dataTables_paginate {
-  margin: 10px 0 0;
-  white-space: nowrap;
-  text-align: right; }
-
-.page-link {
-  color: #23A2B8; }
-
-.page-item.active .page-link {
-  z-index: 1;
-  color: #fff;
+button.adaptation.active {
   background-color: #23A2B8;
-  border-color: #23A2B8; }
-
-div.dataTables_wrapper div.dataTables_filter input {
-  margin-left: 0.5em;
-  display: inline-block;
-  width: auto;
-  min-width: 300px; }
-
-.l_patient-area {
-  border: 1px solid rgba(187, 187, 187, 0.4);
-  background: rgba(255, 242, 222, 0.35);
-  margin-bottom: 40px;
-  padding: 24px 32px 16px;
-  border-radius: 8px; }
-  .l_patient-area h3 {
-    color: #fb9900; }
+  color: #fff; }
 
 .text-success {
   color: #44883c !important; }
@@ -334,7 +284,7 @@ form.lay_form {
   background: #fcfcfc;
   padding-bottom: 32px;
   font-size: 1.15em;
-  border: 1px solid rgba(91, 128, 99, 0.2); }
+  border: 2px solid rgba(16, 165, 96, 0.85); }
 
 [type=checkbox]:checked,
 [type=checkbox]:not(:checked) {
@@ -558,8 +508,6 @@ input[type="text"]:focus {
   max-width: 480px;
   grid-gap: 12px; }
   .grid-container .m_form {
-    text-align: center;
-    margin: 0 0 0 1.2em;
     white-space: nowrap; }
 
 @media all and (-ms-high-contrast: none) {

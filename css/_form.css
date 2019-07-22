@@ -5,7 +5,7 @@ form.lay_form {
   background: #fcfcfc;
   padding-bottom: 32px;
   font-size: 1.15em;
-  border: 1px solid rgba(91, 128, 99, 0.2); }
+  border: 2px solid rgba(16, 165, 96, 0.85); }
 
 [type=checkbox]:checked,
 [type=checkbox]:not(:checked) {

@@ -1,9 +1,4 @@
 $color_main: #1b83c2;
-<<<<<<< HEAD
-$color_warning: #fb9900;
-$color_success: #41a759;
-$color_info: #23A2B8;
-=======
 $color_green: #44883c;
 $bd_green: rgba(91, 128, 99, 0.2);
 @mixin cl_green {
@@ -22,7 +17,6 @@ $bd_green: rgba(91, 128, 99, 0.2);
   padding: 0.1em 0.5em;
   background: linear-gradient(transparent 45%, rgba(250, 255, 0, 0.65) 80%);
 }
->>>>>>> develop
 
 body {
   margin: 0;
@@ -57,8 +51,10 @@ p {
 
 .lay_Outer {
   padding: 16px 32px;
-  background: white;
-  @include bg_green;
+  // background: #fbffef;
+  // @include bg_green;
+  background: #fafbf8;
+  border: 2px solid rgba(173, 175, 173, 0.93);
 }
 
 .header {
@@ -134,11 +130,6 @@ p {
   }
 }
 
-.l_user-info {
-  max-width: 1366px;
-  margin: auto;
-}
-
 .l_info {
   z-index: 1;
   display: block;
@@ -153,7 +144,7 @@ p {
   .m_title {
     display: inline-flex;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1;
 
     ul {
@@ -166,7 +157,7 @@ p {
         line-height: 1;
 
         &:last-child {
-          color: darkgray;
+          color: #444;
         }
 
         &:before {
@@ -275,7 +266,6 @@ p {
       margin: 0 0 12px;
       padding: 0;
       font-size: 24px;
-      max-width: 350px;
     }
   }
 
@@ -338,15 +328,8 @@ table.inline-table {
   }
 }
 
-.table_patient table th {
-  background: $color_warning!important;
-  border-color: darkorange!important;
-}
-
-.table .thead-dark th {
-  color: #fff;
-  background-color: #444;
-  border-color: #32383e;
+.table-striped.cl_ye tbody tr:nth-of-type(odd) {
+  background-color: rgba(240, 255, 41, 0.4);
 }
 
 .formSection {
@@ -375,26 +358,21 @@ table.inline-table {
 }
 
 .bg-warning {
-  background-color: $color_warning!important;
+  background-color: #fb9900!important;
 }
 
 .bg-success {
-<<<<<<< HEAD
-  background-color: $color_success!important;
-=======
   background-color: $color_green!important;
 }
 
 .bg-success {
   background-color: #41a759!important;
->>>>>>> develop
 }
 
-.btn-outline-warning,
 .btn-outline-warning:hover {
-  color: $color_warning;
+  color: #ffc107;
   background-color: #fff;
-  border-color: $color_warning;
+  border-color: #ffc107;
 }
 
 .btn-outline-success:hover {
@@ -410,61 +388,12 @@ table.inline-table {
 }
 
 button.adaptation {
-<<<<<<< HEAD
-  width: 74px;
-  border: 1px solid $color_info;
-
-=======
->>>>>>> develop
   &.active {
     background-color: #23A2B8;
     color: #fff;
   }
 }
 
-<<<<<<< HEAD
-.border_section {
-  border: 1px solid rgba(#bbbbbb, 0.4);
-  background-color: rgba(#ffffff, 0.7);
-  padding: 8px 32px 32px 40px;
-  border-radius: 8px;
-}
-
-div.dataTables_wrapper div.dataTables_paginate {
-  margin: 10px 0 0;
-  white-space: nowrap;
-  text-align: right;
-}
-
-.page-link {
-  color: $color_info;
-}
-
-.page-item.active .page-link {
-  z-index: 1;
-  color: #fff;
-  background-color: $color_info;
-  border-color: $color_info;
-}
-//// table
-
-div.dataTables_wrapper div.dataTables_filter input {
-  margin-left: 0.5em;
-  display: inline-block;
-  width: auto;
-  min-width: 300px;
-}
-
-.l_patient-area {
-  border: 1px solid rgba(#bbbbbb, 0.4);
-  background: rgba(255, 242, 222, 0.35);
-  margin-bottom: 40px;
-  padding: 24px 32px 16px;
-  border-radius: 8px;
-
-  h3 {
-    color: $color_warning;
-=======
 .text-success {
   color: #44883c!important;
 }
@@ -479,8 +408,8 @@ div.dataTables_wrapper div.dataTables_filter input {
   grid-gap: 12px;
 
   .m_form {
-    text-align: center;
-    margin: 0 0 0 1.2em;
+    // text-align: center;s
+    // margin: 0 0 0 1.2em;
     white-space: nowrap;
   }
 }
@@ -489,6 +418,5 @@ div.dataTables_wrapper div.dataTables_filter input {
     display: -ms-grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
->>>>>>> develop
   }
 }
