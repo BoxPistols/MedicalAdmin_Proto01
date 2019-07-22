@@ -1,14 +1,14 @@
 .cl_green {
-  color: #50a546; }
+  color: #44883c; }
 
 .m_colorLine {
-  background-color: #f9ff0494 !important;
-  padding: 0.1em 0.5em; }
+  padding: 0.1em 0.5em;
+  background: linear-gradient(transparent 45%, rgba(250, 255, 0, 0.65) 80%); }
 
 body {
   margin: 0;
   padding: 0;
-  background: rgba(235, 255, 240, 0.4);
+  background: rgba(41, 127, 208, 0.23);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
   color: #334; }
@@ -31,7 +31,7 @@ p {
 
 .lay_Outer {
   padding: 16px 32px;
-  background: #fff;
+  background: white;
   border: 1px solid rgba(91, 128, 99, 0.2); }
 
 .header {
@@ -96,7 +96,7 @@ p {
   width: 100%;
   margin-left: 60px;
   color: #666;
-  background: #e0e0e0;
+  background: rgba(255, 255, 249, 0.53);
   padding-left: 15px;
   transition: all 0.2s ease-in-out; }
   .l_info .m_title {
@@ -181,7 +181,6 @@ p {
     transition: all 0.2s ease-in-out; }
   .main .jumbotron {
     padding: 20px 30px 20px !important !important;
-    border: 1px solid #dfe8f1;
     border-radius: 3px;
     background-color: #fff; }
     .main .jumbotron h1 {
@@ -248,7 +247,7 @@ table.inline-table {
   background-color: #fb9900 !important; }
 
 .bg-success {
-  background-color: #50a546 !important; }
+  background-color: #44883c !important; }
 
 .bg-success {
   background-color: #41a759 !important; }
@@ -272,8 +271,11 @@ button.adaptation.active {
   background-color: #23A2B8;
   color: #fff; }
 
+.text-success {
+  color: #44883c !important; }
+
 .cl_green {
-  color: #50a546; }
+  color: #44883c; }
 
 form.lay_form {
   background: #fcfcfc;
@@ -468,12 +470,14 @@ button.btn.idSearch {
   height: 36px;
   margin: -6px 0 0 -7px; }
 
-.modal table tr {
-  transition: 0.2s; }
-  .modal table tr:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    background-color: #f9f9f9; }
+.modal {
+  top: 8%; }
+  .modal table tr {
+    transition: 0.2s; }
+    .modal table tr:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      background-color: #f9f9f9; }
 
 @media (min-width: 576px) {
   .modal-dialog {
@@ -493,5 +497,22 @@ button.btn.idSearch {
     max-width: 800px; } }
 input[type="text"]:focus {
   outline: none; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 85px 1fr 1fr 1fr;
+  grid-template-rows: 4em 1fr 1fr;
+  max-width: 480px;
+  grid-gap: 12px; }
+  .grid-container .m_form {
+    text-align: center;
+    margin: 0 0 0 1.2em;
+    white-space: nowrap; }
+
+@media all and (-ms-high-contrast: none) {
+  .lt-grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr; } }
 
 /*# sourceMappingURL=style.css.map */

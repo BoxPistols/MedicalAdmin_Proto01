@@ -1,5 +1,5 @@
 .cl_green {
-  color: #50a546; }
+  color: #44883c; }
 
 form.lay_form {
   background: #fcfcfc;
@@ -194,12 +194,14 @@ button.btn.idSearch {
   height: 36px;
   margin: -6px 0 0 -7px; }
 
-.modal table tr {
-  transition: 0.2s; }
-  .modal table tr:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    background-color: #f9f9f9; }
+.modal {
+  top: 8%; }
+  .modal table tr {
+    transition: 0.2s; }
+    .modal table tr:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      background-color: #f9f9f9; }
 
 @media (min-width: 576px) {
   .modal-dialog {

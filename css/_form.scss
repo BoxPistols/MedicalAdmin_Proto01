@@ -1,7 +1,6 @@
 $color_main: #1b83c2;
-$color_green: #50a546;
+$color_green: #44883c;
 $bd_green: rgba(91, 128, 99, 0.2);
-
 @mixin cl_green {
   color: $color_green;
 }
@@ -230,6 +229,8 @@ button.btn.idSearch {
 }
 
 .modal {
+  top: 8%;
+
   table {
     tr {
       transition: 0.2s;
