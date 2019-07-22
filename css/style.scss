@@ -1,13 +1,43 @@
 $color_main: #1b83c2;
+<<<<<<< HEAD
 $color_warning: #fb9900;
 $color_success: #41a759;
 $color_info: #23A2B8;
+=======
+$color_green: #44883c;
+$bd_green: rgba(91, 128, 99, 0.2);
+@mixin cl_green {
+  color: $color_green;
+}
+@mixin bg_green {
+  border: 1px solid $bd_green;
+}
+
+.cl_green {
+  @include cl_green
+}
+
+.m_colorLine {
+  // background-color: rgba(248, 243, 91, 0.23) !important;
+  padding: 0.1em 0.5em;
+  background: linear-gradient(transparent 45%, rgba(250, 255, 0, 0.65) 80%);
+}
+>>>>>>> develop
 
 body {
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  font-family: 'Lato', sans-serif;
+  // background: #f5f5f5;
+  // background: rgba(235, 255, 240, 0.4);
+  background: rgba(41, 127, 208, 0.23);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #334;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 i.fa {
@@ -17,6 +47,18 @@ i.fa {
 p {
   font-size: 16px;
   line-height: 1.428571429;
+}
+
+.m_hr {
+  border-top: 1px solid rgba(190, 191, 187, 0.18);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.lay_Outer {
+  padding: 16px 32px;
+  background: white;
+  @include bg_green;
 }
 
 .header {
@@ -104,7 +146,7 @@ p {
   width: 100%;
   margin-left: 60px;
   color: #666;
-  background: #e0e0e0;
+  background: rgba(255, 255, 249, 0.53);
   padding-left: 15px;
   transition: all 0.2s ease-in-out;
 
@@ -112,7 +154,7 @@ p {
     display: inline-flex;
     align-items: center;
     font-size: 0.9em;
-    line-height: 1.2;
+    line-height: 1;
 
     ul {
       display: inline-flex;
@@ -225,7 +267,7 @@ p {
 
   .jumbotron {
     padding: 20px 30px 20px!important !important;
-    border: 1px solid #dfe8f1;
+    // border: 1px solid #dfe8f1;
     border-radius: 3px;
     background-color: #fff;
 
@@ -250,8 +292,14 @@ p {
 // title global
 
 .m_title {
+  font-weight: 400;
+
   &.lv3 {
-    font-size: 1.4rem;
+    font-size: 1.5em;
+  }
+
+  &.lv4 {
+    font-size: 1.25rem;
   }
 }
 
@@ -331,7 +379,15 @@ table.inline-table {
 }
 
 .bg-success {
+<<<<<<< HEAD
   background-color: $color_success!important;
+=======
+  background-color: $color_green!important;
+}
+
+.bg-success {
+  background-color: #41a759!important;
+>>>>>>> develop
 }
 
 .btn-outline-warning,
@@ -341,6 +397,12 @@ table.inline-table {
   border-color: $color_warning;
 }
 
+.btn-outline-success:hover {
+  color: #50a546;
+  background-color: #fff;
+  border-color: #50a546;
+}
+
 .btn-outline-info:hover {
   color: #23A2B8;
   background-color: #fff;
@@ -348,15 +410,19 @@ table.inline-table {
 }
 
 button.adaptation {
+<<<<<<< HEAD
   width: 74px;
   border: 1px solid $color_info;
 
+=======
+>>>>>>> develop
   &.active {
     background-color: #23A2B8;
     color: #fff;
   }
 }
 
+<<<<<<< HEAD
 .border_section {
   border: 1px solid rgba(#bbbbbb, 0.4);
   background-color: rgba(#ffffff, 0.7);
@@ -398,5 +464,31 @@ div.dataTables_wrapper div.dataTables_filter input {
 
   h3 {
     color: $color_warning;
+=======
+.text-success {
+  color: #44883c!important;
+}
+@import "form";
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 85px 1fr 1fr 1fr;
+  grid-template-rows: 4em 1fr 1fr;
+  // grid-template-areas: "areaA" "areaB" "areaC";
+  max-width: 480px;
+  grid-gap: 12px;
+
+  .m_form {
+    text-align: center;
+    margin: 0 0 0 1.2em;
+    white-space: nowrap;
+  }
+}
+@media all and (-ms-high-contrast:none) {
+  .lt-grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+>>>>>>> develop
   }
 }

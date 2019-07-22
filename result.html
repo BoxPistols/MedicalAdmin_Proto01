@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<div class="header">
 		<a href="#" id="menu-toggle" class="">
 			<i class="fa fa-bars"></i>
@@ -634,6 +635,314 @@
 		<script src="js/jquery-3.3.1.js"></script>
 		<script src="js/datatables.min.js"></script>
 		<script src="js/script.js"></script>
+=======
+  <div class="header">
+    <a href="#" id="menu-toggle" class="">
+      <i class="fa fa-bars"></i>
+      <span>Menu</span>
+    </a>
+    <div class="logo">
+      <a href="index.html">
+        胚画像による妊娠出産予想システム
+      </a>
+    </div>
+
+    <div class="l_info">
+      <div class="m_title">
+        <ul>
+          <li class="active">検索結果</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
+      <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
+      <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
+      <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+      <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+    </ul>
+  </div>
+
+  <!-- Content -->
+  <div class="main">
+    <div class="hipsum">
+      <div class="jumbotron" style="background:rgba(210, 250, 251, 0.15);">
+        <h1 class="m_title lv3 p-3 mb-4 bg-info text-white">ドナー情報(K指標順)</h1>
+
+        <div class="l_user-info">
+          <table id="example" class="display table inline-table table-responsive-lg table-hover table-sm table-striped table-bordered" style="display:table-cell;">
+            <thead class="thead-dark">
+              <tr>
+                <th style="width:35px">番号</th>
+                <th style="width:80px">ドナーID</th>
+                <th>妻年齢</th>
+                <th>夫年齢</th>
+                <th>血液型</th>
+                <th>ABOミスマッチ</th>
+                <th colspan="2">HLAミスマッチ座数 </th>
+                <th>K指標</th>
+                <th style="width:15%">HLA（A-C-B-DR-DQ-DP）</th>
+                <th>登録日</th>
+                <th>保管場所</th>
+                <th>適応</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>血清型</th>
+                <th>遺伝子型</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>D0000321</td>
+                <td>男</td>
+                <td>28</td>
+                <td>B-</td>
+                <td>mismatch</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0.997</td>
+                <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                <td>12/12/18</td>
+                <td>神戸市立医療センター中央市民病院</td>
+                <td style="width:50px"><button class="adaptation" type="button" name="button">適用</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>D0000321</td>
+                <td>男</td>
+                <td>28</td>
+                <td>B-</td>
+                <td>mismatch</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0.997</td>
+                <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                <td>12/12/18</td>
+                <td>神戸市立医療センター中央市民病院</td>
+                <td class="text-primary">検討中</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>D0000321</td>
+                <td>男</td>
+                <td>28</td>
+                <td>B-</td>
+                <td>mismatch</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0.997</td>
+                <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                <td>12/12/18</td>
+                <td>神戸市立医療センター中央市民病院</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <div class="container mt-5">
+          <h1 class="m_title lv3 ">前処置</h1>
+          <div class="mb-4"></div>
+
+          <form class="row px-1 px-1">
+            <div class="container form-row">
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">骨髄</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">RIC</option>
+                  <option value="2">MAC</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">移放射線療法</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">あり</option>
+                  <option value="2">なし</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">移植前処置</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">CY+TBI±</option>
+                  <option value="2" selected>Other TBI regimen</option>
+                  <option value="3">BY＋CY±</option>
+                  <option value="4">Other non TBI</option>
+                  <option value="5">FL±TBI±</option>
+                  <option value="6">Other RIST</option>
+                  <option value="9">Missing</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">移植前処置2</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <!-- <option selected>選択する</option> -->
+                  <option value="1">FL+BU±</option>
+                  <option value="2">FL+CY±</option>
+                  <option value="3" selected>FL+Mel±</option>
+                  <option value="4">Other RIST</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">GVHD予防</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option value="0">無し</option>
+                  <option value="1" selected>CyA+MTX</option>
+                  <option value="2">CyA±</option>
+                  <option value="3">Tac+MTX</option>
+                  <option value="4">Tac±</option>
+                  <option value="5">Other</option>
+                  <option value="9">Missing</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">CSA/TAC</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option value="0">CyA-based</option>
+                  <option value="1" selected>Tac-based</option>
+                </select>
+              </div>
+
+              <div class="formSection">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">体内T細胞除去</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option value="0">なし</option>
+                  <option value="1" selected>あり</option>
+                </select>
+              </div>
+
+            </div>
+
+
+            <div class="container">
+              <div class="row col-md-6">
+                <label class="" for="inlineFormCustomSelect2">補足</label>
+                <input type="text" class="form-control " placeholder="入力する" style="width:100%;">
+              </div>
+            </div>
+
+
+            <div class="mt-3">
+              <h3 class="m_title lv3 mt-4">移植ソース</h3>
+
+              <div class="container">
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio1">全て</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">骨髄</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio3">末梢血幹細胞</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio4">臍帯血</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="container mt-4">
+              <div class="row">
+                <a href="result.html">
+                  <button type="button" class="btn btn-primary btn-lg" value="検索する" style="width:240px">
+                    再検索する
+                  </button>
+                </a>
+              </div>
+            </div>
+
+          </form>
+          <!-- ///// -->
+
+        </div>
+
+
+        <!--
+        <form>
+          <div class="container">
+            <div class="form-row">
+
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Selecter A</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">Selecter B</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row mt-3">
+              <div class="col-6">
+                <input type="text" class="form-control " placeholder="Other" style="width:100%;">
+              </div>
+            </div>
+
+            <div class="row mt-3 d-flex justify-content-center">
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-lg">再検索</button>
+              </div>
+            </div>
+          </div> -->
+
+        </form>
+        <!-- ///// -->
+      </div>
+
+      <!-- <div class="footer text-center">
+        <p>footer</p>
+      </div> -->
+    </div>
+
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <!-- <script src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/af-2.3.3/b-1.5.6/sc-2.0.0/datatables.min.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+>>>>>>> develop
 
 </body>
 
