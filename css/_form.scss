@@ -1,5 +1,5 @@
 $color_main: #1b83c2;
-$color_green: #44883c;
+$color_green: #479c3d;
 $bd_green: rgba(91, 128, 99, 0.2);
 
 @mixin cl_green {
@@ -9,17 +9,10 @@ $bd_green: rgba(91, 128, 99, 0.2);
   // border: 1px solid $bd_green;
   border: 2px solid rgba(16, 165, 96, 0.85);
 }
-
 .cl_green {
   @include cl_green
 }
 
-form.lay_form {
-  background: #fcfcfc;
-  padding-bottom: 32px;
-  font-size: 1.15em;
-  @include bg_green;
-}
 
 [type=checkbox]:checked,
 [type=checkbox]:not(:checked) {

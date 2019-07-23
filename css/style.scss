@@ -1,8 +1,12 @@
 $color_main: #1b83c2;
-$color_green: #44883c;
+$color_green: #479c3d;
+$color_orange: #fb9f0c;
 $bd_green: rgba(91, 128, 99, 0.2);
 @mixin cl_green {
   color: $color_green;
+}
+@mixin cl_orange {
+  color: $color_orange;
 }
 @mixin bg_green {
   border: 1px solid $bd_green;
@@ -10,6 +14,10 @@ $bd_green: rgba(91, 128, 99, 0.2);
 
 .cl_green {
   @include cl_green
+}
+
+.cl_orange {
+  @include cl_orange
 }
 
 .m_colorLine {
@@ -54,7 +62,18 @@ p {
   // background: #fbffef;
   // @include bg_green;
   background: #fafbf8;
-  border: 2px solid rgba(173, 175, 173, 0.93);
+  border: 2px solid rgba(255, 193, 18, 0.93);
+  border-radius: 6px;
+}
+
+form.lay_form {
+  background: #fcfcfc;
+  padding-bottom: 32px;
+  font-size: 1.15em;
+  border-radius: 6px;
+  // @include bg_green;
+  border: 2px solid;
+  border-color: $color_green;
 }
 
 .header {
@@ -395,7 +414,7 @@ button.adaptation {
 }
 
 .text-success {
-  color: #44883c!important;
+  color: #479c3d!important;
 }
 @import "form";
 
