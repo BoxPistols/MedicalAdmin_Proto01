@@ -1,4 +1,8 @@
 $color_main: #1b83c2;
+$grad_main: linear-gradient(135deg, #6078ea 0%, #17ead9 100%);
+@mixin grad_main {
+  background: linear-gradient(135deg, #6078ea 0%, #17ead9 100%);
+}
 $color_green: #479c3d;
 $color_orange: #fb9f0c;
 $bd_green: rgba(91, 128, 99, 0.2);
@@ -29,12 +33,11 @@ $bd_green: rgba(91, 128, 99, 0.2);
 body {
   margin: 0;
   padding: 0;
-  // background: #f5f5f5;
-  // background: rgba(235, 255, 240, 0.4);
-  background: rgba(41, 127, 208, 0.23);
+  background: linear-gradient(135deg, rgba(30, 118, 228, 0.26) 0%,rgba(18, 201, 193, 0.38) 100%);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
   color: #334;
+  min-height: 100vh;
 }
 
 ol,
@@ -86,7 +89,7 @@ form.lay_form {
   color: #fff;
   // background: $color_main;
   background: #42586d;
-  line-height: 50px;
+  @include grad_main line-height: 50px;
 
   .logo a {
     color: rgba(255,255,255,.85);
@@ -113,7 +116,7 @@ form.lay_form {
   text-transform: uppercase;
   color: #fff;
   background: rgba(0, 0, 0, 0.15);
-  font-size: 13px;
+  @include grad_main font-size: 13px;
   line-height: 50px;
 
   i {
@@ -261,7 +264,7 @@ form.lay_form {
 
 .main {
   position: relative;
-  top: 100px;
+  top: 110px;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -347,12 +350,26 @@ table.inline-table {
   }
 }
 
-table svg {
-  transition: 0.2s;
+table {
+  svg {
+    transition: 0.2s;
 
-  &:hover {
-    cursor: pointer;
-    fill: darkorange;
+    &:hover {
+      cursor: pointer;
+      fill: darkorange;
+    }
+  }
+
+  .embryuoImages {
+    img {
+      width: 100%;
+      max-width: 120px;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(2,2);
+      }
+    }
   }
 }
 
@@ -446,5 +463,22 @@ button.adaptation {
     display: -ms-grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
+  }
+}
+
+.m_title {
+  &-featuer {
+    background: linear-gradient(135deg, #036ED9 0%,#12aec9 100%);
+    padding: 8px 12px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    max-width: 1140px;
+    margin: auto auto 24px;
+  }
+
+  &-tx {
+    color: #eee;
+    font-size: 20px;
   }
 }
