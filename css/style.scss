@@ -347,6 +347,15 @@ table.inline-table {
   }
 }
 
+table svg {
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    fill: darkorange;
+  }
+}
+
 .table-striped.cl_ye tbody tr:nth-of-type(odd) {
   background-color: rgba(240, 255, 41, 0.4);
 }
