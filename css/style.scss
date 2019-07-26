@@ -494,18 +494,18 @@ button.adaptation {
   max-width: 1140px;
   margin: auto;
   width: auto;
+
   li {
     // float: left
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     background: #ccc;
-    color: #fff;
+    color: #444;
     position: relative;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     width: calc(100% / 4 - 24px);
     // width: auto;
     margin: 0 auto;
-
     // &:before {
     //   content: '';
     //   border-left: 16px solid #ccc;
@@ -515,19 +515,19 @@ button.adaptation {
     //   top: 0;
     //   left: 0;
     // }
-
     &:after {
       content: '';
       border-left: 22px solid #ccc;
       border-top: 22px solid transparent;
       border-bottom: 22px solid transparent;
       position: absolute;
-      top: 0px;
+      top: 0;
       left: 100%;
       z-index: 20;
     }
 
     &.active {
+      color: #fff;
       background: #295ac8;
 
       &:after {
