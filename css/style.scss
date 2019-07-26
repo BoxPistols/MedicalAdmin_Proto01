@@ -313,6 +313,7 @@ form.lay_form {
   &.lv4 {
     font-size: 1.25rem;
   }
+
   &.lv5 {
     font-size: 1.125rem;
   }
@@ -368,6 +369,7 @@ table {
       width: 100%;
       max-width: 120px;
       transition: 0.3s;
+
       &:hover {
         cursor: pointer;
         transform: scale(2,2);
@@ -483,5 +485,58 @@ button.adaptation {
   &-tx {
     color: #eee;
     font-size: 20px;
+  }
+}
+/* --------------------- */
+#progress {
+  display: flex;
+  justify-content: center;
+  max-width: 1140px;
+  margin: auto;
+  width: auto;
+  li {
+    // float: left
+    padding: 10px 20px 10px 20px;
+    background: #ccc;
+    color: #fff;
+    position: relative;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: calc(100% / 4 - 24px);
+    // width: auto;
+    margin: 0 auto;
+
+    // &:before {
+    //   content: '';
+    //   border-left: 16px solid #ccc;
+    //   border-top: 16px solid transparent;
+    //   border-bottom: 16px solid transparent;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    // }
+
+    &:after {
+      content: '';
+      border-left: 22px solid #ccc;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      position: absolute;
+      top: 0px;
+      left: 100%;
+      z-index: 20;
+    }
+
+    &.active {
+      background: #295ac8;
+
+      &:after {
+        border-left-color: #295ac8;
+      }
+    }
+
+    &:first-child:before {
+      border: none;
+    }
   }
 }
