@@ -355,6 +355,12 @@ table.inline-table {
 }
 
 table {
+  &.table-hover {
+    tr:hover {
+      cursor: pointer;
+    }
+  }
+
   svg {
     transition: 0.2s;
 
@@ -498,32 +504,23 @@ button.adaptation {
   li {
     // float: left
     padding: 10px 20px;
-    background: #ccc;
+    background: #e3e3e9;
     color: #444;
     position: relative;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    // border-top: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
     width: calc(100% / 4 - 24px);
-    // width: auto;
     margin: 0 auto;
-    // &:before {
-    //   content: '';
-    //   border-left: 16px solid #ccc;
-    //   border-top: 16px solid transparent;
-    //   border-bottom: 16px solid transparent;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    // }
+
     &:after {
       content: '';
-      border-left: 22px solid #ccc;
+      border-left: 22px solid #e3e3e9;
       border-top: 22px solid transparent;
       border-bottom: 22px solid transparent;
       position: absolute;
       top: 0;
       left: 100%;
-      z-index: 20;
+      z-index: 2;
     }
 
     &.active {
