@@ -5,3 +5,7 @@ node_modules
 css/style.css.map
 
 css/style.css
+
+*.css
+
+.map
