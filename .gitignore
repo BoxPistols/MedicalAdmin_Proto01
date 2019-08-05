@@ -6,6 +6,6 @@ css/style.css.map
 
 css/style.css
 
-*.css
+# *.css
 
 .map
