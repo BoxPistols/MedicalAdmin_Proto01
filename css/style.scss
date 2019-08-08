@@ -92,9 +92,15 @@ p {
   }
 }
 
+.titleArea {
+  max-width: 1140px;
+  margin: auto;
+}
+
 .l_user-info {
   max-width: 1366px;
   margin: auto;
+  text-align: center;
 }
 
 .l_info {
@@ -276,12 +282,24 @@ ul.list {
 table.inline-table {
   display: inline-table;
   background: #fff;
+
+  b {
+    white-space: nowrap;
+    padding: 12px;
+  }
+
+  center {
+    background: #eee;
+    margin: -12px -5px -12px;
+    padding: 8px;
+    line-height: 1;
+  }
+
   td,
   th {
     vertical-align: middle;
     transition: 0.2s;
     @media screen and (max-width: 1366px) {
-
       min-width: 60px;
     }
 
@@ -301,8 +319,8 @@ table.inline-table {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #444;
-  border-color: #32383e;
+  background-color: #5e5e5e;
+  border-color: #424547;
 }
 
 .formSection {
