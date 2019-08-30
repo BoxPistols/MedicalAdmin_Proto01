@@ -443,8 +443,8 @@ table.ptn_dnr {
 
   td,
   th {
+    vertical-align: middle;
     border: 1px solid rgb(201, 230, 255);
-
     border-collapse: collapse;
     padding: 3px;
     min-width: calc(1140px / 20);
@@ -476,5 +476,9 @@ table.ptn_dnr {
   .tb_bd-t {
     border-top: 3px solid rgba(155, 204, 204, 0.83);
     background: aliceblue;
+  }
+
+  span.caption {
+    font-size: 12px;
   }
 }

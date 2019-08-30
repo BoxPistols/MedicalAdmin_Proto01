@@ -141,13 +141,14 @@ body
                 input.form-control(type="text" placeholder="入力する" style="width:100%;")
             .mt-3
               h3.m_title.lv3.mt-4 移植ソース
+              p.mb-2 &nbsp;&nbsp;&nbsp;&nbsp;(骨髄バンクかそれ以外かの２種類の遷移)
               .container
                 .custom-control.custom-radio
                   input#customRadio1.custom-control-input(type="radio" name="customRadio" checked="")
                   label.custom-control-label(for="customRadio1") 全て
                 .custom-control.custom-radio
                   input#customRadio2.custom-control-input(type="radio" name="customRadio")
-                  label.custom-control-label(for="customRadio2") 骨髄(*骨髄バンクへ遷移)
+                  label.custom-control-label(for="customRadio2") 骨髄 &nbsp;&nbsp;(*骨髄バンクへ遷移)
                 .custom-control.custom-radio
                   input#customRadio3.custom-control-input(type="radio" name="customRadio")
                   label.custom-control-label(for="customRadio3") 末梢血幹細胞
@@ -159,19 +160,5 @@ body
                 button.btn.btn-primary.btn-lg(type="button" value="検索する" onclick='link()' style="width:240px")
                   | 検索する
                   
-            //a(href="result.html")                    
-            //.row        
-              input(type='radio' name='room')
-              | りんご入荷！
-              input(type='radio' name='room')
-              | みかん入荷！
-              hr
-              input(type='button' value='移動' onclick='link()')
-                    
-          // /////
-          //
-            <div class="footer text-center">
-            <p>footer</p>
-            </div>
   script(src="https://code.jquery.com/jquery-3.3.1.js")
   script(src="js/script.js")

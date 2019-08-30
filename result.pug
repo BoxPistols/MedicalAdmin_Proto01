@@ -7,9 +7,10 @@ body
     .hipsum
       .jumbotron(style="background:rgba(210, 250, 251, 0.15); ma")
         .titleAreas(style="max-width: 1360px;")
+          span (骨髄バンク以外の移植ソース)
           h1.m_title.lv3.p-2.mb-4.bg-info.text-white        
             img(src="img/donor.svg", alt="alt")
-            span.ml-2 ドナー情報(K指標順)
+            span.ml-2 ドナー情報(K指標順)          
         .l_patient-area
           .l_user-info.pt-2
             h3.text-left(style="max-width: 1140px; margin-left: calc((1366px - 1140px) / 2 - 40px);")
@@ -83,7 +84,7 @@ body
                   td 13:02
                   td 15:02
 
-        .l_user-info
+        .l_user-info   
           table.ptn_dnr#example
             tbody
               tr
@@ -97,9 +98,18 @@ body
                 th GRFS
                 th 再発
                 th GVHD
-                th 遊郭細胞数
-                th CD34+細胞数
-                th GMコロニー数
+                th 
+                  span.caption x10^7/Kg
+                  br
+                  | 有核細胞数
+                th
+                  span.caption x10^5/Kg
+                  br
+                  | CD34+細胞数
+                th
+                  span.caption x10^3/Kg
+                  br
+                  | GMコロニー数
                 th
                   | 整理番号
                   | 施設
@@ -342,17 +352,7 @@ body
         .mt-5.ml-5
           .row.mt-3
             a(href="search.html")
-              button.btn.btn-lg(type="button" value="戻る" style="width:240px") 戻る
+              button.btn.btn-lg.btn-outline-info(type="button" value="戻る" style="width:240px") 戻る
 
     script(src="js/datatables.min.js")
     script(src="js/script.js")
-
-    //script(type="text/javascript").
-      $('button.adaptation').on('click', function(e) {
-        $elem = $(e.target);
-        if ($elem.hasClass('active')) {
-          $elem.removeClass('active');
-        } else {
-          $elem.addClass('active');
-        }
-      });

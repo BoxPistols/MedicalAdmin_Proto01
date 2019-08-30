@@ -40,8 +40,8 @@
   <div class="main">
     <div class="hipsum">
       <div class="jumbotron" style="background:rgba(210, 250, 251, 0.15); ma">
-        <div class="titleAreas" style="max-width: 1360px;">
-          <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)</span></h1>
+        <div class="titleAreas" style="max-width: 1360px;"><span>(骨髄バンク以外の移植ソース)</span>
+          <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)          </span></h1>
         </div>
         <div class="l_patient-area">
           <div class="l_user-info pt-2">
@@ -125,7 +125,7 @@
             </table>
           </div>
         </div>
-        <div class="l_user-info">
+        <div class="l_user-info">  
           <table class="ptn_dnr" id="example">
             <tbody>
               <tr>
@@ -139,9 +139,9 @@
                 <th>GRFS</th>
                 <th>再発</th>
                 <th>GVHD</th>
-                <th>遊郭細胞数</th>
-                <th>CD34+細胞数</th>
-                <th>GMコロニー数</th>
+                <th> <span class="caption">x10^7/Kg</span><br>有核細胞数</th>
+                <th><span class="caption">x10^5/Kg</span><br>CD34+細胞数</th>
+                <th><span class="caption">x10^3/Kg</span><br>GMコロニー数</th>
                 <th>
                   整理番号
                   施設
@@ -395,21 +395,11 @@
         </div>
         <div class="mt-5 ml-5">
           <div class="row mt-3"><a href="search.html">
-              <button class="btn btn-lg" type="button" value="戻る" style="width:240px">戻る</button></a></div>
+              <button class="btn btn-lg btn-outline-info" type="button" value="戻る" style="width:240px">戻る</button></a></div>
         </div>
       </div>
     </div>
     <script src="js/datatables.min.js"></script>
     <script src="js/script.js"></script>
-    <!--script(type="text/javascript").
-    $('button.adaptation').on('click', function(e) {
-      $elem = $(e.target);
-      if ($elem.hasClass('active')) {
-        $elem.removeClass('active');
-      } else {
-        $elem.addClass('active');
-      }
-    });
-    -->
   </div>
 </body>
