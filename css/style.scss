@@ -443,7 +443,8 @@ table.ptn_dnr {
 
   td,
   th {
-    border: 1px solid #28b;
+    border: 1px solid rgb(201, 230, 255);
+
     border-collapse: collapse;
     padding: 3px;
     min-width: calc(1140px / 20);
@@ -452,7 +453,7 @@ table.ptn_dnr {
   }
 
   th {
-    background: #17a2b8;
+    background: rgba(50, 174, 193, 0.9);
     color: #fff;
   }
 
@@ -465,15 +466,14 @@ table.ptn_dnr {
   }
 
   tr.subTH th {
-    // background: #d6edf5;
-    // color: #0c4979;
-    background: #666;
-    color: #fff;
-    border: 1px solid #ace;
+    background: #99bdce;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dae7f1a3;
+    font-size: 19px;
   }
 
   .tb_bd-t {
-    border-top: 3px solid #317bb8;
+    border-top: 3px solid rgba(155, 204, 204, 0.83);
     background: aliceblue;
   }
 }

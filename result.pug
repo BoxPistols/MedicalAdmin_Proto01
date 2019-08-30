@@ -137,7 +137,9 @@ body
                 td 0.56
                 td 21.2
                 td M201108999
-                td.text-light.bg-warning 適用
+                td(rowspan="2", style="vertical-align:middle")
+                  button(type="button", class="btn adaptation", name="button") 適用
+                  
               tr
                 td
                 td
@@ -158,7 +160,7 @@ body
                 td
                 td
                 td KNKI
-                td
+                //td
 
               tr(class="tb_bd-t")
                 td 2
@@ -180,7 +182,8 @@ body
                 td 0.56
                 td 21.2
                 td G201208999
-                td.text-info 検討中
+                td.text-info(rowspan="2", style="vertical-align:middle")
+                  button(type="button", class="btn btn-secondary", name="button", disable="disable") 検討中
 
               tr
                 td
@@ -202,8 +205,7 @@ body
                 td
                 td
                 td MIYG
-                td
-                        
+
               tr(class="tb_bd-t")
                 td 3
                 td 6
@@ -224,7 +226,8 @@ body
                 td 0.56
                 td 21.2
                 td 110021337766
-                td.text-light.bg-warning 適用
+                td(rowspan="2", style="vertical-align:middle")
+                  button(type="button", class="btn adaptation", name="button") 適用
               tr
                 td
                 td
@@ -245,8 +248,8 @@ body
                 td
                 td
                 td CENT
-                td
-      
+                //td
+
               tr(class="tb_bd-t")
                 td 4
                 td 6
@@ -267,7 +270,9 @@ body
                 td 0.56
                 td 21.2
                 td G201208123
-                td.text-light.bg-warning 適用
+                td(rowspan="2", style="vertical-align:middle")
+                  button(type="button", class="btn adaptation", name="button") 適用
+
               tr
                 td
                 td
@@ -288,7 +293,6 @@ body
                 td
                 td
                 td TOKY
-                td
 
               tr(class="tb_bd-t")
                 td 5
@@ -310,7 +314,9 @@ body
                 td 0.56
                 td 21.2
                 td G201208456
-                td.text-light.bg-warning 適用
+                td(rowspan="2", style="vertical-align:middle")
+                  button(type="button", class="btn adaptation", name="button") 適用
+
               tr
                 td
                 td
@@ -331,348 +337,6 @@ body
                 td
                 td
                 td KNKI
-                td
-
-
-          //table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style="display:table-cell;")
-            thead.thead-dark
-              tr
-                th.text-center(style="width:60px") No
-                th(style="width:50px") HLAマッチ
-                th(style="width:40px" colspan="2") ミスマッチ
-                th(style="width:40px") 年齢
-                th(style="width:40px") 血液型
-                th(style="width:80px") ABOミスマッチ
-                th(colspan="2") HLAミスマッチ座数 
-                th(style="width:60px") K指標
-                th(style="width:15%") HLA（A-C-B-DR-DQ-DP）
-                th(style="width:60px") 登録日
-                th(style="width:120px") 保管場所
-                th(style="width:60px") 適応
-              tr
-                th
-                th
-                th
-                th
-                th
-                th
-                th(style="width:60px") 血清型
-                th(style="width:75px") 遺伝子型
-                th
-                th
-                th
-                th
-                th
-            tbody
-              tr
-                td.text-center 1
-                td D0000321
-                td 男
-                td 28
-                td B-
-                td mismatch
-                td.text-center 2
-                td.text-center 1s
-                td 0.997
-                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-                td 12/12/18
-                td 神戸市立医療センター中央市民病院
-                td(style="width:50px")
-                  button.btn.adaptation(type="button" name="button") 適用
-              tr
-                td.text-center 2
-                td D0000437
-                td 女
-                td 32
-                td A+
-                td Matched
-                td.text-center 2
-                td.text-center 2
-                td 0.992
-                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-                td 10/01/12
-                td 世田谷市民病院
-                // <td class="text-primary">検討中</td>
-                td(style="width:50px")
-                  button.btn.adaptation(type="button" name="button") 適用
-              tr
-                td.text-center 3
-                td D0000335
-                td 男
-                td 40
-                td B+
-                td Major mismatch
-                td.text-center 3
-                td.text-center 4
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 埼玉大学病院
-                td(style="width:50px")
-                  button.btn.adaptation(type="button" name="button") 適用
-              tr
-                td.text-center 4
-                td D0000321
-                td 女
-                td 22
-                td B-
-                td Major-minor mismatch
-                td.text-center 3
-                td.text-center 5
-                td 0.947
-                td A＊24:02-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01
-                td 13/06/21
-                td 品川掖済会病院
-                td(style="width:50px")
-                  button.btn.adaptation(type="button" name="button") 適用
-              tr
-                td.text-center 5
-                td D0000437
-                td 女
-                td 32
-                td A+
-                td Matched
-                td.text-center 2
-                td.text-center 0
-                td 0.892
-                td A＊11:01-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01
-                td 11/03/01
-                td 駒沢病院
-                // <td class="text-primary">検討中</td>
-                td
-                  button.btn.btn-secondary(type="button" disabled="") 検討中
-              tr
-                td.text-center 6
-                td D0000335
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 7
-                td D0000321
-                td 男
-                td 28
-                td O-
-                td Minor mismatch
-                td.text-center 3
-                td.text-center 6
-                td 0.797
-                td A＊02:07-C＊01:02-B＊46:01-DRB1＊08:03-DQB1＊06:01-DPB1＊05:01
-                td 15/10/18
-                td 千葉医療センタ
-                td
-              tr
-                td.text-center 8
-                td D0000237
-                td 女
-                td 32
-                td A+
-                td Matched
-                td.text-center 2
-                td.text-center 2
-                td 0.992
-                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-                td 10/01/12
-                td 世田谷市民病院
-                // <td class="text-primary">検討中</td>
-                td
-                  button.btn.btn-secondary(type="button" disabled="") 検討中
-              tr
-                td.text-center 9
-                td D0000135
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 10
-                td D0000907
-                td 男
-                td 28
-                td B-
-                td mismatch
-                td.text-center 2
-                td.text-center 1s
-                td 0.997
-                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-                td 12/12/18
-                td 神戸市立医療センター中央市民病院
-                td
-              tr
-                td.text-center 11
-                td D0000887
-                td 女
-                td 32
-                td A+
-                td Matched
-                td.text-center 2
-                td.text-center 2
-                td 0.992
-                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-                td 10/01/12
-                td 世田谷市民病院
-                // <td class="text-primary">検討中</td>
-                td
-                  button.btn.btn-secondary(type="button" disabled="") 検討中
-              tr
-                td.text-center 12
-                td D0000482
-                td 男
-                td 41
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 13
-                td D0000321
-                td 男
-                td 28
-                td B-
-                td mismatch
-                td.text-center 2
-                td.text-center 1s
-                td 0.997
-                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-                td 12/12/18
-                td 神戸市立医療センター中央市民病院
-                td
-              tr
-                td.text-center 13
-                td D0000437
-                td 女
-                td 32
-                td A+
-                td Matched
-                td.text-center 2
-                td.text-center 2
-                td 0.992
-                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-                td 10/01/12
-                td 世田谷市民病院
-                // <td class="text-primary">検討中</td>
-                td
-                  button.btn.btn-secondary(type="button" disabled="") 検討中
-              tr
-                td.text-center 14
-                td D0000335
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 15
-                td D0000321
-                td 男
-                td 28
-                td B-
-                td mismatch
-                td.text-center 2
-                td.text-center 1s
-                td 0.997
-                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-                td 12/12/18
-                td 神戸市立医療センター中央市民病院
-                td
-              tr
-                td.text-center 16
-                td D0000437
-                td 女
-                td 32
-                td A+
-                td Matched
-                td.text-center 2
-                td.text-center 2
-                td 0.992
-                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-                td 10/01/12
-                td 世田谷市民病院
-                // <td class="text-primary">検討中</td>
-                td
-                  button.btn.btn-secondary(type="button" disabled="") 検討中
-              tr
-                td.text-center 17
-                td D0000335
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 18
-                td D0000335
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 19
-                td D0000335
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
-              tr
-                td.text-center 20
-                td D0000335
-                td 男
-                td 40
-                td AB-
-                td Minor mismatch
-                td.text-center 1
-                td.text-center 2
-                td 0.825
-                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-                td 14/08/12
-                td 大阪国立医療センター
-                td
 
         .mt-5.ml-5
           .row.mt-3
@@ -681,3 +345,13 @@ body
 
     script(src="js/datatables.min.js")
     script(src="js/script.js")
+
+    script(type="text/javascript").
+      $('button.adaptation').on('click', function(e) {
+        $elem = $(e.target);
+        if ($elem.hasClass('active')) {
+          $elem.removeClass('active');
+        } else {
+          $elem.addClass('active');
+        }
+      });
