@@ -14,7 +14,7 @@ body
             h3.text-left(style="max-width: 1140px; margin-left: calc((1366px - 1140px) / 2 - 40px);")
               img(src="img/patient_og.svg", class="mb-2", alt="alt", style="border: 1px solid orange; padding: 0px 3px; background:rgba(255,255,255,0.7); ")
               span.ml-2 患者情報
-            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto")
+            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto; background:rgba(255,255,2555,0.8)")
               thead.thead-dark
                 tr
                   th 患者ID
@@ -35,7 +35,7 @@ body
                   td(style="max-width:200px;") 2CR
 
 
-            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto 20px")
+            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto 20px;  background:rgba(255,255,2555,0.8)")
               thead.thead-dark
                 tr
                   th(colspan="18" style="vertical-align: middle")
@@ -108,7 +108,7 @@ body
                 th
                 th GVH
                 th HVG
-                th(colspan="8") 上段：抗原  下段：リアル
+                th(colspan="8") 上段：抗原  / 下段：アリル
                 th days
                 th
                 th
@@ -117,7 +117,7 @@ body
                 th
                 th
                 th
-              tr
+              tr(class="tb_bd-t")
                 td 1
                 td 8
                 td 1
@@ -137,7 +137,7 @@ body
                 td 0.56
                 td 21.2
                 td M201108999
-                td 適合
+                td.text-light.bg-warning 適用
               tr
                 td
                 td
@@ -160,49 +160,179 @@ body
                 td KNKI
                 td
 
-                tr(class="tb_bd-t")
-                  td 2
-                  td 7
-                  td 2
-                  td 1
-                  td A24
-                  td A2
-                  td B51
-                  td
-                  td Cw4
-                  td Cw12
-                  td DR4
-                  td DR15
-                  td 243
-                  td 44%
-                  td 20%
-                  td 3.54
-                  td 0.56
-                  td 21.2
-                  td G201208999
-                  td 検討中
+              tr(class="tb_bd-t")
+                td 2
+                td 7
+                td 2
+                td 1
+                td A24
+                td A2
+                td.bg-danger.text-white.font-weight-bold B51
+                td
+                td Cw4
+                td Cw12
+                td DR4
+                td DR15
+                td 243
+                td 44%
+                td 20%
+                td 3.54
+                td 0.56
+                td 21.2
+                td G201208999
+                td.text-info 検討中
 
-                tr
-                  td
-                  td
-                  td
-                  td
-                  td 24:02
-                  td 33:03
-                  td 51:01
-                  td 44:03
-                  td 04:01
-                  td 12:02
-                  td 13:02
-                  td 15:02
-                  td
-                  td
-                  td
-                  td
-                  td
-                  td
-                  td MIYG
-                  td
+              tr
+                td
+                td
+                td
+                td
+                td 24:02
+                td 33:03
+                td.text-danger.font-weight-bold 51:01
+                td 44:03
+                td 04:01
+                td 12:02
+                td 13:02
+                td 15:02
+                td
+                td
+                td
+                td
+                td
+                td
+                td MIYG
+                td
+                        
+              tr(class="tb_bd-t")
+                td 3
+                td 6
+                td 2
+                td 2
+                td A24
+                td A2
+                td.bg-danger.text-white.font-weight-bold B51
+                td
+                td -
+                td -
+                td DR4
+                td.text-white.bg-danger DR14
+                td 187
+                td 55%
+                td 42%
+                td 3.54
+                td 0.56
+                td 21.2
+                td 110021337766
+                td.text-light.bg-warning 適用
+              tr
+                td
+                td
+                td
+                td
+                td 24:02
+                td 33:03
+                td.text-danger.font-weight-bold 51:01
+                td 44:03
+                td -
+                td -
+                td 13:02
+                td.text-danger.font-weight-bold 14:02
+                td
+                td
+                td
+                td
+                td
+                td
+                td CENT
+                td
+      
+              tr(class="tb_bd-t")
+                td 4
+                td 6
+                td 2
+                td 2
+                td A24
+                td -
+                td.bg-danger.text-white.font-weight-bold B51
+                td
+                td -
+                td -
+                td DR4
+                td.text-white.bg-danger DR14
+                td 180
+                td 45%
+                td 66%
+                td 3.54
+                td 0.56
+                td 21.2
+                td G201208123
+                td.text-light.bg-warning 適用
+              tr
+                td
+                td
+                td
+                td
+                td 24:02
+                td -
+                td.text-danger.font-weight-bold 51:01
+                td 44:03
+                td -
+                td -
+                td 13:02
+                td.text-danger.font-weight-bold 14:02
+                td
+                td
+                td
+                td
+                td
+                td
+                td TOKY
+                td
+
+              tr(class="tb_bd-t")
+                td 5
+                td 6
+                td 2
+                td 2
+                td A24
+                td A2
+                td.bg-danger.text-white.font-weight-bold B51
+                td
+                td Cw4
+                td Cw12
+                td DR4
+                td.text-white.bg-danger DR14
+                td 166
+                td 57%
+                td 53%
+                td 3.54
+                td 0.56
+                td 21.2
+                td G201208456
+                td.text-light.bg-warning 適用
+              tr
+                td
+                td
+                td
+                td
+                td 24:02
+                td 33:03
+                td.text-danger.font-weight-bold 51:01
+                td 44:03
+                td 04:01
+                td 12:02
+                td 13:02
+                td.text-danger.font-weight-bold 14:02
+                td
+                td
+                td
+                td
+                td
+                td
+                td KNKI
+                td
+
 
           //table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style="display:table-cell;")
             thead.thead-dark

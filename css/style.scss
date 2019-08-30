@@ -465,11 +465,15 @@ table.ptn_dnr {
   }
 
   tr.subTH th {
-    background: #d6edf5;
-    color: #0c4979;
+    // background: #d6edf5;
+    // color: #0c4979;
+    background: #666;
+    color: #fff;
+    border: 1px solid #ace;
   }
 
   .tb_bd-t {
-    border-top: 2px solid #1866a5;
+    border-top: 3px solid #317bb8;
+    background: aliceblue;
   }
 }

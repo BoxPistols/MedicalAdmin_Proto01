@@ -48,7 +48,7 @@
         <div class="l_patient-area">
           <div class="l_user-info pt-2">
             <h3 class="text-left" style="max-width: 1140px; margin-left: calc((1366px - 1140px) / 2 - 40px);"><img class="mb-2" src="img/patient_og.svg" alt="alt" style="border: 1px solid orange; padding: 0px 3px; background:rgba(255,255,255,0.7); "><span class="ml-2">患者情報</span></h3>
-            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto">
+            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto; background:rgba(255,255,2555,0.8)">
               <thead class="thead-dark">
                 <tr>
                   <th>患者ID</th>
@@ -72,7 +72,7 @@
                 </tr>
               </tbody>
             </table>
-            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto 20px">
+            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto 20px;  background:rgba(255,255,2555,0.8)">
               <thead class="thead-dark">
                 <tr>
                   <th colspan="18" style="vertical-align: middle">HLA</th>
@@ -155,7 +155,7 @@
                 <th></th>
                 <th>GVH</th>
                 <th>HVG</th>
-                <th colspan="8">上段：抗原  下段：リアル</th>
+                <th colspan="8">上段：抗原  / 下段：アリル</th>
                 <th>days</th>
                 <th></th>
                 <th></th>
@@ -165,7 +165,7 @@
                 <th></th>
                 <th></th>
               </tr>
-              <tr>
+              <tr class="tb_bd-t">
                 <td>1</td>
                 <td>8</td>
                 <td>1</td>
@@ -185,7 +185,7 @@
                 <td>0.56</td>
                 <td>21.2</td>
                 <td>M201108999</td>
-                <td>適合</td>
+                <td class="text-light bg-warning">適用</td>
               </tr>
               <tr>
                 <td></td>
@@ -208,50 +208,182 @@
                 <td></td>
                 <td>KNKI</td>
                 <td></td>
-                <tr class="tb_bd-t">
-                  <td>2</td>
-                  <td>7</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>A24</td>
-                  <td>A2</td>
-                  <td>B51</td>
-                  <td></td>
-                  <td>Cw4</td>
-                  <td>Cw12</td>
-                  <td>DR4</td>
-                  <td>DR15</td>
-                  <td>243</td>
-                  <td>44%</td>
-                  <td>20%</td>
-                  <td>3.54</td>
-                  <td>0.56</td>
-                  <td>21.2</td>
-                  <td>G201208999</td>
-                  <td>検討中</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>24:02</td>
-                  <td>33:03</td>
-                  <td>51:01</td>
-                  <td>44:03</td>
-                  <td>04:01</td>
-                  <td>12:02</td>
-                  <td>13:02</td>
-                  <td>15:02</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>MIYG</td>
-                  <td></td>
-                </tr>
+              </tr>
+              <tr class="tb_bd-t">
+                <td>2</td>
+                <td>7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>A24</td>
+                <td>A2</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>Cw4</td>
+                <td>Cw12</td>
+                <td>DR4</td>
+                <td>DR15</td>
+                <td>243</td>
+                <td>44%</td>
+                <td>20%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>G201208999</td>
+                <td class="text-info">検討中</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>33:03</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>04:01</td>
+                <td>12:02</td>
+                <td>13:02</td>
+                <td>15:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>MIYG</td>
+                <td></td>
+              </tr>
+              <tr class="tb_bd-t">
+                <td>3</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>A24</td>
+                <td>A2</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>-</td>
+                <td>-</td>
+                <td>DR4</td>
+                <td class="text-white bg-danger">DR14</td>
+                <td>187</td>
+                <td>55%</td>
+                <td>42%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>110021337766</td>
+                <td class="text-light bg-warning">適用</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>33:03</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>-</td>
+                <td>-</td>
+                <td>13:02</td>
+                <td class="text-danger font-weight-bold">14:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>CENT</td>
+                <td></td>
+              </tr>
+              <tr class="tb_bd-t">
+                <td>4</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>A24</td>
+                <td>-</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>-</td>
+                <td>-</td>
+                <td>DR4</td>
+                <td class="text-white bg-danger">DR14</td>
+                <td>180</td>
+                <td>45%</td>
+                <td>66%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>G201208123</td>
+                <td class="text-light bg-warning">適用</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>-</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>-</td>
+                <td>-</td>
+                <td>13:02</td>
+                <td class="text-danger font-weight-bold">14:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TOKY</td>
+                <td></td>
+              </tr>
+              <tr class="tb_bd-t">
+                <td>5</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>A24</td>
+                <td>A2</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>Cw4</td>
+                <td>Cw12</td>
+                <td>DR4</td>
+                <td class="text-white bg-danger">DR14</td>
+                <td>166</td>
+                <td>57%</td>
+                <td>53%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>G201208456</td>
+                <td class="text-light bg-warning">適用</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>33:03</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>04:01</td>
+                <td>12:02</td>
+                <td>13:02</td>
+                <td class="text-danger font-weight-bold">14:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>KNKI</td>
+                <td></td>
               </tr>
             </tbody>
           </table>
