@@ -40,8 +40,8 @@
   <div class="main">
     <div class="hipsum">
       <div class="jumbotron" style="background:rgba(210, 250, 251, 0.15); ma">
-        <div class="titleAreas" style="max-width: 1360px;">
-          <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)</span></h1>
+        <div class="titleAreas" style="max-width: 1360px;"><span>(骨髄バンクの移植ソース)</span>
+          <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)          </span></h1>
         </div>
         <div class="l_patient-area">
           <div class="l_user-info pt-2">
@@ -125,7 +125,7 @@
             </table>
           </div>
         </div>
-        <div class="l_user-info">
+        <div class="l_user-info">  
           <table class="ptn_dnr" id="example">
             <tbody>
               <tr>
@@ -139,13 +139,10 @@
                 <th>GRFS</th>
                 <th>再発</th>
                 <th>GVHD</th>
-                <th>遊郭細胞数</th>
-                <th>CD34+細胞数</th>
-                <th>GMコロニー数</th>
                 <th>
-                  整理番号
-                  施設
-                </th>
+                   適合者総数</th>
+                <th>適合者数(男性)</th>
+                <th>適合者数(女性)</th>
                 <th></th>
               </tr>
               <tr class="subTH">
@@ -155,7 +152,6 @@
                 <th>HVG</th>
                 <th colspan="8">上段：抗原  / 下段：アリル</th>
                 <th>days</th>
-                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -179,10 +175,9 @@
                 <td>330</td>
                 <td>23%</td>
                 <td>24%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>M201108999</td>
+                <td>93</td>
+                <td>47</td>
+                <td>46</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -206,8 +201,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>KNKI</td>
-                <!--td-->
               </tr>
               <tr class="tb_bd-t">
                 <td>2</td>
@@ -225,10 +218,9 @@
                 <td>243</td>
                 <td>44%</td>
                 <td>20%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>G201208999</td>
+                <td>54</td>
+                <td>21</td>
+                <td>33</td>
                 <td class="text-info" rowspan="2" style="vertical-align:middle">
                   <button class="btn btn-secondary" type="button" name="button" disable="disable">検討中</button>
                 </td>
@@ -252,7 +244,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>MIYG</td>
               </tr>
               <tr class="tb_bd-t">
                 <td>3</td>
@@ -270,10 +261,9 @@
                 <td>187</td>
                 <td>55%</td>
                 <td>42%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>110021337766</td>
+                <td>126</td>
+                <td>98</td>
+                <td>28</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -296,9 +286,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>CENT</td>
-                <!--td-->
               </tr>
               <tr class="tb_bd-t">
                 <td>4</td>
@@ -316,10 +303,9 @@
                 <td>180</td>
                 <td>45%</td>
                 <td>66%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>G201208123</td>
+                <td>66</td>
+                <td>24</td>
+                <td>42</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -342,8 +328,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>TOKY</td>
               </tr>
               <tr class="tb_bd-t">
                 <td>5</td>
@@ -361,10 +345,9 @@
                 <td>166</td>
                 <td>57%</td>
                 <td>53%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>G201208456</td>
+                <td>79</td>
+                <td>39</td>
+                <td>40</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -387,29 +370,17 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>KNKI</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="mt-5 ml-5">
           <div class="row mt-3"><a href="search.html">
-              <button class="btn btn-lg" type="button" value="戻る" style="width:240px">戻る</button></a></div>
+              <button class="btn btn-lg btn-outline-info" type="button" value="戻る" style="width:240px">戻る</button></a></div>
         </div>
       </div>
     </div>
     <script src="js/datatables.min.js"></script>
     <script src="js/script.js"></script>
-    <!--script(type="text/javascript").
-    $('button.adaptation').on('click', function(e) {
-      $elem = $(e.target);
-      if ($elem.hasClass('active')) {
-        $elem.removeClass('active');
-      } else {
-        $elem.addClass('active');
-      }
-    });
-    -->
   </div>
 </body>
