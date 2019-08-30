@@ -101,6 +101,9 @@ p {
   max-width: 1366px;
   margin: auto;
   text-align: center;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .l_info {
@@ -235,6 +238,11 @@ p {
     border-radius: 3px;
     background-color: #fff;
 
+    .titleAreas {
+      max-width: 1140px;
+      margin: 0 auto 30px;
+    }
+
     h1 {
       margin: 0 0 12px;
       padding: 0;
@@ -290,7 +298,7 @@ table.inline-table {
 
   center {
     background: #eee;
-    margin: -12px -5px -12px;
+    margin: -12px -5px;
     padding: 8px;
     line-height: 1;
   }
@@ -313,8 +321,8 @@ table.inline-table {
 }
 
 .table_patient table th {
-  background: $color_warning!important;
-  border-color: darkorange!important;
+  // background: $color_warning!important;
+  // border-color: darkorange!important;
 }
 
 .table .thead-dark th {
@@ -412,13 +420,60 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .l_patient-area {
-  border: 1px solid rgba(#bbbbbb, 0.4);
-  background: rgba(255, 242, 222, 0.35);
-  margin-bottom: 40px;
+  border: 3px solid #fb9900;
+  background: rgba(255, 242, 222, 085);
+  margin-bottom: 50px;
   padding: 24px 32px 16px;
   border-radius: 8px;
+  // max-width: 1140px;
+  max-width: 1360px;
+  margin: 20px auto 40px;
 
   h3 {
     color: $color_warning;
+  }
+}
+
+table.ptn_dnr {
+  background-color: #fff;
+  border: 1px solid;
+  border-collapse: collapse;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  td,
+  th {
+    border: 1px solid rgb(201, 230, 255);
+
+    border-collapse: collapse;
+    padding: 3px;
+    min-width: calc(1140px / 20);
+    height: 25px;
+    padding: 4px;
+  }
+
+  th {
+    background: rgba(50, 174, 193, 0.9);
+    color: #fff;
+  }
+
+  .even {
+    background: #fbf8f0;
+  }
+
+  .odd {
+    background: #fefcf9;
+  }
+
+  tr.subTH th {
+    background: #99bdce;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dae7f1a3;
+    font-size: 19px;
+  }
+
+  .tb_bd-t {
+    border-top: 3px solid rgba(155, 204, 204, 0.83);
+    background: aliceblue;
   }
 }
