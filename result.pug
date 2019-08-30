@@ -1,0 +1,509 @@
+include pug/meta
+body
+  #head
+  // Content
+  .main
+    .hipsum
+      .jumbotron(style="background:rgba(210, 250, 251, 0.15);")
+        h1.m_title.lv3.p-2.mb-4.bg-info.text-white        
+          img(src="img/donor.svg", alt="alt")
+          span.ml-2 ドナー情報(K指標順)
+        .l_patient-area
+          .l_user-info.table_patient
+            h3
+              img(src="img/patient_og.svg", class="mb-2", alt="alt")
+              span.ml-2 患者情報
+            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto")
+              thead.thead-dark
+                tr
+                  th 患者ID
+                  th 性別
+                  th 年齢
+                  th 血液型
+                  th 病状（大分類）
+                  th 病状（小分類）
+                  th 病期
+              tbody
+                tr
+                  td P0000321
+                  td 男
+                  td 28
+                  td A+
+                  td Other lymphoma
+                  td(style="max-width:200px;") びまん性大細胞型B細胞性リンパ球
+                  td(style="max-width:200px;") 2CR
+
+            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto 20px")
+              thead.thead-dark
+                tr
+                  th(colspan="18" style="vertical-align: middle")
+                    | HLA
+              tbody
+                tr
+                  th(colspan="2")
+                    b HLA
+                  td(colspan="4")
+                    center A
+                  td(colspan="4")
+                    center B
+                  td(colspan="4")
+                    center C
+                  td(colspan="4")
+                    center D
+                tr
+                  th(style="width:50px; " colspan="2")
+                    b 検索用抗原
+                  th(style="width:65px; " colspan="2") DNA型
+                  th(style="width:50px; " colspan="2") 検索用抗原
+                  th(style="width:65px; " colspan="2") DNA型
+                  th(style="width:50px; " colspan="2") 検索用抗原
+                  th(style="width:65px; " colspan="2") DNA型
+                  th(style="width:50px; " colspan="2") 検索用抗原
+                  th(style="width:65px; " colspan="2") DNA型
+                tr
+                  th(colspan="2")
+                    b DNA型
+                  td A24
+                  td A2
+                  td 24:02
+                  td 33:03
+                  td B54
+                  td       
+                  td 52:01
+                  td 44:03
+                  td Cw4
+                  td Cw12
+                  td 04:01
+                  td 12:02
+                  td DR4
+                  td DR15
+                  td 13:02
+                  td 15:02
+                  
+        .l_user-info
+          table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style="display:table-cell;")
+            thead.thead-dark
+              tr
+                th.text-center(style="width:60px") No
+                th(style="width:50px") HLAマッチ
+                th(style="width:40px" colspan="2") ミスマッチ
+                th(style="width:40px") 年齢
+                th(style="width:40px") 血液型
+                th(style="width:80px") ABOミスマッチ
+                th(colspan="2") HLAミスマッチ座数 
+                th(style="width:60px") K指標
+                th(style="width:15%") HLA（A-C-B-DR-DQ-DP）
+                th(style="width:60px") 登録日
+                th(style="width:120px") 保管場所
+                th(style="width:60px") 適応
+              tr
+                th
+                th
+                th
+                th
+                th
+                th
+                th(style="width:60px") 血清型
+                th(style="width:75px") 遺伝子型
+                th
+                th
+                th
+                th
+                th
+            tbody
+              tr
+                td.text-center 1
+                td D0000321
+                td 男
+                td 28
+                td B-
+                td mismatch
+                td.text-center 2
+                td.text-center 1s
+                td 0.997
+                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
+                td 12/12/18
+                td 神戸市立医療センター中央市民病院
+                td(style="width:50px")
+                  button.btn.adaptation(type="button" name="button") 適用
+              tr
+                td.text-center 2
+                td D0000437
+                td 女
+                td 32
+                td A+
+                td Matched
+                td.text-center 2
+                td.text-center 2
+                td 0.992
+                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
+                td 10/01/12
+                td 世田谷市民病院
+                // <td class="text-primary">検討中</td>
+                td(style="width:50px")
+                  button.btn.adaptation(type="button" name="button") 適用
+              tr
+                td.text-center 3
+                td D0000335
+                td 男
+                td 40
+                td B+
+                td Major mismatch
+                td.text-center 3
+                td.text-center 4
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 埼玉大学病院
+                td(style="width:50px")
+                  button.btn.adaptation(type="button" name="button") 適用
+              tr
+                td.text-center 4
+                td D0000321
+                td 女
+                td 22
+                td B-
+                td Major-minor mismatch
+                td.text-center 3
+                td.text-center 5
+                td 0.947
+                td A＊24:02-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01
+                td 13/06/21
+                td 品川掖済会病院
+                td(style="width:50px")
+                  button.btn.adaptation(type="button" name="button") 適用
+              tr
+                td.text-center 5
+                td D0000437
+                td 女
+                td 32
+                td A+
+                td Matched
+                td.text-center 2
+                td.text-center 0
+                td 0.892
+                td A＊11:01-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01
+                td 11/03/01
+                td 駒沢病院
+                // <td class="text-primary">検討中</td>
+                td
+                  button.btn.btn-secondary(type="button" disabled="") 検討中
+              tr
+                td.text-center 6
+                td D0000335
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 7
+                td D0000321
+                td 男
+                td 28
+                td O-
+                td Minor mismatch
+                td.text-center 3
+                td.text-center 6
+                td 0.797
+                td A＊02:07-C＊01:02-B＊46:01-DRB1＊08:03-DQB1＊06:01-DPB1＊05:01
+                td 15/10/18
+                td 千葉医療センタ
+                td
+              tr
+                td.text-center 8
+                td D0000237
+                td 女
+                td 32
+                td A+
+                td Matched
+                td.text-center 2
+                td.text-center 2
+                td 0.992
+                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
+                td 10/01/12
+                td 世田谷市民病院
+                // <td class="text-primary">検討中</td>
+                td
+                  button.btn.btn-secondary(type="button" disabled="") 検討中
+              tr
+                td.text-center 9
+                td D0000135
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 10
+                td D0000907
+                td 男
+                td 28
+                td B-
+                td mismatch
+                td.text-center 2
+                td.text-center 1s
+                td 0.997
+                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
+                td 12/12/18
+                td 神戸市立医療センター中央市民病院
+                td
+              tr
+                td.text-center 11
+                td D0000887
+                td 女
+                td 32
+                td A+
+                td Matched
+                td.text-center 2
+                td.text-center 2
+                td 0.992
+                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
+                td 10/01/12
+                td 世田谷市民病院
+                // <td class="text-primary">検討中</td>
+                td
+                  button.btn.btn-secondary(type="button" disabled="") 検討中
+              tr
+                td.text-center 12
+                td D0000482
+                td 男
+                td 41
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 13
+                td D0000321
+                td 男
+                td 28
+                td B-
+                td mismatch
+                td.text-center 2
+                td.text-center 1s
+                td 0.997
+                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
+                td 12/12/18
+                td 神戸市立医療センター中央市民病院
+                td
+              tr
+                td.text-center 13
+                td D0000437
+                td 女
+                td 32
+                td A+
+                td Matched
+                td.text-center 2
+                td.text-center 2
+                td 0.992
+                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
+                td 10/01/12
+                td 世田谷市民病院
+                // <td class="text-primary">検討中</td>
+                td
+                  button.btn.btn-secondary(type="button" disabled="") 検討中
+              tr
+                td.text-center 14
+                td D0000335
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 15
+                td D0000321
+                td 男
+                td 28
+                td B-
+                td mismatch
+                td.text-center 2
+                td.text-center 1s
+                td 0.997
+                td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
+                td 12/12/18
+                td 神戸市立医療センター中央市民病院
+                td
+              tr
+                td.text-center 16
+                td D0000437
+                td 女
+                td 32
+                td A+
+                td Matched
+                td.text-center 2
+                td.text-center 2
+                td 0.992
+                td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
+                td 10/01/12
+                td 世田谷市民病院
+                // <td class="text-primary">検討中</td>
+                td
+                  button.btn.btn-secondary(type="button" disabled="") 検討中
+              tr
+                td.text-center 17
+                td D0000335
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 18
+                td D0000335
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 19
+                td D0000335
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+              tr
+                td.text-center 20
+                td D0000335
+                td 男
+                td 40
+                td AB-
+                td Minor mismatch
+                td.text-center 1
+                td.text-center 2
+                td 0.825
+                td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
+                td 14/08/12
+                td 大阪国立医療センター
+                td
+        .container.border_section.mt-5.pt-4
+          h1.m_title.lv3 前処置
+          .mb-4
+          form.row.px-1.px-1
+            .container.form-row
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect") 骨髄
+                select#inlineFormCustomSelect.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") RIC
+                  option(value="2") MAC
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 移放射線療法
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") あり
+                  option(value="2") なし
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 移植前処置
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") CY+TBI±
+                  option(value="2" selected="") Other TBI regimen
+                  option(value="3") BY＋CY±
+                  option(value="4") Other non TBI
+                  option(value="5") FL±TBI±
+                  option(value="6") Other RIST
+                  option(value="9") Missing
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 移植前処置2
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") FL+BU±
+                  option(value="2") FL+CY±
+                  option(value="3" selected="") FL+Mel±
+                  option(value="4") Other RIST
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") GVHD予防
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  option(value="0") 無し
+                  option(value="1" selected="") CyA+MTX
+                  option(value="2") CyA±
+                  option(value="3") Tac+MTX
+                  option(value="4") Tac±
+                  option(value="5") Other
+                  option(value="9") Missing
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") CSA/TAC
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  option(value="0") CyA-based
+                  option(value="1" selected="") Tac-based
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 体内T細胞除去
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  option(value="0") なし
+                  option(value="1" selected="") あり
+            .container
+              .row.col-md-6
+                label(for="inlineFormCustomSelect2") 補足
+                input.form-control(type="text" placeholder="入力する" style="width:100%;")
+            .mt-3
+              h3.m_title.lv3.mt-4 移植ソース
+              .container
+                .custom-control.custom-radio
+                  input#customRadio1.custom-control-input(type="radio" name="customRadio" checked="")
+                  label.custom-control-label(for="customRadio1") 全て
+                .custom-control.custom-radio
+                  input#customRadio2.custom-control-input(type="radio" name="customRadio")
+                  label.custom-control-label(for="customRadio2") 骨髄
+                .custom-control.custom-radio
+                  input#customRadio3.custom-control-input(type="radio" name="customRadio")
+                  label.custom-control-label(for="customRadio3") 末梢血幹細胞
+                .custom-control.custom-radio
+                  input#customRadio4.custom-control-input(type="radio" name="customRadio")
+                  label.custom-control-label(for="customRadio4") 臍帯血
+            .container.mt-4
+              .row
+                a(href="result.html")
+                  button.btn.btn-primary.btn-lg(type="button" value="検索する" style="width:240px") 再検索する
+          // /////
+          //
+            <div class="footer text-center">
+            <p>footer</p>
+            </div>
+    // <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    script(src="js/datatables.min.js")
+    script(src="js/script.js")

@@ -1,0 +1,167 @@
+include pug/meta
+body
+  #head
+  .main
+    .hipsum
+      .jumbotron(style="background:rgba(255, 242, 222, 0.35);")
+        .titleAreas
+          h1.m_title.lv3.p-2.mb-3.bg-warning.text-white
+            img(src="img/patient.svg", alt="alt")
+            span.ml-2 患者ID情報
+        .l_user-info
+          table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto")
+            thead.thead-dark
+              tr
+                th(style="width:65px;") 患者ID
+                th(style="width:30px;") 性別
+                th(style="width:30px;") 年齢
+                th(style="width:40px;") 血液型
+            tbody
+              tr
+                td P0000321
+                td 男
+                td 28
+                td A+
+          table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto")
+            thead.thead-dark
+              tr
+                th(style="width:80px;") 病状(大分類)
+                th(style="width:120px;") 病状()小分類)
+                th(style="width:50px;") 病期
+            tbody
+              tr
+                td Other lymphoma
+                td びまん性大細胞型B細胞性リンパ球
+                td 2CR
+          table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto")
+            thead.thead-dark
+              tr
+                th(colspan="18" style="vertical-align: middle")
+                  | HLA
+            tbody
+              tr
+                th(colspan="2")
+                  b HLA
+                td(colspan="4")
+                  center A
+                td(colspan="4")
+                  center B
+                td(colspan="4")
+                  center C
+                td(colspan="4")
+                  center D
+              tr
+                th(style="width:50px; " colspan="2")
+                  b 検索用抗原
+                th(style="width:65px; " colspan="2") DNA型
+                th(style="width:50px; " colspan="2") 検索用抗原
+                th(style="width:65px; " colspan="2") DNA型
+                th(style="width:50px; " colspan="2") 検索用抗原
+                th(style="width:65px; " colspan="2") DNA型
+                th(style="width:50px; " colspan="2") 検索用抗原
+                th(style="width:65px; " colspan="2") DNA型
+              tr
+                th(colspan="2")
+                  b DNA型
+                td A24
+                td A2
+                td 24:02
+                td 33:03
+                td B54
+                td       
+                td 52:01
+                td 44:03
+                td Cw4
+                td Cw12
+                td 04:01
+                td 12:02
+                td DR4
+                td DR15
+                td 13:02
+                td 15:02
+        .container.border_section.mt-4
+          h3.row.m_title.lv3.mt-4.mb-3 前処置
+          form.row.px-1.px-1
+            .container.form-row
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect") 骨髄
+                select#inlineFormCustomSelect.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") RIC
+                  option(value="2") MAC
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 移放射線療法
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") あり
+                  option(value="2") なし
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 移植前処置
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") CY+TBI±
+                  option(value="2" selected="") Other TBI regimen
+                  option(value="3") BY＋CY±
+                  option(value="4") Other non TBI
+                  option(value="5") FL±TBI±
+                  option(value="6") Other RIST
+                  option(value="9") Missing
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 移植前処置2
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  // <option selected>選択する</option>
+                  option(value="1") FL+BU±
+                  option(value="2") FL+CY±
+                  option(value="3" selected="") FL+Mel±
+                  option(value="4") Other RIST
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") GVHD予防
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  option(value="0") 無し
+                  option(value="1" selected="") CyA+MTX
+                  option(value="2") CyA±
+                  option(value="3") Tac+MTX
+                  option(value="4") Tac±
+                  option(value="5") Other
+                  option(value="9") Missing
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") CSA/TAC
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  option(value="0") CyA-based
+                  option(value="1" selected="") Tac-based
+              .formSection
+                label.mr-sm-2(for="inlineFormCustomSelect2") 体内T細胞除去
+                select#inlineFormCustomSelect2.custom-select.mr-sm-2
+                  option(value="0") なし
+                  option(value="1" selected="") あり
+            .container
+              .row.col-md-6
+                label(for="inlineFormCustomSelect2") 補足
+                input.form-control(type="text" placeholder="入力する" style="width:100%;")
+            .mt-3
+              h3.m_title.lv3.mt-4 移植ソース
+              .container
+                .custom-control.custom-radio
+                  input#customRadio1.custom-control-input(type="radio" name="customRadio" checked="")
+                  label.custom-control-label(for="customRadio1") 全て
+                .custom-control.custom-radio
+                  input#customRadio2.custom-control-input(type="radio" name="customRadio")
+                  label.custom-control-label(for="customRadio2") 骨髄
+                .custom-control.custom-radio
+                  input#customRadio3.custom-control-input(type="radio" name="customRadio")
+                  label.custom-control-label(for="customRadio3") 末梢血幹細胞
+                .custom-control.custom-radio
+                  input#customRadio4.custom-control-input(type="radio" name="customRadio")
+                  label.custom-control-label(for="customRadio4") 臍帯血
+            .container.mt-4
+              .row
+                a(href="result.html")
+                  button.btn.btn-primary.btn-lg(type="button" value="検索する" style="width:240px")
+                    | 検索する
+          // /////
+          //
+            <div class="footer text-center">
+            <p>footer</p>
+            </div>
+  script(src="https://code.jquery.com/jquery-3.3.1.js")
+  script(src="js/script.js")

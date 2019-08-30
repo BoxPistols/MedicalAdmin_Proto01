@@ -101,6 +101,9 @@ p {
   max-width: 1366px;
   margin: auto;
   text-align: center;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .l_info {
@@ -235,6 +238,11 @@ p {
     border-radius: 3px;
     background-color: #fff;
 
+    .titleAreas {
+      max-width: 1140px;
+      margin: 0 auto 30px;
+    }
+
     h1 {
       margin: 0 0 12px;
       padding: 0;
@@ -313,8 +321,8 @@ table.inline-table {
 }
 
 .table_patient table th {
-  background: $color_warning!important;
-  border-color: darkorange!important;
+  // background: $color_warning!important;
+  // border-color: darkorange!important;
 }
 
 .table .thead-dark th {
