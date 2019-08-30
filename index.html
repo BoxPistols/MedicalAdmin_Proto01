@@ -11,31 +11,29 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-      $(function() {
-      $("#head").load("head.html .header, .sidebar",
-      function() {
-        //コールバック後のjavascriptをここに記述する
-          var main = document.querySelector(".main");
-          var sidebar = document.querySelector(".sidebar");
-          var menutoggle = document.querySelector("#menu-toggle");
-          var l_info = document.querySelector(".l_info");
-          menutoggle.addEventListener("click", function(e) {
-          menutoggle.classList.toggle("active");
-          main.classList.toggle("active");
-          sidebar.classList.toggle("active");
-          l_info.classList.toggle("active");
-          if (sidebar.classList.contains("active")) {
-          menutoggle.querySelector("i").classList.remove("fa-bars");
-          } else {
-          menutoggle.querySelector("i").classList.add("fa-bars");
-          }
-          });
-        });
-      })
-    </script>
   </head>
 </html>
+<div class="header"><a id="menu-toggle" href="#"><i class="fa fa-bars"></i><span>Menu</span></a>
+  <div class="logo"><a href="index.html"><img src="img/logo.svg" alt=""><span class="ml-3">患者/ドナー検索システム</span></a></div>
+  <div class="l_info">
+    <div class="m_title">
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li>This Page</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <ul>
+    <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+    <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
+    <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
+    <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
+    <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+    <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+  </ul>
+</div>
 <body>
   <div id="head"></div>
   <div class="main">
@@ -43,7 +41,6 @@
       <div class="jumbotrons">
         <h1 class="m_title lv3">トップページ</h1>
         <div class="l_user-info mt-4"></div>
-        <!-- <p class="mt-4">リンク</p>-->
         <ul class="d-flex align-items-center">
           <li><a href="search.html">
               <button class="btn btn-outline-warning" type="button">
@@ -71,14 +68,8 @@
               </button></a></li>
         </ul>
       </div>
-      <!--
-      <div class="footer text-center">
-      <p>footer</p>
-      </div>        
-      -->
     </div>
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>-->
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="js/script.js"></script>
   </div>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
