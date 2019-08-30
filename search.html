@@ -135,7 +135,7 @@
         </div>
         <div class="container border_section mt-4">
           <h3 class="row m_title lv3 mt-4 mb-3">前処置</h3>
-          <form class="row px-1 px-1">
+          <form class="row px-1 px-1" name="form1">
             <div class="container form-row">
               <div class="formSection">
                 <label class="mr-sm-2" for="inlineFormCustomSelect">骨髄</label>
@@ -218,7 +218,7 @@
                 </div>
                 <div class="custom-control custom-radio">
                   <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
-                  <label class="custom-control-label" for="customRadio2">骨髄</label>
+                  <label class="custom-control-label" for="customRadio2">骨髄(*骨髄バンクへ遷移)</label>
                 </div>
                 <div class="custom-control custom-radio">
                   <input class="custom-control-input" id="customRadio3" type="radio" name="customRadio">
@@ -231,9 +231,20 @@
               </div>
             </div>
             <div class="container mt-4">
-              <div class="row"><a href="result.html">
-                  <button class="btn btn-primary btn-lg" type="button" value="検索する" style="width:240px">検索する</button></a></div>
+              <div class="row">
+                <button class="btn btn-primary btn-lg" type="button" value="検索する" onclick="link()" style="width:240px">検索する</button>
+              </div>
             </div>
+            <!--a(href="result.html")                    -->
+            <!--.row        
+            input(type='radio' name='room')
+            | りんご入荷！
+            input(type='radio' name='room')
+            | みかん入荷！
+            hr
+            input(type='button' value='移動' onclick='link()')
+                  
+            -->
           </form>
           <!-- /////-->
           <!--

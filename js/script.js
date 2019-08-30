@@ -63,3 +63,18 @@ $('button.adaptation').on('click', function(e) {
     $elem.addClass('active');
   }
 });
+
+
+/////// Radio
+function link() {
+  if (document.form1.customRadio[0].checked == true)
+    location.href = "result.html";
+  if (document.form1.customRadio[1].checked == true)
+    location.href = "result_bank.html";
+  if (document.form1.customRadio[2].checked == true)
+    location.href = "result.html";
+  if (document.form1.customRadio[3].checked == true)
+    location.href = "result.html";
+  if (document.form1.customRadio[4].checked == true)
+    location.href = "result.html";
+}
