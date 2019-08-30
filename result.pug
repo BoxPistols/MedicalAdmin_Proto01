@@ -33,6 +33,7 @@ body
                   td(style="max-width:200px;") びまん性大細胞型B細胞性リンパ球
                   td(style="max-width:200px;") 2CR
 
+
             table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto 20px")
               thead.thead-dark
                 tr
@@ -81,7 +82,128 @@ body
                   td 15:02
                   
         .l_user-info
-          table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style="display:table-cell;")
+          table.ptn_dnr#example
+            tbody
+              tr
+                th No
+                th HLAマッチ
+                th(colspan="2") ミスマッチ
+                th(colspan="2") A
+                th(colspan="2") B
+                th(colspan="2") C
+                th(colspan="2") DR
+                th GRFS
+                th 再発
+                th GVHD
+                th 遊郭細胞数
+                th CD34+細胞数
+                th GMコロニー数
+                th
+                  | 整理番号
+                  | 施設
+                th
+              tr.subTH
+                th
+                th
+                th GVH
+                th HVG
+                th(colspan="8") 上段：抗原  下段：リアル
+                th days
+                th
+                th
+                th
+                th
+                th
+                th
+                th
+              tr
+                td 1
+                td 8
+                td 1
+                td 1
+                td A24
+                td A2
+                td B54
+                td
+                td Cw4
+                td Cw12
+                td DR4
+                td DR15
+                td 330
+                td 23%
+                td 24%
+                td 3.54
+                td 0.56
+                td 21.2
+                td M201108999
+                td 適合
+              tr
+                td
+                td
+                td
+                td
+                td 24:02
+                td 33:03
+                td 52:01
+                td 44:03
+                td 04:01
+                td 12:05
+                td 13:02
+                td 15:02
+                td
+                td
+                td
+                td
+                td
+                td
+                td KNKI
+                td
+
+                tr(class="tb_bd-t")
+                  td 2
+                  td 7
+                  td 2
+                  td 1
+                  td A24
+                  td A2
+                  td B51
+                  td
+                  td Cw4
+                  td Cw12
+                  td DR4
+                  td DR15
+                  td 243
+                  td 44%
+                  td 20%
+                  td 3.54
+                  td 0.56
+                  td 21.2
+                  td G201208999
+                  td 検討中
+                  
+                tr
+                  td
+                  td
+                  td
+                  td
+                  td 24:02
+                  td 33:03
+                  td 51:01
+                  td 44:03
+                  td 04:01
+                  td 12:02
+                  td 13:02
+                  td 15:02
+                  td
+                  td
+                  td
+                  td
+                  td
+                  td
+                  td MIYG
+                  td
+
+          //table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style="display:table-cell;")
             thead.thead-dark
               tr
                 th.text-center(style="width:60px") No
@@ -420,6 +542,7 @@ body
                 td 14/08/12
                 td 大阪国立医療センター
                 td
+        
         .container.border_section.mt-5.pt-4
           h1.m_title.lv3 前処置
           .mb-4

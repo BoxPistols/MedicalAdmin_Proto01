@@ -430,3 +430,42 @@ div.dataTables_wrapper div.dataTables_filter input {
     color: $color_warning;
   }
 }
+
+table.ptn_dnr {
+  border: 1px solid;
+  border-collapse: collapse;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  td,
+  th {
+    border: 1px solid #28b;
+    border-collapse: collapse;
+    padding: 3px;
+    min-width: calc(1140px / 20);
+    height: 25px;
+    padding: 4px;
+  }
+
+  th {
+    background: #17a2b8;
+    color: #fff;
+  }
+
+  .even {
+    background: #fbf8f0;
+  }
+
+  .odd {
+    background: #fefcf9;
+  }
+
+  tr.subTH th {
+    background: #d6edf5;
+    color: #0c4979;
+  }
+
+  .tb_bd-t {
+    border-top: 2px solid #1866a5;
+  }
+}
