@@ -11,42 +11,42 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-      $(function() {
-      $("#head").load("head.html .header, .sidebar",
-      function() {
-        //コールバック後のjavascriptをここに記述する
-          var main = document.querySelector(".main");
-          var sidebar = document.querySelector(".sidebar");
-          var menutoggle = document.querySelector("#menu-toggle");
-          var l_info = document.querySelector(".l_info");
-          menutoggle.addEventListener("click", function(e) {
-          menutoggle.classList.toggle("active");
-          main.classList.toggle("active");
-          sidebar.classList.toggle("active");
-          l_info.classList.toggle("active");
-          if (sidebar.classList.contains("active")) {
-          menutoggle.querySelector("i").classList.remove("fa-bars");
-          } else {
-          menutoggle.querySelector("i").classList.add("fa-bars");
-          }
-          });
-        });
-      })
-    </script>
   </head>
 </html>
+<div class="header"><a id="menu-toggle" href="#"><i class="fa fa-bars"></i><span>Menu</span></a>
+  <div class="logo"><a href="index.html"><img src="img/logo.svg" alt=""><span class="ml-3">患者/ドナー検索システム</span></a></div>
+  <div class="l_info">
+    <div class="m_title">
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li>This Page</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <ul>
+    <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+    <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
+    <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
+    <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
+    <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+    <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+  </ul>
+</div>
 <body>
   <div id="head"></div>
   <!-- Content-->
   <div class="main">
     <div class="hipsum">
-      <div class="jumbotron" style="background:rgba(210, 250, 251, 0.15);">
-        <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)</span></h1>
+      <div class="jumbotron" style="background:rgba(210, 250, 251, 0.15); ma">
+        <div class="titleAreas" style="max-width: 1360px;">
+          <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)</span></h1>
+        </div>
         <div class="l_patient-area">
-          <div class="l_user-info table_patient">
-            <h3><img class="mb-2" src="img/patient_og.svg" alt="alt"><span class="ml-2">患者情報</span></h3>
-            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto">
+          <div class="l_user-info pt-2">
+            <h3 class="text-left" style="max-width: 1140px; margin-left: calc((1366px - 1140px) / 2 - 40px);"><img class="mb-2" src="img/patient_og.svg" alt="alt" style="border: 1px solid orange; padding: 0px 3px; background:rgba(255,255,255,0.7); "><span class="ml-2">患者情報</span></h3>
+            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto; background:rgba(255,255,2555,0.8)">
               <thead class="thead-dark">
                 <tr>
                   <th>患者ID</th>
@@ -70,7 +70,7 @@
                 </tr>
               </tbody>
             </table>
-            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto 20px">
+            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto 20px;  background:rgba(255,255,2555,0.8)">
               <thead class="thead-dark">
                 <tr>
                   <th colspan="18" style="vertical-align: middle">HLA</th>
@@ -153,7 +153,7 @@
                 <th></th>
                 <th>GVH</th>
                 <th>HVG</th>
-                <th colspan="8">上段：抗原  下段：リアル</th>
+                <th colspan="8">上段：抗原  / 下段：アリル</th>
                 <th>days</th>
                 <th></th>
                 <th></th>
@@ -163,7 +163,7 @@
                 <th></th>
                 <th></th>
               </tr>
-              <tr>
+              <tr class="tb_bd-t">
                 <td>1</td>
                 <td>8</td>
                 <td>1</td>
@@ -183,7 +183,9 @@
                 <td>0.56</td>
                 <td>21.2</td>
                 <td>M201108999</td>
-                <td>適合</td>
+                <td rowspan="2" style="vertical-align:middle">
+                  <button class="btn adaptation" type="button" name="button">適用</button>
+                </td>
               </tr>
               <tr>
                 <td></td>
@@ -205,510 +207,209 @@
                 <td></td>
                 <td></td>
                 <td>KNKI</td>
+                <!--td-->
+              </tr>
+              <tr class="tb_bd-t">
+                <td>2</td>
+                <td>7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>A24</td>
+                <td>A2</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
                 <td></td>
-                <tr class="tb_bd-t">
-                  <td>2</td>
-                  <td>7</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>A24</td>
-                  <td>A2</td>
-                  <td>B51</td>
-                  <td></td>
-                  <td>Cw4</td>
-                  <td>Cw12</td>
-                  <td>DR4</td>
-                  <td>DR15</td>
-                  <td>243</td>
-                  <td>44%</td>
-                  <td>20%</td>
-                  <td>3.54</td>
-                  <td>0.56</td>
-                  <td>21.2</td>
-                  <td>G201208999</td>
-                  <td>検討中</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>24:02</td>
-                  <td>33:03</td>
-                  <td>51:01</td>
-                  <td>44:03</td>
-                  <td>04:01</td>
-                  <td>12:02</td>
-                  <td>13:02</td>
-                  <td>15:02</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>MIYG</td>
-                  <td></td>
-                </tr>
+                <td>Cw4</td>
+                <td>Cw12</td>
+                <td>DR4</td>
+                <td>DR15</td>
+                <td>243</td>
+                <td>44%</td>
+                <td>20%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>G201208999</td>
+                <td class="text-info" rowspan="2" style="vertical-align:middle">
+                  <button class="btn btn-secondary" type="button" name="button" disable="disable">検討中</button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>33:03</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>04:01</td>
+                <td>12:02</td>
+                <td>13:02</td>
+                <td>15:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>MIYG</td>
+              </tr>
+              <tr class="tb_bd-t">
+                <td>3</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>A24</td>
+                <td>A2</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>-</td>
+                <td>-</td>
+                <td>DR4</td>
+                <td class="text-white bg-danger">DR14</td>
+                <td>187</td>
+                <td>55%</td>
+                <td>42%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>110021337766</td>
+                <td rowspan="2" style="vertical-align:middle">
+                  <button class="btn adaptation" type="button" name="button">適用</button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>33:03</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>-</td>
+                <td>-</td>
+                <td>13:02</td>
+                <td class="text-danger font-weight-bold">14:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>CENT</td>
+                <!--td-->
+              </tr>
+              <tr class="tb_bd-t">
+                <td>4</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>A24</td>
+                <td>-</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>-</td>
+                <td>-</td>
+                <td>DR4</td>
+                <td class="text-white bg-danger">DR14</td>
+                <td>180</td>
+                <td>45%</td>
+                <td>66%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>G201208123</td>
+                <td rowspan="2" style="vertical-align:middle">
+                  <button class="btn adaptation" type="button" name="button">適用</button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>-</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>-</td>
+                <td>-</td>
+                <td>13:02</td>
+                <td class="text-danger font-weight-bold">14:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TOKY</td>
+              </tr>
+              <tr class="tb_bd-t">
+                <td>5</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>A24</td>
+                <td>A2</td>
+                <td class="bg-danger text-white font-weight-bold">B51</td>
+                <td></td>
+                <td>Cw4</td>
+                <td>Cw12</td>
+                <td>DR4</td>
+                <td class="text-white bg-danger">DR14</td>
+                <td>166</td>
+                <td>57%</td>
+                <td>53%</td>
+                <td>3.54</td>
+                <td>0.56</td>
+                <td>21.2</td>
+                <td>G201208456</td>
+                <td rowspan="2" style="vertical-align:middle">
+                  <button class="btn adaptation" type="button" name="button">適用</button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>24:02</td>
+                <td>33:03</td>
+                <td class="text-danger font-weight-bold">51:01</td>
+                <td>44:03</td>
+                <td>04:01</td>
+                <td>12:02</td>
+                <td>13:02</td>
+                <td class="text-danger font-weight-bold">14:02</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>KNKI</td>
               </tr>
             </tbody>
           </table>
-          <!--table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style="display:table-cell;")
-          thead.thead-dark
-            tr
-              th.text-center(style="width:60px") No
-              th(style="width:50px") HLAマッチ
-              th(style="width:40px" colspan="2") ミスマッチ
-              th(style="width:40px") 年齢
-              th(style="width:40px") 血液型
-              th(style="width:80px") ABOミスマッチ
-              th(colspan="2") HLAミスマッチ座数 
-              th(style="width:60px") K指標
-              th(style="width:15%") HLA（A-C-B-DR-DQ-DP）
-              th(style="width:60px") 登録日
-              th(style="width:120px") 保管場所
-              th(style="width:60px") 適応
-            tr
-              th
-              th
-              th
-              th
-              th
-              th
-              th(style="width:60px") 血清型
-              th(style="width:75px") 遺伝子型
-              th
-              th
-              th
-              th
-              th
-          tbody
-            tr
-              td.text-center 1
-              td D0000321
-              td 男
-              td 28
-              td B-
-              td mismatch
-              td.text-center 2
-              td.text-center 1s
-              td 0.997
-              td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-              td 12/12/18
-              td 神戸市立医療センター中央市民病院
-              td(style="width:50px")
-                button.btn.adaptation(type="button" name="button") 適用
-            tr
-              td.text-center 2
-              td D0000437
-              td 女
-              td 32
-              td A+
-              td Matched
-              td.text-center 2
-              td.text-center 2
-              td 0.992
-              td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-              td 10/01/12
-              td 世田谷市民病院
-              // <td class="text-primary">検討中</td>
-              td(style="width:50px")
-                button.btn.adaptation(type="button" name="button") 適用
-            tr
-              td.text-center 3
-              td D0000335
-              td 男
-              td 40
-              td B+
-              td Major mismatch
-              td.text-center 3
-              td.text-center 4
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 埼玉大学病院
-              td(style="width:50px")
-                button.btn.adaptation(type="button" name="button") 適用
-            tr
-              td.text-center 4
-              td D0000321
-              td 女
-              td 22
-              td B-
-              td Major-minor mismatch
-              td.text-center 3
-              td.text-center 5
-              td 0.947
-              td A＊24:02-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01
-              td 13/06/21
-              td 品川掖済会病院
-              td(style="width:50px")
-                button.btn.adaptation(type="button" name="button") 適用
-            tr
-              td.text-center 5
-              td D0000437
-              td 女
-              td 32
-              td A+
-              td Matched
-              td.text-center 2
-              td.text-center 0
-              td 0.892
-              td A＊11:01-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01
-              td 11/03/01
-              td 駒沢病院
-              // <td class="text-primary">検討中</td>
-              td
-                button.btn.btn-secondary(type="button" disabled="") 検討中
-            tr
-              td.text-center 6
-              td D0000335
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 7
-              td D0000321
-              td 男
-              td 28
-              td O-
-              td Minor mismatch
-              td.text-center 3
-              td.text-center 6
-              td 0.797
-              td A＊02:07-C＊01:02-B＊46:01-DRB1＊08:03-DQB1＊06:01-DPB1＊05:01
-              td 15/10/18
-              td 千葉医療センタ
-              td
-            tr
-              td.text-center 8
-              td D0000237
-              td 女
-              td 32
-              td A+
-              td Matched
-              td.text-center 2
-              td.text-center 2
-              td 0.992
-              td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-              td 10/01/12
-              td 世田谷市民病院
-              // <td class="text-primary">検討中</td>
-              td
-                button.btn.btn-secondary(type="button" disabled="") 検討中
-            tr
-              td.text-center 9
-              td D0000135
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 10
-              td D0000907
-              td 男
-              td 28
-              td B-
-              td mismatch
-              td.text-center 2
-              td.text-center 1s
-              td 0.997
-              td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-              td 12/12/18
-              td 神戸市立医療センター中央市民病院
-              td
-            tr
-              td.text-center 11
-              td D0000887
-              td 女
-              td 32
-              td A+
-              td Matched
-              td.text-center 2
-              td.text-center 2
-              td 0.992
-              td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-              td 10/01/12
-              td 世田谷市民病院
-              // <td class="text-primary">検討中</td>
-              td
-                button.btn.btn-secondary(type="button" disabled="") 検討中
-            tr
-              td.text-center 12
-              td D0000482
-              td 男
-              td 41
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 13
-              td D0000321
-              td 男
-              td 28
-              td B-
-              td mismatch
-              td.text-center 2
-              td.text-center 1s
-              td 0.997
-              td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-              td 12/12/18
-              td 神戸市立医療センター中央市民病院
-              td
-            tr
-              td.text-center 13
-              td D0000437
-              td 女
-              td 32
-              td A+
-              td Matched
-              td.text-center 2
-              td.text-center 2
-              td 0.992
-              td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-              td 10/01/12
-              td 世田谷市民病院
-              // <td class="text-primary">検討中</td>
-              td
-                button.btn.btn-secondary(type="button" disabled="") 検討中
-            tr
-              td.text-center 14
-              td D0000335
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 15
-              td D0000321
-              td 男
-              td 28
-              td B-
-              td mismatch
-              td.text-center 2
-              td.text-center 1s
-              td 0.997
-              td A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01
-              td 12/12/18
-              td 神戸市立医療センター中央市民病院
-              td
-            tr
-              td.text-center 16
-              td D0000437
-              td 女
-              td 32
-              td A+
-              td Matched
-              td.text-center 2
-              td.text-center 2
-              td 0.992
-              td A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01
-              td 10/01/12
-              td 世田谷市民病院
-              // <td class="text-primary">検討中</td>
-              td
-                button.btn.btn-secondary(type="button" disabled="") 検討中
-            tr
-              td.text-center 17
-              td D0000335
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 18
-              td D0000335
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 19
-              td D0000335
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-            tr
-              td.text-center 20
-              td D0000335
-              td 男
-              td 40
-              td AB-
-              td Minor mismatch
-              td.text-center 1
-              td.text-center 2
-              td 0.825
-              td A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02
-              td 14/08/12
-              td 大阪国立医療センター
-              td
-          
-          -->
         </div>
-        <div class="container border_section mt-5 pt-4">
-          <h1 class="m_title lv3">前処置</h1>
-          <div class="mb-4"></div>
-          <form class="row px-1 px-1">
-            <div class="container form-row">
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">骨髄</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                  <!-- <option selected>選択する</option>-->
-                  <option value="1">RIC</option>
-                  <option value="2">MAC</option>
-                </select>
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">移放射線療法</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <!-- <option selected>選択する</option>-->
-                  <option value="1">あり</option>
-                  <option value="2">なし</option>
-                </select>
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">移植前処置</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <!-- <option selected>選択する</option>-->
-                  <option value="1">CY+TBI±</option>
-                  <option value="2" selected="">Other TBI regimen</option>
-                  <option value="3">BY＋CY±</option>
-                  <option value="4">Other non TBI</option>
-                  <option value="5">FL±TBI±</option>
-                  <option value="6">Other RIST</option>
-                  <option value="9">Missing</option>
-                </select>
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">移植前処置2</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <!-- <option selected>選択する</option>-->
-                  <option value="1">FL+BU±</option>
-                  <option value="2">FL+CY±</option>
-                  <option value="3" selected="">FL+Mel±</option>
-                  <option value="4">Other RIST</option>
-                </select>
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">GVHD予防</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <option value="0">無し</option>
-                  <option value="1" selected="">CyA+MTX</option>
-                  <option value="2">CyA±</option>
-                  <option value="3">Tac+MTX</option>
-                  <option value="4">Tac±</option>
-                  <option value="5">Other</option>
-                  <option value="9">Missing</option>
-                </select>
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">CSA/TAC</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <option value="0">CyA-based</option>
-                  <option value="1" selected="">Tac-based</option>
-                </select>
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="inlineFormCustomSelect2">体内T細胞除去</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
-                  <option value="0">なし</option>
-                  <option value="1" selected="">あり</option>
-                </select>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row col-md-6">
-                <label for="inlineFormCustomSelect2">補足</label>
-                <input class="form-control" type="text" placeholder="入力する" style="width:100%;">
-              </div>
-            </div>
-            <div class="mt-3">
-              <h3 class="m_title lv3 mt-4">移植ソース</h3>
-              <div class="container">
-                <div class="custom-control custom-radio">
-                  <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio" checked="">
-                  <label class="custom-control-label" for="customRadio1">全て</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
-                  <label class="custom-control-label" for="customRadio2">骨髄</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input class="custom-control-input" id="customRadio3" type="radio" name="customRadio">
-                  <label class="custom-control-label" for="customRadio3">末梢血幹細胞</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input class="custom-control-input" id="customRadio4" type="radio" name="customRadio">
-                  <label class="custom-control-label" for="customRadio4">臍帯血</label>
-                </div>
-              </div>
-            </div>
-            <div class="container mt-4">
-              <div class="row"><a href="result.html">
-                  <button class="btn btn-primary btn-lg" type="button" value="検索する" style="width:240px">再検索する</button></a></div>
-            </div>
-          </form>
-          <!-- /////-->
-          <!--
-          <div class="footer text-center">
-          <p>footer</p>
-          </div>
-          -->
+        <div class="mt-5 ml-5">
+          <div class="row mt-3"><a href="search.html">
+              <button class="btn btn-lg" type="button" value="戻る" style="width:240px">戻る</button></a></div>
         </div>
       </div>
     </div>
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>-->
     <script src="js/datatables.min.js"></script>
     <script src="js/script.js"></script>
+    <!--script(type="text/javascript").
+    $('button.adaptation').on('click', function(e) {
+      $elem = $(e.target);
+      if ($elem.hasClass('active')) {
+        $elem.removeClass('active');
+      } else {
+        $elem.addClass('active');
+      }
+    });
+    -->
   </div>
 </body>
