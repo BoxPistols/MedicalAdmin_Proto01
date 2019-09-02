@@ -11,78 +11,78 @@ body
           h1.m_title.lv3.p-2.mb-4.bg-info.text-white        
             img(src="img/donor.svg", alt="alt")
             span.ml-2 ドナー情報(K指標順)          
+  
         .l_patient-area
-          .l_user-info.pt-2
+          .l_user-info.pt-2.pb-3
             h3.text-left(style="max-width: 1140px; margin-left: calc((1366px - 1140px) / 2 - 40px);")
               img(src="img/patient_og.svg", class="mb-2", alt="alt", style="border: 1px solid orange; padding: 0px 3px; background:rgba(255,255,255,0.7); ")
               span.ml-2 患者情報
+
+            // Re
             table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto; background:rgba(255,255,2555,0.8)")
               thead.thead-dark
                 tr
-                  th 患者ID
-                  th 性別
-                  th 年齢
-                  th 血液型
-                  th 病状（大分類）
-                  th 病状（小分類）
-                  th 病期
+                  th(style='width:65px;') &#x60A3;&#x8005;ID
+                  th(style='width:30px;') &#x6027;&#x5225;
+                  th(style='width:30px;') &#x5E74;&#x9F62;
+                  th(style='width:40px;') &#x8840;&#x6DB2;&#x578B;
               tbody
                 tr
                   td P0000321
-                  td 男
+                  td &#x7537;
                   td 28
                   td A+
-                  td Other lymphoma
-                  td(style="max-width:200px;") びまん性大細胞型B細胞性リンパ球
-                  td(style="max-width:200px;") 2CR
-
-
-            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id="" style="max-width: 1140px; margin: 0 auto 20px;  background:rgba(255,255,2555,0.8)")
+            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id='' style='max-width: 1140px; margin: 0 auto')
               thead.thead-dark
                 tr
-                  th(colspan="18" style="vertical-align: middle")
-                    | HLA
+                  th(style='width:80px;') &#x75C5;&#x72B6;(&#x5927;&#x5206;&#x985E;)
+                  th(style='width:120px;') &#x75C5;&#x72B6;()&#x5C0F;&#x5206;&#x985E;)
+                  th(style='width:50px;') &#x75C5;&#x671F;
               tbody
                 tr
-                  th(colspan="2")
+                  td Other lymphoma
+                  td &#x3073;&#x307E;&#x3093;&#x6027;&#x5927;&#x7D30;&#x80DE;&#x578B;B&#x7D30;&#x80DE;&#x6027;&#x30EA;&#x30F3;&#x30D1;&#x7403;
+                  td 2CR
+            table.display.table.inline-table.table-responsive-lg.table-sm.table-bordered(id='' style='max-width: 1140px; margin: 0 auto')
+              thead.thead-dark
+                tr
+                  th(colspan='18' style='vertical-align: middle') HLA
+              tbody
+                tr
+                  th(colspan='2')
                     b HLA
-                  td(colspan="4")
+                  td(colspan='4')
                     center A
-                  td(colspan="4")
+                  td(colspan='4')
                     center B
-                  td(colspan="4")
+                  td(colspan='4')
                     center C
-                  td(colspan="4")
+                  td(colspan='4')
                     center D
                 tr
-                  th(style="width:50px; " colspan="2")
-                    b 検索用抗原
-                  th(style="width:65px; " colspan="2") DNA型
-                  th(style="width:50px; " colspan="2") 検索用抗原
-                  th(style="width:65px; " colspan="2") DNA型
-                  th(style="width:50px; " colspan="2") 検索用抗原
-                  th(style="width:65px; " colspan="2") DNA型
-                  th(style="width:50px; " colspan="2") 検索用抗原
-                  th(style="width:65px; " colspan="2") DNA型
+                  th(style='width:50px;' colspan='2')
+                    b &#x691C;&#x7D22;&#x7528;&#x6297;&#x539F;
+                  th(style='width:65px;' colspan='2') A24
+                  th(style='width:50px;' colspan='2') A2
+                  th(style='width:65px;' colspan='2') B54
+                  th(style='width:50px;' colspan='2') &nbsp;
+                  th(style='width:65px;' colspan='2') Cw4
+                  th(style='width:50px;' colspan='2') Cw12
+                  th(style='width:65px;' colspan='2') DR4
+                  th(style='width:65px;' colspan='2') DR15
                 tr
-                  th(colspan="2")
-                    b DNA型
-                  td A24
-                  td A2
-                  td 24:02
-                  td 33:03
-                  td B54
-                  td       
-                  td 52:01
-                  td 44:03
-                  td Cw4
-                  td Cw12
-                  td 04:01
-                  td 12:02
-                  td DR4
-                  td DR15
-                  td 13:02
-                  td 15:02
+                  th(colspan='2')
+                    b DNA&#x578B;
+                  td(colspan='2') 24:02
+                  td(colspan='2') 33:03
+                  td(colspan='2') 52:01
+                  td(colspan='2') 44:03
+                  td(colspan='2') 04:01
+                  td(colspan='2') 12:02
+                  td(colspan='2') 13:02
+                  td(colspan='2') 15:02
+                  // add
+
 
         .l_user-info   
           table.ptn_dnr#example
@@ -322,11 +322,12 @@ body
                 td
                 td
                 td
-
-        .mt-5.ml-5
-          .row.mt-3
-            a(href="search.html")
-              button.btn.btn-lg.btn-outline-info(type="button" value="戻る" style="width:240px") 戻る
+        
+        div(style='max-width: 1366px; margin: 0 auto')
+          .mt-5.ml-2
+            .row.mt-3
+              a(href="search.html")
+                button.btn.btn-lg.btn-outline-info(type="button" value="戻る" style="width:240px") 戻る!
 
     script(src="js/datatables.min.js")
     script(src="js/script.js")
