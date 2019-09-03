@@ -40,37 +40,48 @@
   <div class="main">
     <div class="hipsum">
       <div class="jumbotron" style="background:rgba(210, 250, 251, 0.15); ma">
-        <div class="titleAreas" style="max-width: 1360px;"><span>(骨髄バンク以外の移植ソース)</span>
+        <div class="titleAreas" style="max-width: 1360px;"><span>(骨髄バンクの移植ソース)</span>
           <h1 class="m_title lv3 p-2 mb-4 bg-info text-white">       <img src="img/donor.svg" alt="alt"><span class="ml-2">ドナー情報(K指標順)          </span></h1>
         </div>
         <div class="l_patient-area">
-          <div class="l_user-info pt-2">
+          <div class="l_user-info pt-2 pb-3">
             <h3 class="text-left" style="max-width: 1140px; margin-left: calc((1366px - 1140px) / 2 - 40px);"><img class="mb-2" src="img/patient_og.svg" alt="alt" style="border: 1px solid orange; padding: 0px 3px; background:rgba(255,255,255,0.7); "><span class="ml-2">患者情報</span></h3>
+            <!-- Re-->
             <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto; background:rgba(255,255,2555,0.8)">
               <thead class="thead-dark">
                 <tr>
-                  <th>患者ID</th>
-                  <th>性別</th>
-                  <th>年齢</th>
-                  <th>血液型</th>
-                  <th>病状（大分類）</th>
-                  <th>病状（小分類）</th>
-                  <th>病期</th>
+                  <th style="width:65px;">&#x60A3;&#x8005;ID</th>
+                  <th style="width:30px;">&#x6027;&#x5225;</th>
+                  <th style="width:30px;">&#x5E74;&#x9F62;</th>
+                  <th style="width:40px;">&#x8840;&#x6DB2;&#x578B;</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>P0000321</td>
-                  <td>男</td>
+                  <td>&#x7537;</td>
                   <td>28</td>
                   <td>A+</td>
-                  <td>Other lymphoma</td>
-                  <td style="max-width:200px;">びまん性大細胞型B細胞性リンパ球</td>
-                  <td style="max-width:200px;">2CR</td>
                 </tr>
               </tbody>
             </table>
-            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto 20px;  background:rgba(255,255,2555,0.8)">
+            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto">
+              <thead class="thead-dark">
+                <tr>
+                  <th style="width:80px;">&#x75C5;&#x72B6;(&#x5927;&#x5206;&#x985E;)</th>
+                  <th style="width:120px;">&#x75C5;&#x72B6;()&#x5C0F;&#x5206;&#x985E;)</th>
+                  <th style="width:50px;">&#x75C5;&#x671F;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Other lymphoma</td>
+                  <td>&#x3073;&#x307E;&#x3093;&#x6027;&#x5927;&#x7D30;&#x80DE;&#x578B;B&#x7D30;&#x80DE;&#x6027;&#x30EA;&#x30F3;&#x30D1;&#x7403;</td>
+                  <td>2CR</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="display table inline-table table-responsive-lg table-sm table-bordered" id="" style="max-width: 1140px; margin: 0 auto">
               <thead class="thead-dark">
                 <tr>
                   <th colspan="18" style="vertical-align: middle">HLA</th>
@@ -93,33 +104,27 @@
                   </td>
                 </tr>
                 <tr>
-                  <th style="width:50px; " colspan="2"><b>検索用抗原</b></th>
-                  <th style="width:65px; " colspan="2">DNA型</th>
-                  <th style="width:50px; " colspan="2">検索用抗原</th>
-                  <th style="width:65px; " colspan="2">DNA型</th>
-                  <th style="width:50px; " colspan="2">検索用抗原</th>
-                  <th style="width:65px; " colspan="2">DNA型</th>
-                  <th style="width:50px; " colspan="2">検索用抗原</th>
-                  <th style="width:65px; " colspan="2">DNA型</th>
+                  <th style="width:50px;" colspan="2"><b>&#x691C;&#x7D22;&#x7528;&#x6297;&#x539F;</b></th>
+                  <th style="width:65px;" colspan="2">A24</th>
+                  <th style="width:50px;" colspan="2">A2</th>
+                  <th style="width:65px;" colspan="2">B54</th>
+                  <th style="width:50px;" colspan="2">&nbsp;</th>
+                  <th style="width:65px;" colspan="2">Cw4</th>
+                  <th style="width:50px;" colspan="2">Cw12</th>
+                  <th style="width:65px;" colspan="2">DR4</th>
+                  <th style="width:65px;" colspan="2">DR15</th>
                 </tr>
                 <tr>
-                  <th colspan="2"><b>DNA型</b></th>
-                  <td>A24</td>
-                  <td>A2</td>
-                  <td>24:02</td>
-                  <td>33:03</td>
-                  <td>B54</td>
-                  <td>      </td>
-                  <td>52:01</td>
-                  <td>44:03</td>
-                  <td>Cw4</td>
-                  <td>Cw12</td>
-                  <td>04:01</td>
-                  <td>12:02</td>
-                  <td>DR4</td>
-                  <td>DR15</td>
-                  <td>13:02</td>
-                  <td>15:02</td>
+                  <th colspan="2"><b>DNA&#x578B;</b></th>
+                  <td colspan="2">24:02</td>
+                  <td colspan="2">33:03</td>
+                  <td colspan="2">52:01</td>
+                  <td colspan="2">44:03</td>
+                  <td colspan="2">04:01</td>
+                  <td colspan="2">12:02</td>
+                  <td colspan="2">13:02</td>
+                  <td colspan="2">15:02</td>
+                  <!-- add-->
                 </tr>
               </tbody>
             </table>
@@ -139,13 +144,10 @@
                 <th>GRFS</th>
                 <th>再発</th>
                 <th>GVHD</th>
-                <th> <span class="caption">x10^7/Kg</span><br>有核細胞数</th>
-                <th><span class="caption">x10^5/Kg</span><br>CD34+細胞数</th>
-                <th><span class="caption">x10^3/Kg</span><br>GMコロニー数</th>
                 <th>
-                  整理番号
-                  施設
-                </th>
+                   適合者総数</th>
+                <th>適合者数(男性)</th>
+                <th>適合者数(女性)</th>
                 <th></th>
               </tr>
               <tr class="subTH">
@@ -155,7 +157,6 @@
                 <th>HVG</th>
                 <th colspan="8">上段：抗原  / 下段：アリル</th>
                 <th>days</th>
-                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -179,10 +180,9 @@
                 <td>330</td>
                 <td>23%</td>
                 <td>24%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>M201108999</td>
+                <td>93</td>
+                <td>47</td>
+                <td>46</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -206,8 +206,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>KNKI</td>
-                <!--td-->
               </tr>
               <tr class="tb_bd-t">
                 <td>2</td>
@@ -225,10 +223,9 @@
                 <td>243</td>
                 <td>44%</td>
                 <td>20%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>G201208999</td>
+                <td>54</td>
+                <td>21</td>
+                <td>33</td>
                 <td class="text-info" rowspan="2" style="vertical-align:middle">
                   <button class="btn btn-secondary" type="button" name="button" disable="disable">検討中</button>
                 </td>
@@ -252,7 +249,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>MIYG</td>
               </tr>
               <tr class="tb_bd-t">
                 <td>3</td>
@@ -270,10 +266,9 @@
                 <td>187</td>
                 <td>55%</td>
                 <td>42%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>110021337766</td>
+                <td>126</td>
+                <td>98</td>
+                <td>28</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -296,9 +291,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>CENT</td>
-                <!--td-->
               </tr>
               <tr class="tb_bd-t">
                 <td>4</td>
@@ -316,10 +308,9 @@
                 <td>180</td>
                 <td>45%</td>
                 <td>66%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>G201208123</td>
+                <td>66</td>
+                <td>24</td>
+                <td>42</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -342,8 +333,6 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>TOKY</td>
               </tr>
               <tr class="tb_bd-t">
                 <td>5</td>
@@ -361,10 +350,9 @@
                 <td>166</td>
                 <td>57%</td>
                 <td>53%</td>
-                <td>3.54</td>
-                <td>0.56</td>
-                <td>21.2</td>
-                <td>G201208456</td>
+                <td>79</td>
+                <td>39</td>
+                <td>40</td>
                 <td rowspan="2" style="vertical-align:middle">
                   <button class="btn adaptation" type="button" name="button">適用</button>
                 </td>
@@ -387,15 +375,15 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>KNKI</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="mt-5 ml-5">
-          <div class="row mt-3"><a href="search.html">
-              <button class="btn btn-lg btn-outline-info" type="button" value="戻る" style="width:240px">戻る</button></a></div>
+        <div style="max-width: 1366px; margin: 0 auto">
+          <div class="mt-5 ml-2">
+            <div class="row mt-3"><a href="search.html">
+                <button class="btn btn-lg btn-outline-info" type="button" value="戻る" style="width:240px">戻る</button></a></div>
+          </div>
         </div>
       </div>
     </div>
