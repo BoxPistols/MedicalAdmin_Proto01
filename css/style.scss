@@ -479,6 +479,17 @@ table.ptn_dnr {
   }
 
   span.caption {
-    font-size: 12px;
+    font-size: 13px;
+    &.kg{
+      font-size: 12px;
+    }
+    &.slash{
+      font-size: 11px;
+      margin-right: 1px;
+      margin-left: -1px;
+    }
+  }
+  sup.caption{
+    font-size: 11px;
   }
 }
