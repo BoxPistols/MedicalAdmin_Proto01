@@ -1,0 +1,17 @@
+include pug/_head
+// Content
+.main
+  .hipsum
+    .jumbotron.m-4
+      h1.m_title.lv3  FITIE トップページ
+      .l_user-info
+      // <p class="mt-4">リンク</p>
+      ul.d-flex.align-items-center
+          include pug/_indexLink-01
+          include pug/_indexLink-02
+      ul.d-flex.align-items-center
+          include pug/_indexLink-03
+  // <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  script(src='https://code.jquery.com/jquery-3.3.1.js')
+  // <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  script(src='js/script.js')
