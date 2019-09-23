@@ -89,7 +89,8 @@ form.lay_form {
   color: #fff;
   // background: $color_main;
   background: #42586d;
-  @include grad_main line-height: 50px;
+  @include grad_main;
+  line-height: 50px;
 
   .logo a {
     color: rgba(255,255,255,.85);
@@ -116,7 +117,8 @@ form.lay_form {
   text-transform: uppercase;
   color: #fff;
   background: rgba(0, 0, 0, 0.15);
-  @include grad_main font-size: 13px;
+  @include grad_main;
+  font-size: 13px;
   line-height: 50px;
 
   i {

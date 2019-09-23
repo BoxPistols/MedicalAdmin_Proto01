@@ -273,3 +273,10 @@ button.btn.idSearch {
 input[type="text"]:focus {
   outline: none;
 }
+
+.form-check-input[type=checkbox]+label,
+label.btn input[type=checkbox]+label {
+  // padding-left: 28px;
+  white-space: nowrap;
+  margin: 8px 16px 0 0;
+}

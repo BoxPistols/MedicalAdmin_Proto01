@@ -18,14 +18,13 @@ body
           li
             a(href='index.html') Home
           li.active
-            | IVF情報検索
+            | IVF情報 / 検索
 
   include pug/_sideBar
-
   // Content
   .main
     .hipsum
-      .jumbotron(style='')
+      .jumbotron
         .container.mt-2
           form.lay_form.row.px-4
             .lay_title.mb-2.mt-2.d-flex.align-items-center
@@ -50,118 +49,46 @@ body
                 //- input(type='text', name='', value='')
                 //- button#1.btn.btn-primary.idSearch(type='button', data-toggle='modal', data-target='#exampleModalCenter')
                 //-   | 検索
-                .modal.fade
-                  .modal-dialog
-                    .modal-content
-                      .modal-header
-                        h4.modal-title IVF情報
-                        button.close(type='button', data-dismiss='modal')
-                          span(aria-hidden='true') ×
-                          span.sr-only Close
-                      .modal-body
-                        p IVF一覧
-                        |                         1
-                        |                             1
-                        |                             1
-                        table.table.table-striped
-                          thead
-                            tr
-                              th(scope='col') #
-                              th(scope='col') IVF ID
-                              th(scope='col') 患者ID
-                              th(scope='col') 移植日
-                              th(scope='col') 新鮮／凍結
-                              th(scope='col') 移植方法
-                              th(scope='col') 入力状況
-                          tbody
-                            tr
-                              th(scope='row') 1
-                              td
-                                a(href='#') P012
-                              td
-                                a(href='#') A0123
-                              td 19/06/01
-                              td 新鮮
-                              td 単一
-                              td
-                                // ?xml version="1.0" encoding="UTF-8"?
-                                svg(fill='#424242', width='50pt', height='50pt', version='1.1', viewBox='0 0 100 100', xmlns='http://www.w3.org/2000/svg')
-                                  path(d='m72 45h-44c-1.6523 0-3 1.3477-3 3v4c0 1.6523 1.3477 3 3 3h44c1.6523 0 3-1.3477 3-3v-4c0-1.6523-1.3477-3-3-3zm1 7c0 0.55078-0.44922 1-1 1h-32v-6h32c0.55078 0 1 0.44922 1 1z')
-                            tr
-                              th(scope='row') 2
-                              td
-                                a(href='#') P048
-                              td
-                                a(href='#') A0163
-                              td 19/05/23
-                              td 新鮮
-                              td 一
-                              td
-                                // ?xml version="1.0" encoding="UTF-8"?
-                                svg(fill='#424242', width='50pt', height='50pt', version='1.1', viewBox='0 0 100 100', xmlns='http://www.w3.org/2000/svg')
-                                  path(d='m72 45h-44c-1.6523 0-3 1.3477-3 3v4c0 1.6523 1.3477 3 3 3h44c1.6523 0 3-1.3477 3-3v-4c0-1.6523-1.3477-3-3-3zm1 7c0 0.55078-0.44922 1-1 1h-22v-6h22c0.55078 0 1 0.44922 1 1z')
-                            tr
-                              th(scope='row') 3
-                              td
-                                a(href='#') P022
-                              td
-                                a(href='#') A0223
-                              td 19/07/11
-                              td 新鮮
-                              td 単一
-                              td
-                                // ?xml version="1.0" encoding="UTF-8"?
-                                svg(fill='#424242', width='50pt', height='50pt', version='1.1', viewBox='0 0 100 100', xmlns='http://www.w3.org/2000/svg')
-                                  path(d='m72 45h-44c-1.6523 0-3 1.3477-3 3v4c0 1.6523 1.3477 3 3 3h44c1.6523 0 3-1.3477 3-3v-4c0-1.6523-1.3477-3-3-3zm1 7c0 0.55078-0.44922 1-1 1h-12v-6h12c0.55078 0 1 0.44922 1 1z')
-                      .modal-footer
-                        button.btn.btn-default(type='button', data-dismiss='modal') Close
-                        // <button type="button" class="btn btn-primary">Save changes</button>
-                        // /.modal-content
-                        // /.modal-dialog
-                        // /.modal
             .m_hr.pt-1.pb-2(style='margin-top: 12px')
             .container.form-row
-              .formSection.mr-3
-                label.mr-sm-2.ml-1(for='') 排卵日
-                input(type='date', value='2019-07-25', onchange='ex()')
-              .formSection
-                label.mr-sm-2(for='') 年齢
-                input.age(type='text', value='', placeholder='年齢', style='width: 3em;')
-              .formSection.mr-3
-                label.mr-sm-2(for='') 排卵数
-                input.age(type='text', value='', placeholder='', style='width: 4em;')
+              .mr-3.mb-4.d-flex
+                .form-check
+                  input#defaultCheck1.form-check-input(type='checkbox', value='')
+                  label.form-check-label(for='defaultCheck1')
+                    | 全て
+                .custom-select-Group.input-group.mb-3
+                  .input-group-prepend
+                    label.input-group-text(for='inputGroupSelect01') 年
+                  select#inputGroupSelect01.custom-select
+                    option(selected='') 年の選択
+                    option(value='1') 2019
+                    option(value='2') 2020
+                  .mr-4
+                  .input-group-prepend
+                    label.input-group-text(for='inputGroupSelect01') 月
+                  select#inputGroupSelect01.custom-select
+                    option(selected='') 月の選択
+                    option(value='1') 9
+                    option(value='2') 10
+                    option(value='3') 11
+                    option(value='4') 12
+
+                //- label.mr-sm-2.ml-1(for='') 実施日付
+                //- selsect
+                //-   option(value="1")  
+
+              //- .formSection
+              //-   label.mr-sm-2(for='') 年齢
+              //-   input.age(type='text', value='', placeholder='年齢', style='width: 3em;')
+              //- .formSection.mr-3
+              //-   label.mr-sm-2(for='') 排卵数
+              //-   input.age(type='text', value='', placeholder='', style='width: 4em;')
+
             .container.mt-4
-              .grid-container
-                .m_form.d-flex.align-items-center(style='padding-top: 32px')
-                  div(for='') CD2-3
-                .m_form
-                  label(for='') EII
-                  input.form-control(type='text', placeholder='', style='width:100px;')
-                .m_form
-                  label(for='') LH
-                  input.form-control(type='text', placeholder='', style='width:100px;')
-                .m_form
-                  label(for='') AMH
-                  // <input type="text" class="form-control " placeholder="" style="width:100px;">
-                .m_form
-                  div(for='') CD8-10
-                .m_form
-                  input.form-control(type='text', placeholder='', style='width:100px;')
-                .m_form
-                  input.form-control(type='text', placeholder='', style='width:100px;')
-                .m_form
-                  // <input type="text" class="form-control " placeholder="" style="width:100px;">
-                .m_form
-                  div(for='') HCG直前
-                .m_form
-                  input.form-control(type='text', placeholder='', style='width:100px;')
-                .m_form
-                  input.form-control(type='text', placeholder='', style='width:100px;')
-                .m_form
-                  input.form-control(type='text', placeholder='', style='width:100px;')
+
             .container.mt-4
               .row
-                a(href='check.html')
+                a(href='modalDev01.html')
                   button.btn.btn-primary(type='button', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
                     | 登録確認
           // /////

@@ -23,7 +23,7 @@
       <div class="m_title">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li class="active">IVF情報検索</li>
+          <li class="active">IVF情報 / 検索</li>
         </ul>
       </div>
     </div>
@@ -59,148 +59,41 @@
                   <input class="form-input" id="dev" type="text">
                 </div>
               </div>
-              <div class="formSection d-flex flex-nowrap" style="margin: 6px 0px 8px 16px">
-                <div class="modal fade">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">IVF情報</h4>
-                        <button class="close" type="button" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                      </div>
-                      <div class="modal-body">
-                        <p>IVF一覧</p>                        1
-                                                    1
-                                                    1
-                        <table class="table table-striped">
-                          <thead>
-                            <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">IVF ID</th>
-                              <th scope="col">患者ID</th>
-                              <th scope="col">移植日</th>
-                              <th scope="col">新鮮／凍結</th>
-                              <th scope="col">移植方法</th>
-                              <th scope="col">入力状況</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td><a href="#">P012</a></td>
-                              <td><a href="#">A0123</a></td>
-                              <td>19/06/01</td>
-                              <td>新鮮</td>
-                              <td>単一</td>
-                              <td>
-                                <!-- ?xml version="1.0" encoding="UTF-8"?-->
-                                <svg fill="#424242" width="50pt" height="50pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="m72 45h-44c-1.6523 0-3 1.3477-3 3v4c0 1.6523 1.3477 3 3 3h44c1.6523 0 3-1.3477 3-3v-4c0-1.6523-1.3477-3-3-3zm1 7c0 0.55078-0.44922 1-1 1h-32v-6h32c0.55078 0 1 0.44922 1 1z"></path>
-                                </svg>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td><a href="#">P048</a></td>
-                              <td><a href="#">A0163</a></td>
-                              <td>19/05/23</td>
-                              <td>新鮮</td>
-                              <td>一</td>
-                              <td>
-                                <!-- ?xml version="1.0" encoding="UTF-8"?-->
-                                <svg fill="#424242" width="50pt" height="50pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="m72 45h-44c-1.6523 0-3 1.3477-3 3v4c0 1.6523 1.3477 3 3 3h44c1.6523 0 3-1.3477 3-3v-4c0-1.6523-1.3477-3-3-3zm1 7c0 0.55078-0.44922 1-1 1h-22v-6h22c0.55078 0 1 0.44922 1 1z"></path>
-                                </svg>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td><a href="#">P022</a></td>
-                              <td><a href="#">A0223</a></td>
-                              <td>19/07/11</td>
-                              <td>新鮮</td>
-                              <td>単一</td>
-                              <td>
-                                <!-- ?xml version="1.0" encoding="UTF-8"?-->
-                                <svg fill="#424242" width="50pt" height="50pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="m72 45h-44c-1.6523 0-3 1.3477-3 3v4c0 1.6523 1.3477 3 3 3h44c1.6523 0 3-1.3477 3-3v-4c0-1.6523-1.3477-3-3-3zm1 7c0 0.55078-0.44922 1-1 1h-12v-6h12c0.55078 0 1 0.44922 1 1z"></path>
-                                </svg>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="modal-footer">
-                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
-                        <!-- <button type="button" class="btn btn-primary">Save changes</button>-->
-                        <!-- /.modal-content-->
-                        <!-- /.modal-dialog-->
-                        <!-- /.modal-->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="formSection d-flex flex-nowrap" style="margin: 6px 0px 8px 16px"></div>
             </div>
             <div class="m_hr pt-1 pb-2" style="margin-top: 12px"></div>
             <div class="container form-row">
-              <div class="formSection mr-3">
-                <label class="mr-sm-2 ml-1" for="">排卵日</label>
-                <input type="date" value="2019-07-25" onchange="ex()">
-              </div>
-              <div class="formSection">
-                <label class="mr-sm-2" for="">年齢</label>
-                <input class="age" type="text" value="" placeholder="年齢" style="width: 3em;">
-              </div>
-              <div class="formSection mr-3">
-                <label class="mr-sm-2" for="">排卵数</label>
-                <input class="age" type="text" value="" placeholder="" style="width: 4em;">
-              </div>
-            </div>
-            <div class="container mt-4">
-              <div class="grid-container">
-                <div class="m_form d-flex align-items-center" style="padding-top: 32px">
-                  <div for="">CD2-3</div>
+              <div class="mr-3 mb-4 d-flex">
+                <div class="form-check">
+                  <input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
+                  <label class="form-check-label" for="defaultCheck1">全て</label>
                 </div>
-                <div class="m_form">
-                  <label for="">EII</label>
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
-                </div>
-                <div class="m_form">
-                  <label for="">LH</label>
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
-                </div>
-                <div class="m_form">
-                  <label for="">AMH</label>
-                  <!-- <input type="text" class="form-control " placeholder="" style="width:100px;">-->
-                </div>
-                <div class="m_form">
-                  <div for="">CD8-10</div>
-                </div>
-                <div class="m_form">
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
-                </div>
-                <div class="m_form">
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
-                </div>
-                <div class="m_form">
-                  <!-- <input type="text" class="form-control " placeholder="" style="width:100px;">-->
-                </div>
-                <div class="m_form">
-                  <div for="">HCG直前</div>
-                </div>
-                <div class="m_form">
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
-                </div>
-                <div class="m_form">
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
-                </div>
-                <div class="m_form">
-                  <input class="form-control" type="text" placeholder="" style="width:100px;">
+                <div class="custom-select-Group input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">年</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected="">年の選択</option>
+                    <option value="1">2019</option>
+                    <option value="2">2020</option>
+                  </select>
+                  <div class="mr-4"></div>
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">月</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected="">月の選択</option>
+                    <option value="1">9</option>
+                    <option value="2">10</option>
+                    <option value="3">11</option>
+                    <option value="4">12</option>
+                  </select>
                 </div>
               </div>
             </div>
+            <div class="container mt-4"></div>
             <div class="container mt-4">
-              <div class="row"><a href="check.html">
+              <div class="row"><a href="modalDev01.html">
                   <button class="btn btn-primary" type="button" value="検索する" style="width:240px; margin: 10px auto 20px 190px; padding: .8em 2em">登録確認</button></a></div>
             </div>
           </form>

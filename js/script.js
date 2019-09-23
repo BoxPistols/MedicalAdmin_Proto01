@@ -36,6 +36,19 @@ function ex() {
   result();
 }
 
+$(document).ready(function() {
+  $("#defaultCheck1").click(function() {
+    if ($("#defaultCheck1").prop("checked") == true) {
+      console.log("A");
+      $(".custom-select-Group").css('opacity', '0.5');
+      $(".custom-select").prop('disabled', true);
+    } else {
+      console.log("B");
+      $(".custom-select-Group").css('opacity', '1');
+      $(".custom-select").prop('disabled', false);
+    }
+  })
+})
 
 /*
   Sort
