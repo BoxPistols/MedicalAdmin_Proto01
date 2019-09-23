@@ -51,27 +51,31 @@ body
                 //-   | 検索
             .m_hr.pt-1.pb-2(style='margin-top: 12px')
             .container.form-row
-              .mr-3.mb-4.d-flex
-                .form-check
-                  input#defaultCheck1.form-check-input(type='checkbox', value='')
-                  label.form-check-label(for='defaultCheck1')
-                    | 全て
-                .custom-select-Group.input-group.mb-3
-                  .input-group-prepend
-                    label.input-group-text(for='inputGroupSelect01') 年
-                  select#inputGroupSelect01.custom-select
-                    option(selected='') 年の選択
-                    option(value='1') 2019
-                    option(value='2') 2020
-                  .mr-4
-                  .input-group-prepend
-                    label.input-group-text(for='inputGroupSelect01') 月
-                  select#inputGroupSelect01.custom-select
-                    option(selected='') 月の選択
-                    option(value='1') 9
-                    option(value='2') 10
-                    option(value='3') 11
-                    option(value='4') 12
+              .mr-3.mb-4
+                h4.h4.div.d-flex
+                  i.far.fa-calendar-alt.mr-2
+                  .h5 排卵実施日付
+                .d-flex  
+                  .form-check
+                    input#defaultCheck1.form-check-input(type='checkbox', value='')
+                    label.form-check-label(for='defaultCheck1')
+                      | 全て
+                  .custom-select-Group.input-group.mb-3
+                    .input-group-prepend
+                      label.input-group-text(for='inputGroupSelect01') 年
+                    select#inputGroupSelect01.custom-select
+                      option(selected='') 年の選択
+                      option(value='1') 2019
+                      option(value='2') 2020
+                    .mr-4
+                    .input-group-prepend
+                      label.input-group-text(for='inputGroupSelect01') 月
+                    select#inputGroupSelect01.custom-select
+                      option(selected='') 月の選択
+                      option(value='1') 9
+                      option(value='2') 10
+                      option(value='3') 11
+                      option(value='4') 12
 
                 //- label.mr-sm-2.ml-1(for='') 実施日付
                 //- selsect
@@ -90,7 +94,7 @@ body
               .row
                 a(href='modalDev01.html')
                   button.btn.btn-primary(type='button', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
-                    | 登録確認
+                    | 胚検索
           // /////
           //
             <div class="footer text-center">
