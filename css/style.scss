@@ -6,11 +6,15 @@ $grad_main: linear-gradient(135deg, #6078ea 0%, #17ead9 100%);
 $color_green: #479c3d;
 $color_orange: #fb9f0c;
 $bd_green: rgba(91, 128, 99, 0.2);
+$color_gray: #3b454a;
 @mixin cl_green {
   color: $color_green;
 }
 @mixin cl_orange {
   color: $color_orange;
+}
+@mixin cl_gray {
+  color: $color_gray;
 }
 @mixin bg_green {
   border: 1px solid $bd_green;
@@ -22,6 +26,10 @@ $bd_green: rgba(91, 128, 99, 0.2);
 
 .cl_orange {
   @include cl_orange
+}
+
+.cl_gray {
+  @include cl_gray
 }
 
 .m_colorLine {

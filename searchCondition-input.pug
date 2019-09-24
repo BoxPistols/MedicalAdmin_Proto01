@@ -51,12 +51,14 @@ body
                 //-   | 検索
             .m_hr.pt-1.pb-2(style='margin-top: 12px')
             .container.form-row
+              
               .mr-3.mb-4
                 h4.h4.div.d-flex
                   i.far.fa-calendar-alt.mr-2
-                  .h5 排卵実施日付
+                  .h5 実施日付
+
                 .d-flex  
-                  .form-check
+                  .form-check(style='padding:0')
                     input#defaultCheck1.form-check-input(type='checkbox', value='')
                     label.form-check-label(for='defaultCheck1')
                       | 全て
@@ -76,6 +78,82 @@ body
                       option(value='2') 10
                       option(value='3') 11
                       option(value='4') 12
+                
+                .form_SelectGroup      
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-random.mr-2
+                    .h5 移植方法1
+                    
+                  .d-flex
+                    .form-check.form-check-inline
+                      input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='all')
+                      label.form-check-label(for='inlineRadio1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
+                      label.form-check-label(for='inlineRadio2') 新鮮胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadio3.form-check-input(type='radio', name='inlineRadioOptions', value='option3')
+                      label.form-check-label(for='inlineRadio3') 複数胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadio4.form-check-input(type='radio', name='inlineRadioOptions', value='option4')
+                      label.form-check-label(for='inlineRadio4') 凍結胚移植
+
+                .form_SelectGroup                
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-random.mr-2
+                    .h5 移植方法2
+                    
+                  .d-flex.mb-3
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-1.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='all')
+                      label.form-check-label(for='inlineRadioDev2-1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-2.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option2')
+                      label.form-check-label(for='inlineRadioDev2-2') 新鮮胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-3.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option3')
+                      label.form-check-label(for='inlineRadioDev2-3') 複数胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-4.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option4')
+                      label.form-check-label(for='inlineRadioDev2-4') 凍結胚移植
+                
+                .form_SelectGroup
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-edit.mr-2
+                    .h5 入力状況
+                    
+                  .d-flex
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-1.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='all')
+                      label.form-check-label(for='inlineRadioDev3-1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-2.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option2')
+                      label.form-check-label(for='inlineRadioDev3-2') 新鮮胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-3.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option3')
+                      label.form-check-label(for='inlineRadioDev3-3') 複数胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-4.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option4')
+                      label.form-check-label(for='inlineRadioDev3-4') 凍結胚移植
+
+                .form_SelectGroup
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-poll.mr-2
+                    .h5 結果状況
+                    
+                  .d-flex
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-1.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='all')
+                      label.form-check-label(for='inlineRadioDev4-1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-2.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option2')
+                      label.form-check-label(for='inlineRadioDev4-2') 新鮮胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-3.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option3')
+                      label.form-check-label(for='inlineRadioDev4-3') 複数胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-4.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option4')
+                      label.form-check-label(for='inlineRadioDev4-4') 凍結胚移植
 
                 //- label.mr-sm-2.ml-1(for='') 実施日付
                 //- selsect
@@ -92,9 +170,9 @@ body
 
             .container.mt-4
               .row
-                a(href='modalDev01.html')
+                a(href='searchCondition-result.html')
                   button.btn.btn-primary(type='button', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
-                    | 胚検索
+                    | IVF検索
           // /////
           //
             <div class="footer text-center">

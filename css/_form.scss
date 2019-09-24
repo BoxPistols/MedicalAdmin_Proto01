@@ -1,8 +1,12 @@
 $color_main: #1b83c2;
 $color_green: #479c3d;
+$color_gray: #3b454a;
 $bd_green: rgba(91, 128, 99, 0.2);
 @mixin cl_green {
   color: $color_green;
+}
+@mixin cl_gray {
+  color: $color_gray;
 }
 @mixin bg_green {
   // border: 1px solid $bd_green;
@@ -12,6 +16,9 @@ $bd_green: rgba(91, 128, 99, 0.2);
 .cl_green {
   @include cl_green
 }
+// .cl_gray {
+//   @include cl_gray
+// }
 
 .custom-control-label {
   transition: 0.2s;
@@ -27,6 +34,14 @@ $bd_green: rgba(91, 128, 99, 0.2);
   position: absolute;
   opacity: 0;
   pointer-events: none;
+}
+
+.form-check {
+  transition: 0.2s;
+
+  &:hover {
+    color: $color_green;
+  }
 }
 
 .form-check-input[type=checkbox]+label,
@@ -51,13 +66,14 @@ label.btn input[type=checkbox]:not(.filled-in)+label:after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
+  width: 21px;
+  height: 21px;
   z-index: 0;
   border: 2px solid #8a8a8a;
   border-radius: 1px;
-  margin-top: 3px;
+  margin-top: 2px;
   transition: 0.08s;
+  background: #fcfcfc;
 }
 
 .form-check-input[type=checkbox]:not(.filled-in)+label:after,
@@ -212,7 +228,7 @@ input[type=month],
 input[type=text],
 input[type=time] {
   -webkit-appearance: listbox;
-  background: none;
+  background: rgba(255, 255, 255, 0.8);
   border: none;
   border: 1px solid #ccc;
   min-height: 32px;
@@ -279,4 +295,14 @@ label.btn input[type=checkbox]+label {
   // padding-left: 28px;
   white-space: nowrap;
   margin: 8px 16px 0 0;
+}
+
+.form {
+  &_SelectGroup {
+    margin-top: 32px;
+
+    .h4 {
+      color: $color_gray;
+    }
+  }
 }
