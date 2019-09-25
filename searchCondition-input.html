@@ -52,11 +52,11 @@
               <div class="formSection d-md-flex">
                 <div class="form-input mr-4">
                   <label class="form-label mr-1" for="dev">患者ID                    </label>
-                  <input class="form-input" id="dev" type="text">
+                  <input class="form-input" id="dev" type="text" placeholder="P00001234">
                 </div>
                 <div class="form-input">
                   <label class="form-label mr-1" for="dev">IFVID：ART</label>
-                  <input class="form-input" id="dev" type="text">
+                  <input class="form-input" id="dev2" type="text" placeholder="0056789">
                 </div>
               </div>
               <div class="formSection d-flex flex-nowrap" style="margin: 6px 0px 8px 16px"></div>
@@ -70,27 +70,26 @@
                 <div class="d-flex"> 
                   <div class="form-check" style="padding:0">
                     <input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
-                    <label class="form-check-label" for="defaultCheck1">全て</label>
+                    <label class="form-check-label" for="defaultCheck1" name="all">全て</label>
                   </div>
                   <div class="custom-select-Group input-group mb-3">
                     <div class="input-group-prepend">
-                      <label class="input-group-text" for="inputGroupSelect01">年</label>
+                      <label class="input-group-text" for="inputGroupSelect01" name="year">年</label>
                     </div>
                     <select class="custom-select" id="inputGroupSelect01">
-                      <option selected="">年の選択</option>
-                      <option value="1">2019</option>
-                      <option value="2">2020</option>
+                      <option selected="" value="">年の選択</option>
+                      <option value="2019">2019</option>
                     </select>
                     <div class="mr-4"></div>
                     <div class="input-group-prepend">
-                      <label class="input-group-text" for="inputGroupSelect01">月</label>
+                      <label class="input-group-text" for="inputGroupSelect01" name="month">月</label>
                     </div>
                     <select class="custom-select" id="inputGroupSelect01">
-                      <option selected="">月の選択</option>
-                      <option value="1">9</option>
-                      <option value="2">10</option>
-                      <option value="3">11</option>
-                      <option value="4">12</option>
+                      <option selected="" value="">月の選択</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
                     </select>
                   </div>
                 </div>
@@ -100,7 +99,7 @@
                   </h4>
                   <div class="d-flex">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" id="inlineRadio1" type="radio" name="inlineRadioOptions" value="all">
+                      <input class="form-check-input" id="inlineRadio1" type="radio" name="inlineRadioOptions" value="all" required checked="checked">
                       <label class="form-check-label" for="inlineRadio1">全て</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -119,7 +118,7 @@
                   </h4>
                   <div class="d-flex mb-3">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" id="inlineRadioDev2-1" type="radio" name="inlineRadioDev2-Options2" value="all">
+                      <input class="form-check-input" id="inlineRadioDev2-1" type="radio" name="inlineRadioDev2-Options2" value="all" required checked="checked">
                       <label class="form-check-label" for="inlineRadioDev2-1">全て</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -142,7 +141,7 @@
                   </h4>
                   <div class="d-flex">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" id="inlineRadioDev3-1" type="radio" name="inlineRadioDev3-Options3" value="all">
+                      <input class="form-check-input" id="inlineRadioDev3-1" type="radio" name="inlineRadioDev3-Options3" value="all" required checked="checked">
                       <label class="form-check-label" for="inlineRadioDev3-1">全て</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -169,7 +168,7 @@
                   </h4>
                   <div class="d-flex">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" id="inlineRadioDev4-1" type="radio" name="inlineRadioDev4-Options4" value="all">
+                      <input class="form-check-input" id="inlineRadioDev4-1" type="radio" name="inlineRadioDev4-Options4" value="all" required checked="checked">
                       <label class="form-check-label" for="inlineRadioDev4-1">全て</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -187,7 +186,7 @@
             <div class="container mt-4"></div>
             <div class="container mt-4">
               <div class="row"><a href="searchCondition-result.html">
-                  <button class="btn btn-primary" type="button" value="検索する" style="width:240px; margin: 10px auto 20px 190px; padding: .8em 2em">IVF検索</button></a></div>
+                  <button class="btn btn-primary" type="submit" value="検索する" style="width:240px; margin: 10px auto 20px 190px; padding: .8em 2em">IVF検索</button></a></div>
             </div>
           </form>
           <!-- /////-->
@@ -202,6 +201,14 @@
           <script>
             $('button').on('click', function() {
             $('.modal').modal('show');
+            
+            var target = $('input#dev').val();
+            var target2 = $('input#dev2').val();
+            if (target == '' && target2 == '') {
+              alert("IDまたはIVFIDは必須入力項目です");
+              $('html, body').animate({scrollTop: 0}, 400);
+              return false;
+              }              
             });
           </script>
         </div>

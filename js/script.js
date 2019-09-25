@@ -19,7 +19,7 @@ menutoggle.addEventListener("click", function(e) {
 
 
 /*-------------------------*/
-
+// Age
 function result() {
   let age = document.querySelector("input.age");
   console.log("hoge");
@@ -36,8 +36,11 @@ function ex() {
   result();
 }
 
+// form Action
 $(document).ready(function() {
+
   $("#defaultCheck1").click(function() {
+    // Select if CheckBox
     if ($("#defaultCheck1").prop("checked") == true) {
       console.log("A");
       $(".custom-select-Group").css('opacity', '0.5');
@@ -48,6 +51,30 @@ $(document).ready(function() {
       $(".custom-select").prop('disabled', false);
     }
   })
+
+
+  // Selects if Select
+  $("#defaultCheck1").prop('required', true);
+
+  $('select.custom-select').change(function() {
+    var r = $('option:selected').val();
+    console.log(r);
+    if (($('option:selected').val() == '')) {
+      $("#defaultCheck1").prop('disabled', false);
+      $("#defaultCheck1").prop('required', true);
+    } else {
+      $("#defaultCheck1").prop('disabled', true);
+      $("#defaultCheck1").prop('required', false);
+    }
+  })
+
+  // var target = $('input#dev').val();
+  // // var obj = $("input#dev");
+  // if (target == '') {
+  //   console.log("必須入力項目です");
+  //   // return false;
+  // }
+
 })
 
 /*

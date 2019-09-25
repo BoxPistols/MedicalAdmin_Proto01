@@ -38,11 +38,11 @@ body
               .formSection.d-md-flex
                 .form-input.mr-4
                   label.form-label.mr-1(for='dev') 患者ID                    
-                  input#dev.form-input(type='text')
+                  input#dev.form-input(type='text', placeholder="P00001234")
 
                 .form-input
                   label.form-label.mr-1(for='dev') IFVID：ART
-                  input#dev.form-input(type='text')
+                  input#dev2.form-input(type='text', placeholder="0056789")
 
               .formSection.d-flex.flex-nowrap(style='margin: 6px 0px 8px 16px')
                 //- label.mr-sm-2(for='inlineFormCustomSelect2') 排卵時IVFID
@@ -51,7 +51,7 @@ body
                 //-   | 検索
             .m_hr.pt-1.pb-2(style='margin-top: 12px')
             .container.form-row
-              
+
               .mr-3.mb-4
                 h4.h4.div.d-flex
                   i.far.fa-calendar-alt.mr-2
@@ -60,33 +60,33 @@ body
                 .d-flex  
                   .form-check(style='padding:0')
                     input#defaultCheck1.form-check-input(type='checkbox', value='')
-                    label.form-check-label(for='defaultCheck1')
+                    label.form-check-label(for='defaultCheck1', name="all")
                       | 全て
                   .custom-select-Group.input-group.mb-3
                     .input-group-prepend
-                      label.input-group-text(for='inputGroupSelect01') 年
+                      label.input-group-text(for='inputGroupSelect01', name="year") 年
                     select#inputGroupSelect01.custom-select
-                      option(selected='') 年の選択
-                      option(value='1') 2019
-                      option(value='2') 2020
+                      option(selected='', value='') 年の選択
+                      option(value='2019') 2019
+                      //- option(value='2') 2020
                     .mr-4
                     .input-group-prepend
-                      label.input-group-text(for='inputGroupSelect01') 月
+                      label.input-group-text(for='inputGroupSelect01', name="month") 月
                     select#inputGroupSelect01.custom-select
-                      option(selected='') 月の選択
-                      option(value='1') 9
-                      option(value='2') 10
-                      option(value='3') 11
-                      option(value='4') 12
-                
+                      option(selected='', value='') 月の選択
+                      option(value='9') 9
+                      option(value='10') 10
+                      option(value='11') 11
+                      option(value='12') 12
+
                 .form_SelectGroup      
                   h4.h4.div.d-flex.mt-4.mb-1
                     i.fas.fa-random.mr-2
                     .h5 移植方法1
-                    
+
                   .d-flex
                     .form-check.form-check-inline
-                      input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='all')
+                      input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='all' required, checked="checked")
                       label.form-check-label(for='inlineRadio1') 全て
                     .form-check.form-check-inline
                       input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
@@ -102,10 +102,10 @@ body
                   h4.h4.div.d-flex.mt-4.mb-1
                     i.fas.fa-random.mr-2
                     .h5 移植方法2
-                    
+
                   .d-flex.mb-3
                     .form-check.form-check-inline
-                      input#inlineRadioDev2-1.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='all')
+                      input#inlineRadioDev2-1.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='all', required, checked="checked")
                       label.form-check-label(for='inlineRadioDev2-1') 全て
                     .form-check.form-check-inline
                       input#inlineRadioDev2-2.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option2')
@@ -116,15 +116,15 @@ body
                     .form-check.form-check-inline
                       input#inlineRadioDev2-4.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option4')
                       label.form-check-label(for='inlineRadioDev2-4') 二段階胚移植
-                
+
                 .form_SelectGroup
                   h4.h4.div.d-flex.mt-4.mb-1
                     i.fas.fa-edit.mr-2
                     .h5 入力状況
-                    
+
                   .d-flex
                     .form-check.form-check-inline
-                      input#inlineRadioDev3-1.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='all')
+                      input#inlineRadioDev3-1.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='all', required, checked="checked")
                       label.form-check-label(for='inlineRadioDev3-1') 全て
                     .form-check.form-check-inline
                       input#inlineRadioDev3-2.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option2')
@@ -143,10 +143,10 @@ body
                   h4.h4.div.d-flex.mt-4.mb-1
                     i.fas.fa-poll.mr-2
                     .h5 結果状況
-                    
+
                   .d-flex
                     .form-check.form-check-inline
-                      input#inlineRadioDev4-1.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='all')
+                      input#inlineRadioDev4-1.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='all', required, checked="checked")
                       label.form-check-label(for='inlineRadioDev4-1') 全て
                     .form-check.form-check-inline
                       input#inlineRadioDev4-2.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option2')
@@ -174,7 +174,7 @@ body
             .container.mt-4
               .row
                 a(href='searchCondition-result.html')
-                  button.btn.btn-primary(type='button', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
+                  button.btn.btn-primary(type='submit', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
                     | IVF検索
           // /////
           //
@@ -187,4 +187,12 @@ body
           script.
             $('button').on('click', function() {
             $('.modal').modal('show');
+
+            var target = $('input#dev').val();
+            var target2 = $('input#dev2').val();
+            if (target == '' && target2 == '') {
+              alert("IDまたはIVFIDは必須入力項目です");
+              $('html, body').animate({scrollTop: 0}, 400);
+              return false;
+              }              
             });
