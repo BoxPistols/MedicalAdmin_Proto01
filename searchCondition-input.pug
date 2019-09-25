@@ -26,7 +26,7 @@ body
     .hipsum
       .jumbotron
         .container.mt-2
-          form.lay_form.row.px-4
+          form.lay_form.row.px-4(action="searchCondition-result.html" method="post")
             .lay_title.mb-2.mt-2.d-flex.align-items-center
               h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
                 span.ml-2.cl_green.mr-4
@@ -162,21 +162,15 @@ body
                 //- selsect
                 //-   option(value="1")  
 
-              //- .formSection
-              //-   label.mr-sm-2(for='') 年齢
-              //-   input.age(type='text', value='', placeholder='年齢', style='width: 3em;')
-              //- .formSection.mr-3
-              //-   label.mr-sm-2(for='') 排卵数
-              //-   input.age(type='text', value='', placeholder='', style='width: 4em;')
-
             .container.mt-4
 
             .container.mt-4
               .row
-                a(href='searchCondition-result.html')
+                //- a(href='searchCondition-result.html')
+                a
                   button.btn.btn-primary(type='submit', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
                     | IVF検索
-          // /////
+
           //
             <div class="footer text-center">
             <p>footer</p>
