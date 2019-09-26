@@ -1,0 +1,50 @@
+include pug/_meta
+
+body
+  .header
+    a#menu-toggle(href='#')
+      i.fa.fa-bars
+      span Menu
+    .logo
+      a(href='index.html')
+        // ?xml version="1.0" encoding="UTF-8"?
+        svg(fill='#f3f3f3', width='35pt', height='35pt', version='1.1', viewBox='0 0 100 100', xmlns='http://www.w3.org/2000/svg')
+          path(d='m44.949 15.27c-7.5977 0-15.195 2.8906-20.988 8.6836v-0.003906c-11.582 11.582-11.582 30.41 0 41.988 10.445 10.449 26.773 11.438 38.375 3.0312l15.758 15.762 6.6328-6.6328-15.758-15.758c8.4141-11.598 7.4219-27.93-3.0312-38.379-5.7891-5.793-13.391-8.6875-20.988-8.6914zm0.003906 3.1016c6.793 0 13.59 2.5977 18.781 7.793 10.387 10.387 10.387 27.176 0 37.562-10.387 10.387-27.18 10.387-37.566 0-10.387-10.387-10.387-27.176 0-37.562 5.1953-5.1953 11.988-7.793 18.785-7.793zm0 3.1484c-6.0039 0-12.004 2.2812-16.574 6.8516-9.1406 9.1406-9.1406 24.008 0 33.145 9.1406 9.1406 24.004 9.1406 33.145 0 9.1406-9.1367 9.1406-24.004 0-33.145-4.5703-4.5703-10.57-6.8516-16.57-6.8516zm0 3.1055c5.1953 0 10.387 1.9844 14.359 5.957 7.9453 7.9453 7.9453 20.781 0 28.727-7.9453 7.9453-20.777 7.9453-28.723 0-7.9453-7.9453-7.9453-20.781 0-28.727 3.9727-3.9727 9.168-5.957 14.363-5.957zm-14.562 6.332v22.203h5.918v6.2383h22.199v-22.199h-5.918v-6.2422zm3.1133 3.1172h15.961v3.125h-13.156v12.836h-2.8047zm5.9297 6.25h15.949v15.961h-15.949zm27.559 24.457 13.316 13.316-2.2148 2.2031-13.312-13.312c0.39062-0.34766 0.78906-0.67578 1.1641-1.0508 0.37109-0.37109 0.69922-0.76953 1.0469-1.1562z', fill-rule='evenodd')
+        |         FITIE
+        span(style='font-size: 14px') - 胚画像による妊娠出産予想システム -
+    .l_info
+      .m_title
+        ul
+          li
+            a(href='index.html') Home
+          li.active
+            | IVF情報 / IVF個別照会
+
+  include pug/_sideBar
+
+  .main
+    .hipsum
+      .jumbotron(style='')
+
+        .container.mt-4
+          form.lay_form.-row.px-4
+            .lay_title.mb-2.mt-2.d-flex.align-items-center
+              h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
+                span.ml-2.cl_green.mr-4 個別IVF照会ページ
+
+            .container.mt-4
+              .l_user-info
+                h3.h3 仮設置 
+
+
+            .container.mt-4
+              .row
+                a(href='#')
+                  button.btn.btn-info(type='button', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em' onclick="history.back()")
+                    | 戻る
+
+          script(src='https://code.jquery.com/jquery-3.3.1.js')
+          script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+          //script(src='js/datatables.min.js')      
+          script(src='js/script.js')
+    

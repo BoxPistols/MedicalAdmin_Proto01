@@ -1,0 +1,192 @@
+include pug/_meta
+
+body
+  .header
+    a#menu-toggle(href='#')
+      i.fa.fa-bars
+      span Menu
+    .logo
+      a(href='index.html')
+        // ?xml version="1.0" encoding="UTF-8"?
+        svg(fill='#f3f3f3', width='35pt', height='35pt', version='1.1', viewBox='0 0 100 100', xmlns='http://www.w3.org/2000/svg')
+          path(d='m44.949 15.27c-7.5977 0-15.195 2.8906-20.988 8.6836v-0.003906c-11.582 11.582-11.582 30.41 0 41.988 10.445 10.449 26.773 11.438 38.375 3.0312l15.758 15.762 6.6328-6.6328-15.758-15.758c8.4141-11.598 7.4219-27.93-3.0312-38.379-5.7891-5.793-13.391-8.6875-20.988-8.6914zm0.003906 3.1016c6.793 0 13.59 2.5977 18.781 7.793 10.387 10.387 10.387 27.176 0 37.562-10.387 10.387-27.18 10.387-37.566 0-10.387-10.387-10.387-27.176 0-37.562 5.1953-5.1953 11.988-7.793 18.785-7.793zm0 3.1484c-6.0039 0-12.004 2.2812-16.574 6.8516-9.1406 9.1406-9.1406 24.008 0 33.145 9.1406 9.1406 24.004 9.1406 33.145 0 9.1406-9.1367 9.1406-24.004 0-33.145-4.5703-4.5703-10.57-6.8516-16.57-6.8516zm0 3.1055c5.1953 0 10.387 1.9844 14.359 5.957 7.9453 7.9453 7.9453 20.781 0 28.727-7.9453 7.9453-20.777 7.9453-28.723 0-7.9453-7.9453-7.9453-20.781 0-28.727 3.9727-3.9727 9.168-5.957 14.363-5.957zm-14.562 6.332v22.203h5.918v6.2383h22.199v-22.199h-5.918v-6.2422zm3.1133 3.1172h15.961v3.125h-13.156v12.836h-2.8047zm5.9297 6.25h15.949v15.961h-15.949zm27.559 24.457 13.316 13.316-2.2148 2.2031-13.312-13.312c0.39062-0.34766 0.78906-0.67578 1.1641-1.0508 0.37109-0.37109 0.69922-0.76953 1.0469-1.1562z', fill-rule='evenodd')
+        |         FITIE
+        span(style='font-size: 14px') - 胚画像による妊娠出産予想システム -
+    .l_info
+      .m_title
+        ul
+          li
+            a(href='index.html') Home
+          li.active
+            | IVF情報 / 検索
+
+  include pug/_sideBar
+  // Content
+  .main
+    .hipsum
+      .jumbotron
+        .container.mt-2
+          form.lay_form.row.px-4(action="searchCondition-result.html" method="post")
+            .lay_title.mb-2.mt-2.d-flex.align-items-center
+              h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
+                span.ml-2.cl_green.mr-4
+                  i(class="fas fa-search mr-2")
+                  span IVF検索
+
+            // /.lay_title
+            .container.form-row.d-flex.justify-content-start                
+              .formSection.d-md-flex
+                .form-input.mr-4
+                  label.form-label.mr-1(for='dev') 患者ID                    
+                  input#dev.form-input(type='text', placeholder="P00001234")
+
+                .form-input
+                  label.form-label.mr-1(for='dev') IFVID：ART
+                  input#dev2.form-input(type='text', placeholder="0056789")
+
+              .formSection.d-flex.flex-nowrap(style='margin: 6px 0px 8px 16px')
+                //- label.mr-sm-2(for='inlineFormCustomSelect2') 排卵時IVFID
+                //- input(type='text', name='', value='')
+                //- button#1.btn.btn-primary.idSearch(type='button', data-toggle='modal', data-target='#exampleModalCenter')
+                //-   | 検索
+            .m_hr.pt-1.pb-2(style='margin-top: 12px')
+            .container.form-row
+
+              .mr-3.mb-4
+                h4.h4.div.d-flex
+                  i.far.fa-calendar-alt.mr-2.cl_gray
+                  .h5.cl_gray 実施日付
+
+                .d-flex  
+                  .form-check(style='')
+                    input#defaultCheck1.form-check-input(type='checkbox', value='')
+                    label.form-check-label(for='defaultCheck1', name="all")
+                      | 全て
+                  .custom-select-Group.input-group.mb-3
+                    .input-group-prepend
+                      label.input-group-text(for='inputGroupSelect01', name="year") 年
+                    select#inputGroupSelect01.custom-select
+                      option(selected='', value='') 年の選択
+                      option(value='2019') 2019
+                      //- option(value='2') 2020
+                    .mr-4
+                    .input-group-prepend
+                      label.input-group-text(for='inputGroupSelect01', name="month") 月
+                    select#inputGroupSelect01.custom-select
+                      option(selected='', value='') 月の選択
+                      option(value='9') 9
+                      option(value='10') 10
+                      option(value='11') 11
+                      option(value='12') 12
+
+                .form_SelectGroup      
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-random.mr-2
+                    .h5 移植方法1
+
+                  .d-flex
+                    .form-check.form-check-inline
+                      input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='all' required, checked="checked")
+                      label.form-check-label(for='inlineRadio1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
+                      label.form-check-label(for='inlineRadio2') 新鮮胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadio3.form-check-input(type='radio', name='inlineRadioOptions', value='option3')
+                      label.form-check-label(for='inlineRadio3') 凍結胚移植
+                    //- .form-check.form-check-inline
+                    //-   input#inlineRadio4.form-check-input(type='radio', name='inlineRadioOptions', value='option4')
+                    //-   label.form-check-label(for='inlineRadio4') 凍結胚移植
+
+                .form_SelectGroup                
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-random.mr-2
+                    .h5 移植方法2
+
+                  .d-flex.mb-3
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-1.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='all', required, checked="checked")
+                      label.form-check-label(for='inlineRadioDev2-1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-2.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option2')
+                      label.form-check-label(for='inlineRadioDev2-2') 単一胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-3.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option3')
+                      label.form-check-label(for='inlineRadioDev2-3') 複数胚移植
+                    .form-check.form-check-inline
+                      input#inlineRadioDev2-4.form-check-input(type='radio', name='inlineRadioDev2-Options2', value='option4')
+                      label.form-check-label(for='inlineRadioDev2-4') 二段階胚移植
+
+                .form_SelectGroup
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-edit.mr-2
+                    .h5 入力状況
+
+                  .d-flex
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-1.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='all', required, checked="checked")
+                      label.form-check-label(for='inlineRadioDev3-1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-2.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option2')
+                      label.form-check-label(for='inlineRadioDev3-2') 情報のみ
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-3.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option3')
+                      label.form-check-label(for='inlineRadioDev3-3') 胚選択済
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-4.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option4')
+                      label.form-check-label(for='inlineRadioDev3-4') 移植済
+                    .form-check.form-check-inline
+                      input#inlineRadioDev3-5.form-check-input(type='radio', name='inlineRadioDev3-Options3', value='option5')
+                      label.form-check-label(for='inlineRadioDev3-5') 結果
+
+                .form_SelectGroup
+                  h4.h4.div.d-flex.mt-4.mb-1
+                    i.fas.fa-poll.mr-2
+                    .h5 結果状況
+
+                  .d-flex
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-1.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='all', required, checked="checked")
+                      label.form-check-label(for='inlineRadioDev4-1') 全て
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-2.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option2')
+                      label.form-check-label(for='inlineRadioDev4-2') 妊娠あり
+                    .form-check.form-check-inline
+                      input#inlineRadioDev4-3.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option3')
+                      label.form-check-label(for='inlineRadioDev4-3') 出産あり
+                    //- .form-check.form-check-inline
+                    //-   input#inlineRadioDev4-4.form-check-input(type='radio', name='inlineRadioDev4-Options4', value='option4')
+                    //-   label.form-check-label(for='inlineRadioDev4-4') 凍結胚移植
+
+                //- label.mr-sm-2.ml-1(for='') 実施日付
+                //- selsect
+                //-   option(value="1")  
+
+            .container.mt-4
+
+            .container.mt-4
+              .row
+                //- a(href='searchCondition-result.html')
+                a
+                  button.btn.btn-primary(type='submit', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
+                    | IVF検索
+
+          //
+            <div class="footer text-center">
+            <p>footer</p>
+            </div>
+          script(src='https://code.jquery.com/jquery-3.3.1.js')
+          script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+          script(src='js/script.js')
+          script.
+            $('button').on('click', function() {
+            $('.modal').modal('show');
+
+            var target = $('input#dev').val();
+            var target2 = $('input#dev2').val();
+            if (target == '' && target2 == '') {
+              alert("IDまたはIVFIDは必須入力項目です");
+              $('html, body').animate({scrollTop: 0}, 400);
+              return false;
+              }              
+            });
