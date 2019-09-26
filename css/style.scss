@@ -48,10 +48,8 @@ body {
   min-height: 100vh;
 }
 
-a {
-  &.udl {
-    text-decoration: underline;
-  }
+.tx_udl {
+  text-decoration: underline;
 }
 
 ol,
@@ -361,6 +359,7 @@ table.inline-table {
   th {
     transition: 0.2s;
     vertical-align: middle;
+    text-align: center;
 
     &:hover {
       cursor: pointer;
@@ -545,6 +544,14 @@ button.adaptation {
       &.active {
         color: #fff;
         background: #036ED9;
+        padding: 3px 0 0 4px;
+        font-size: 12px;
+        height: 24px;
+        @media only screen and (max-width: 960px) {
+          font-size: 0;
+          padding: 0;
+          height: auto;
+        }
 
         &:after {
           border-left-color: #036ED9;
@@ -610,22 +617,68 @@ table.dataTable.table-sm > thead > tr > th {
 //   -webkit-transform: translate(0,-25%);
 //   transform: translate(0,-25%);
 // }
-
+/* ---- Modal ----------------------------------- */
 #ModalArea {
   opacity: 1;
 
-  #close,
+  .modalTrg {
+    padding: 12px;
+    margin: -15px -0.1em;
+    line-height: 1;
+    transition: 0.2s;
+    border: 2px solid transparent;
+
+    &:hover {
+      background: rgba(223, 131, 36, 0.3);
+      border: 2px solid orange;
+    }
+  }
+
+  .buttonArea {
+    display: flex;
+    align-items: flex-end;
+    // justify-content;
+    margin: auto;
+
+    #close {
+      opacity: 1;
+      cursor: pointer;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+      padding: 12px;
+      margin: 16px auto 0;
+      background: #ccc;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #next a {
+      display: block;
+      background: #4caf50;
+      color: white;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+      padding: 12px;
+      margin: 0;
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        text-decoration: none;
+        background-color: darkorange;
+      }
+    }
+  }
+
   #open {
     opacity: 1;
-    cursor: pointer;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-align: center;
-    padding: 12px;
-    margin: 16px auto 0;
-    background: #4caf50;
-    color: white;
+    // cursor: pointer;
+    color: #007bff;
   }
 
   #mask {
@@ -642,7 +695,10 @@ table.dataTable.table-sm > thead > tr > th {
   }
 
   #modaling {
+    display: flex;
+    flex-direction: column;
     opacity: 0.9;
+    cursor: auto;
     background: #fff;
     color: #555;
     width: 70vw;
@@ -664,7 +720,8 @@ table.dataTable.table-sm > thead > tr > th {
     }
 
     p {
-      margin: 0 0 20px;
+      // margin: 0 0 20px;
+      color: darkblue;
     }
 
     &.hidden {
@@ -675,4 +732,13 @@ table.dataTable.table-sm > thead > tr > th {
   #mask.hidden {
     display: none;
   }
+}
+/* ---- DataTable ----------------------------------- */
+div#example_filter {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.pagination {
+  justify-content: flex-end;
 }

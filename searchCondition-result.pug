@@ -19,24 +19,23 @@ body
             a(href='index.html') Home
           li.active
             | IVF情報 / 検索結果
-            
+
   include pug/_sideBar
-  
+
   .main
     .hipsum
       .jumbotron(style='')
-        
+
         .container.mt-4
           form.lay_form.-row.px-4
             .lay_title.mb-2.mt-2.d-flex.align-items-center
               h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
                 span.ml-2.cl_green.mr-4 IVF一覧
             // <div class="m_hr pt-1 pb-2" style="margin-top: 12px"></div>
+
             .container.mt-4
-              
-              //// Add
               .l_user-info
-              
+
                 table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style='display:table;')
                   thead.thead-light
                     tr
@@ -52,66 +51,248 @@ body
                     tr
                       td.text-center 1
                       td 
+                        a.tx_udl(href="searchCondition-individual_inquiry.html") P012
+                        // 個別IVF個別照会ページへ
+                        // 個別IVF individual_inquiry
+                      td
                         #ModalArea
-                          #open
-                            | 詳細をみる
+                          #open.tx_udl.modalTrg A0123
                           #mask.hidden
                           section#modaling.hidden
-                            p
-                              | He said that that that that that boy used in the sentence was wrong.
-                              br
-                              | あの少年がその文で使ったあのthatは間違っていたと彼は言った。
-                            #close
-                              | 閉じる
-            
-
-                      td
-                        a.udl(href="#") A0123
+                            p 患者IDページに進みますか？
+                            .buttonArea
+                              #close
+                                | 閉じる
+                              #next
+                                a(href='check_b.html') はい
                       td -
                       td 新鮮
-                      td 単一
+                      td -
                       td
                         .lay_progress
                           ul.progress_inTable
-                            li.active 
-                            li.active
+                            li.active 1
+                            li.active 2
                             li
                             li
-
                       td(style='width:50px')
                         button.btn.adaptation(type='button', name='button') IVF編集
-            
+
                     tr
                       td.text-center 2
                       td 
-                        a.udl(href="#") P012
+                        a.udl(href="#") P013
                       td
-                        a.udl(href="#") A0123
-                      td -
+                        a.udl(href="#") A0124
+                      td 19/06/01
                       td 新鮮
                       td 単一
                       td
                         .lay_progress
                           ul.progress_inTable
-                            li.active 
-                            li.active
-                            li
-                            li
-
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
                       td(style='width:50px')
                         button.btn.adaptation(type='button', name='button') IVF編集
-            
-                
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
+                    tr
+                      td.text-center 2
+                      td 
+                        a.udl(href="#") P013
+                      td
+                        a.udl(href="#") A0124
+                      td 19/06/01
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 1 
+                            li.active 2
+                            li.active 3
+                            li 
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+
             .container.mt-4
               .row
                 a(href='check_b.html')
                   button.btn.btn-info(type='button', value='検索する', style='width:240px; margin: 10px auto 20px 190px; padding: .8em 2em')
                     | 登録確認
-          // /////
-          //
-            <div class="footer text-center">
-            <p>footer</p>
-            </div>
+                    
           script(src='https://code.jquery.com/jquery-3.3.1.js')
           script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
           script(src='js/datatables.min.js')      
@@ -120,24 +301,3 @@ body
             $('button').on('click', function() {
             $('#ModalArea').modal('show');
             });
-            // $(".embryuoImages img").on('click', function() {
-            //   alert(this.src);
-            // });
-
-
-            $(function() {
-            // let rmNum = $("td.a_bioNum");
-            // console.log("rmNum");
-            // rmNum.html = "mom";
-            var myClass = document.querySelectorAll(".bios td.a_bioNum");
-            for (var i = 0; i < myClass.length; i++) {
-            var min = 2.00;
-            var max = 84.00;
-            // parseFloat(Math.round(num3 * 100) / 100).toFixed(2);
-            var v = Math.floor(Math.random() * (max + 1 - min)).toFixed(1) + min;
-            myClass[i].innerText = v;
-            };
-            });
-            // let a_probability = parseFloat($('.a_probability').val());
-            // alert(a_probability);
-            // let tx = $(a_probability).text();
