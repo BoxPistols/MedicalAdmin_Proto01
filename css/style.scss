@@ -622,7 +622,7 @@ table.dataTable.table-sm > thead > tr > th {
 //   transform: translate(0,-25%);
 // }
 /* ---- Modal ----------------------------------- */
-#ModalArea {
+.ModalArea, .ModalArea2{
   opacity: 1;
 
   .modalTrg {
@@ -644,7 +644,7 @@ table.dataTable.table-sm > thead > tr > th {
     // justify-content;
     margin: auto;
 
-    #close {
+    .close {
       opacity: 1;
       cursor: pointer;
       width: 200px;
@@ -658,7 +658,7 @@ table.dataTable.table-sm > thead > tr > th {
       margin-right: 20px;
     }
 
-    #next a {
+    .next a {
       display: block;
       background: #4caf50;
       color: white;
@@ -679,13 +679,13 @@ table.dataTable.table-sm > thead > tr > th {
     }
   }
 
-  #open {
+  .open {
     opacity: 1;
     // cursor: pointer;
     color: #007bff;
   }
 
-  #mask {
+  .mask {
     background: rgba(0, 0, 0, 0.75);
     position: fixed;
     display: block;
@@ -698,7 +698,7 @@ table.dataTable.table-sm > thead > tr > th {
     height: 100vh;
   }
 
-  #modaling {
+  .modaling {
     display: flex;
     flex-direction: column;
     opacity: 0.9;
@@ -733,7 +733,7 @@ table.dataTable.table-sm > thead > tr > th {
     }
   }
 
-  #mask.hidden {
+  .mask.hidden {
     display: none;
   }
 }

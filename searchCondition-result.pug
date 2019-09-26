@@ -57,15 +57,15 @@ body
                         // 個別IVF個別照会ページへ
                         // 個別IVF individual_inquiry
                       td
-                        #ModalArea
-                          #open.tx_udl.modalTrg A0123
-                          #mask.hidden
-                          section#modaling.hidden
+                        .ModalArea
+                          .open.tx_udl.modalTrg A0123
+                          .mask.hidden
+                          section.modaling.hidden
                             p 患者IDページに進みますか？
                             .buttonArea
-                              #close
+                              .close
                                 | 閉じる
-                              #next
+                              .next
                                 a(href='check_b.html') はい
                       td -
                       td 新鮮
@@ -87,16 +87,8 @@ body
                         // 個別IVF個別照会ページへ
                         // 個別IVF individual_inquiry
                       td
-                        #ModalArea
-                          #open.tx_udl.modalTrg A0124
-                          #mask.hidden
-                          section#modaling.hidden
-                            p 患者IDページに進みますか？
-                            .buttonArea
-                              #close
-                                | 閉じる
-                              #next
-                                a(href='check_b.html') はい
+                        .ModalArea
+                          .open.tx_udl.modalTrg A0124
                       td -
                       td 新鮮
                       td -
@@ -123,5 +115,6 @@ body
           script(src='js/script.js')
           script.
             $('button').on('click', function() {
-            $('#ModalArea').modal('show');
+              $('.ModalArea').modal('show');
+              $('.ModalArea2').modal('show');
             });

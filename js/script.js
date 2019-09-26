@@ -106,24 +106,43 @@ $(document).ready(function() {
 
 
 // Modal
-const open = document.getElementById('open');
-const close = document.getElementById('close');
-const modal = document.getElementById('modaling');
-const mask = document.getElementById('mask');
-const md = $(".dataTables_wrapper, .lay_progress, .pagination,.header, .sidebar");
+const open = document.querySelector('.open');
+const close = document.querySelector('.close');
+const modal = document.querySelector('.modaling');
+const mask = document.querySelector('.mask');
+// const md = $(".dataTables_wrapper, .lay_progress, .pagination,.header, .sidebar");
 
-open.addEventListener('click', function() {
-  modal.classList.remove('hidden');
-  mask.classList.remove('hidden');
-  md.hide();
-});
-close.addEventListener('click', function() {
-  modal.classList.add('hidden');
-  mask.classList.add('hidden');
-  md.show();
-});
-mask.addEventListener('click', function() {
-  modal.classList.add('hidden');
-  mask.classList.add('hidden');
-  md.show();
+// open.addEventListener('click', function() {
+//   modal.classList.remove('hidden');
+//   mask.classList.remove('hidden');
+//   md.hide();
+// });
+// close.addEventListener('click', function() {
+//   modal.classList.add('hidden');
+//   mask.classList.add('hidden');
+//   md.show();
+// });
+// mask.addEventListener('click', function() {
+//   modal.classList.add('hidden');
+//   mask.classList.add('hidden');
+//   md.show();
+// });
+
+// モーダルが複数ある場合
+$(function() {
+  // モーダルのボタンをクリックした時
+  $('.open').on('click', function() {
+    var idx = $(this).index(); // 何番目のモーダルボタンかを取得
+    $('.modaling').eq(idx).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    modal.classList.remove('hidden');
+    mask.classList.remove('hidden');
+    // md.hide();
+  });
+
+  // ×やモーダルの背景をクリックした時
+  $('.close').click(function() {
+    modal.classList.add('hidden');
+    mask.classList.add('hidden');
+    // md.show();
+  });
 });

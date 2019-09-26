@@ -73,14 +73,14 @@
                         <!-- 個別IVF individual_inquiry-->
                       </td>
                       <td>
-                        <div id="ModalArea">
-                          <div class="tx_udl modalTrg" id="open">A0123</div>
-                          <div class="hidden" id="mask"></div>
-                          <section class="hidden" id="modaling">
+                        <div class="ModalArea">
+                          <div class="open tx_udl modalTrg">A0123</div>
+                          <div class="mask hidden"></div>
+                          <section class="modaling hidden">
                             <p>患者IDページに進みますか？</p>
                             <div class="buttonArea">
-                              <div id="close">閉じる</div>
-                              <div id="next"><a href="check_b.html">はい</a></div>
+                              <div class="close">閉じる</div>
+                              <div class="next"><a href="check_b.html">はい</a></div>
                             </div>
                           </section>
                         </div>
@@ -109,16 +109,8 @@
                         <!-- 個別IVF individual_inquiry-->
                       </td>
                       <td>
-                        <div id="ModalArea">
-                          <div class="tx_udl modalTrg" id="open">A0124</div>
-                          <div class="hidden" id="mask"></div>
-                          <section class="hidden" id="modaling">
-                            <p>患者IDページに進みますか？</p>
-                            <div class="buttonArea">
-                              <div id="close">閉じる</div>
-                              <div id="next"><a href="check_b.html">はい</a></div>
-                            </div>
-                          </section>
+                        <div class="ModalArea">
+                          <div class="open tx_udl modalTrg">A0124</div>
                         </div>
                       </td>
                       <td>-</td>
@@ -153,7 +145,8 @@
           <script src="js/script.js"></script>
           <script>
             $('button').on('click', function() {
-            $('#ModalArea').modal('show');
+              $('.ModalArea').modal('show');
+              $('.ModalArea2').modal('show');
             });
           </script>
         </div>
