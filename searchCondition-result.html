@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin UI</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/af-2.3.3/b-1.5.6/sc-2.0.0/datatables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+</html>
+<body>
+  <div class="header"><a id="menu-toggle" href="#"><i class="fa fa-bars"></i><span>Menu</span></a>
+    <div class="logo"><a href="index.html">
+        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+        <svg fill="#f3f3f3" width="35pt" height="35pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="m44.949 15.27c-7.5977 0-15.195 2.8906-20.988 8.6836v-0.003906c-11.582 11.582-11.582 30.41 0 41.988 10.445 10.449 26.773 11.438 38.375 3.0312l15.758 15.762 6.6328-6.6328-15.758-15.758c8.4141-11.598 7.4219-27.93-3.0312-38.379-5.7891-5.793-13.391-8.6875-20.988-8.6914zm0.003906 3.1016c6.793 0 13.59 2.5977 18.781 7.793 10.387 10.387 10.387 27.176 0 37.562-10.387 10.387-27.18 10.387-37.566 0-10.387-10.387-10.387-27.176 0-37.562 5.1953-5.1953 11.988-7.793 18.785-7.793zm0 3.1484c-6.0039 0-12.004 2.2812-16.574 6.8516-9.1406 9.1406-9.1406 24.008 0 33.145 9.1406 9.1406 24.004 9.1406 33.145 0 9.1406-9.1367 9.1406-24.004 0-33.145-4.5703-4.5703-10.57-6.8516-16.57-6.8516zm0 3.1055c5.1953 0 10.387 1.9844 14.359 5.957 7.9453 7.9453 7.9453 20.781 0 28.727-7.9453 7.9453-20.777 7.9453-28.723 0-7.9453-7.9453-7.9453-20.781 0-28.727 3.9727-3.9727 9.168-5.957 14.363-5.957zm-14.562 6.332v22.203h5.918v6.2383h22.199v-22.199h-5.918v-6.2422zm3.1133 3.1172h15.961v3.125h-13.156v12.836h-2.8047zm5.9297 6.25h15.949v15.961h-15.949zm27.559 24.457 13.316 13.316-2.2148 2.2031-13.312-13.312c0.39062-0.34766 0.78906-0.67578 1.1641-1.0508 0.37109-0.37109 0.69922-0.76953 1.0469-1.1562z" fill-rule="evenodd"></path>
+        </svg>        FITIE<span style="font-size: 14px">- 胚画像による妊娠出産予想システム -</span></a></div>
+    <div class="l_info">
+      <div class="m_title">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="active">IVF情報 / 検索結果</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
+      <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
+      <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
+      <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+      <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="hipsum">
+      <div class="jumbotron">
+        <div class="l_user-info py-1">
+          <table class="display table inline-table table-responsive-lg table-sm table-striped cl_ye table-bordered -table-borderless table-hover" id="">
+            <thead>
+              <tr>
+                <th>患者ID</th>
+                <th>妻年齢</th>
+                <th>夫年齢</th>
+                <th>排卵回数</th>
+                <th>ET回数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>P0000123</td>
+                <td>35</td>
+                <td>38</td>
+                <td>4</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lay_progress mt-4">
+          <ul id="progress">
+            <li>1. IVF情報入力</li>
+            <li class="active">2. 胚選択</li>
+            <li>3. 胚移植</li>
+            <li>4. 結果入力</li>
+          </ul>
+        </div>
+        <div class="container mt-4">
+          <form class="lay_form -row px-4">
+            <div class="lay_title mb-2 mt-2 d-flex align-items-center">
+              <h3 class="row m_title lv3 mt-4 ml-2 mb-3 d-flex align-items-center"><span class="ml-2 cl_green mr-4">IVF一覧</span></h3>
+            </div>
+            <!-- <div class="m_hr pt-1 pb-2" style="margin-top: 12px"></div>-->
+            <div class="container mt-4">
+              <!--// Add-->
+              <div class="l_user-info">
+                <table class="display table inline-table table-responsive-lg table-hover table-sm table-striped table-bordered" id="example" style="display:table-cell;">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="text-center" style="width:60px">番号</th>
+                      <th style="width:50px">ドナーID</th>
+                      <th style="width:40px">性別</th>
+                      <th style="width:40px">年齢</th>
+                      <th style="width:40px">血液型</th>
+                      <th style="width:80px">ABOミスマッチ</th>
+                      <th colspan="2">HLAミスマッチ座数 </th>
+                      <th style="width:60px">K指標</th>
+                      <th style="width:15%">HLA（A-C-B-DR-DQ-DP）</th>
+                      <th style="width:60px">登録日</th>
+                      <th style="width:120px">保管場所</th>
+                      <th style="width:60px">適応</th>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th style="width:60px">血清型</th>
+                      <th style="width:75px">遺伝子型</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>D0000321</td>
+                      <td>男</td>
+                      <td>28</td>
+                      <td>B-</td>
+                      <td>mismatch</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">1s</td>
+                      <td>0.997</td>
+                      <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                      <td>12/12/18</td>
+                      <td>神戸市立医療センター中央市民病院</td>
+                      <td style="width:50px">
+                        <button class="btn adaptation" type="button" name="button">適用</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>D0000437</td>
+                      <td>女</td>
+                      <td>32</td>
+                      <td>A+</td>
+                      <td>Matched</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td>0.992</td>
+                      <td>A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01</td>
+                      <td>10/01/12</td>
+                      <td>世田谷市民病院</td>
+                      <!-- <td class="text-primary">検討中</td>-->
+                      <td style="width:50px">
+                        <button class="btn adaptation" type="button" name="button">適用</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">3</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>B+</td>
+                      <td>Major mismatch</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">4</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>埼玉大学病院</td>
+                      <td style="width:50px">
+                        <button class="btn adaptation" type="button" name="button">適用</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">4</td>
+                      <td>D0000321</td>
+                      <td>女</td>
+                      <td>22</td>
+                      <td>B-</td>
+                      <td>Major-minor mismatch</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">5</td>
+                      <td>0.947</td>
+                      <td>A＊24:02-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01</td>
+                      <td>13/06/21</td>
+                      <td>品川掖済会病院</td>
+                      <td style="width:50px">
+                        <button class="btn adaptation" type="button" name="button">適用</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">5</td>
+                      <td>D0000437</td>
+                      <td>女</td>
+                      <td>32</td>
+                      <td>A+</td>
+                      <td>Matched</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">0</td>
+                      <td>0.892</td>
+                      <td>A＊11:01-C＊01:02-B＊54:01-DRB1＊04:05-DQB1＊04:01-DPB1＊05:01</td>
+                      <td>11/03/01</td>
+                      <td>駒沢病院</td>
+                      <!-- <td class="text-primary">検討中</td>-->
+                      <td>
+                        <button class="btn btn-secondary" type="button" disabled="">検討中</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">6</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">7</td>
+                      <td>D0000321</td>
+                      <td>男</td>
+                      <td>28</td>
+                      <td>O-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">6</td>
+                      <td>0.797</td>
+                      <td>A＊02:07-C＊01:02-B＊46:01-DRB1＊08:03-DQB1＊06:01-DPB1＊05:01</td>
+                      <td>15/10/18</td>
+                      <td>千葉医療センタ</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">8</td>
+                      <td>D0000237</td>
+                      <td>女</td>
+                      <td>32</td>
+                      <td>A+</td>
+                      <td>Matched</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td>0.992</td>
+                      <td>A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01</td>
+                      <td>10/01/12</td>
+                      <td>世田谷市民病院</td>
+                      <!-- <td class="text-primary">検討中</td>-->
+                      <td>
+                        <button class="btn btn-secondary" type="button" disabled="">検討中</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">9</td>
+                      <td>D0000135</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">10</td>
+                      <td>D0000907</td>
+                      <td>男</td>
+                      <td>28</td>
+                      <td>B-</td>
+                      <td>mismatch</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">1s</td>
+                      <td>0.997</td>
+                      <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                      <td>12/12/18</td>
+                      <td>神戸市立医療センター中央市民病院</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">11</td>
+                      <td>D0000887</td>
+                      <td>女</td>
+                      <td>32</td>
+                      <td>A+</td>
+                      <td>Matched</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td>0.992</td>
+                      <td>A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01</td>
+                      <td>10/01/12</td>
+                      <td>世田谷市民病院</td>
+                      <!-- <td class="text-primary">検討中</td>-->
+                      <td>
+                        <button class="btn btn-secondary" type="button" disabled="">検討中</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">12</td>
+                      <td>D0000482</td>
+                      <td>男</td>
+                      <td>41</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">13</td>
+                      <td>D0000321</td>
+                      <td>男</td>
+                      <td>28</td>
+                      <td>B-</td>
+                      <td>mismatch</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">1s</td>
+                      <td>0.997</td>
+                      <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                      <td>12/12/18</td>
+                      <td>神戸市立医療センター中央市民病院</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">13</td>
+                      <td>D0000437</td>
+                      <td>女</td>
+                      <td>32</td>
+                      <td>A+</td>
+                      <td>Matched</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td>0.992</td>
+                      <td>A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01</td>
+                      <td>10/01/12</td>
+                      <td>世田谷市民病院</td>
+                      <!-- <td class="text-primary">検討中</td>-->
+                      <td>
+                        <button class="btn btn-secondary" type="button" disabled="">検討中</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">14</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">15</td>
+                      <td>D0000321</td>
+                      <td>男</td>
+                      <td>28</td>
+                      <td>B-</td>
+                      <td>mismatch</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">1s</td>
+                      <td>0.997</td>
+                      <td>A＊24:02-C＊12:02-B＊52:01-DRB1＊15:02-DQB1＊06:01-DPB1＊09:01</td>
+                      <td>12/12/18</td>
+                      <td>神戸市立医療センター中央市民病院</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">16</td>
+                      <td>D0000437</td>
+                      <td>女</td>
+                      <td>32</td>
+                      <td>A+</td>
+                      <td>Matched</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">2</td>
+                      <td>0.992</td>
+                      <td>A＊33:03-C＊14:03-B＊44:03-DRB1＊13:02-DQB1＊06:04-DPB1＊04:01</td>
+                      <td>10/01/12</td>
+                      <td>世田谷市民病院</td>
+                      <!-- <td class="text-primary">検討中</td>-->
+                      <td>
+                        <button class="btn btn-secondary" type="button" disabled="">検討中</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">17</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">18</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">19</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">20</td>
+                      <td>D0000335</td>
+                      <td>男</td>
+                      <td>40</td>
+                      <td>AB-</td>
+                      <td>Minor mismatch</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">2</td>
+                      <td>0.825</td>
+                      <td>A＊24:02-C＊07:02-B＊07:02-DRB1＊01:01-DQB1＊05:01-DPB1＊04:02</td>
+                      <td>14/08/12</td>
+                      <td>大阪国立医療センター</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <table class="table table-sm mt-2 mx-2 table-hover" id="t1">
+                  <thead>
+                    <tr>
+                      <th scope="col">胚ID</th>
+                      <th scope="col">#1</th>
+                      <th scope="col">#2</th>
+                      <th scope="col">#3</th>
+                      <th scope="col">#4</th>
+                      <th scope="col">#5</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                  <tbody>
+                    <tr class="embryuoImages">
+                      <th scope="row">D3胚画像</th>
+                      <td><img src="img/RUN186.JPG" title="RUN186"></td>
+                      <td><img src="img/RUN268.JPG" title="RUN268"></td>
+                      <td><img src="img/RUN284_2.JPG" title="RUN284_2"></td>
+                      <td><img src="img/RUN284.JPG" title="RUN284"></td>
+                      <td><img src="img/RUN466.JPG" title="RUN466"></td>
+                    </tr>
+                    <tr class="dothesort">
+                      <td>胚グレード
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td>3</td>
+                      <td>5</td>
+                      <td>4</td>
+                      <td>7</td>
+                      <td>2</td>
+                    </tr>
+                    <tr class="dothesort">
+                      <td>妊娠確率
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_probability">72%</td>
+                      <td class="a_probability">65%</td>
+                      <td class="a_probability">58%</td>
+                      <td class="a_probability">47%</td>
+                      <td class="a_probability">39%</td>
+                    </tr>
+                    <tr class="dothesort">
+                      <td>出産確率
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_probability">49%</td>
+                      <td class="a_probability">60%</td>
+                      <td class="a_probability">46%</td>
+                      <td class="a_probability">40%</td>
+                      <td class="a_probability">30%</td>
+                    </tr>
+                    <tr class="dothesort">
+                      <td>LOSS率
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_probability">23%</td>
+                      <td class="a_probability">5%</td>
+                      <td class="a_probability">12%</td>
+                      <td class="a_probability">7%</td>
+                      <td class="a_probability">9%</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">採否</th>
+                      <td>
+                        <p>Transfer</p>
+                        <select name="" id="">
+                          <option value="採用">採用</option>
+                          <option value="不採用" selected="selected">不採用</option>
+                        </select>
+                      </td>
+                      <td>
+                        <p>Transfer</p>
+                        <select name="" id="">
+                          <option value="採用">採用</option>
+                          <option value="不採用" selected="selected">不採用</option>
+                        </select>
+                      </td>
+                      <td>
+                        <p>Transfer</p>
+                        <select name="" id="">
+                          <option value="採用">採用</option>
+                          <option value="不採用" selected="selected">不採用</option>
+                        </select>
+                      </td>
+                      <td>
+                        <p>Transfer</p>
+                        <select name="" id="">
+                          <option value="採用" selected="selected">採用</option>
+                          <option value="不採用">不採用</option>
+                        </select>
+                      </td>
+                      <td>
+                        <p>Transfer</p>
+                        <select name="" id="">
+                          <option value="採用">採用</option>
+                          <option value="不採用" selected="selected">不採用</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="font-weight-bold">培養過程</td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <!--
+                    <tr class="bios">
+                    <td>tPB2
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                    <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z" />
+                    <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z" />
+                    </g>
+                    </svg>
+                    </td>
+                    <td class="a_bioNum">1.31</td>
+                    <td class="a_bioNum">3.42</td>
+                    <td class="a_bioNum">2.87</td>
+                    <td class="a_bioNum">4.87</td>
+                    <td class="a_bioNum">3.87</td>
+                    </tr>
+                    -->
+                    <tr class="bios">
+                      <td>tPNf
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t2
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t3
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t4
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t5
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t6
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t7
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t8
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t9+
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <!-- <tr class="bios">-->
+                    <!--
+                    <td>tM
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                    <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z" />
+                    <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z" />
+                    </g>
+                    </svg>
+                    </td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    </tr>
+                    -->
+                    <tr class="bios">
+                      <td>tSB
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>tB
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>t9+
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>tEB
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <tr class="bios">
+                      <td>tHB
+                        <!-- ?xml version="1.0" encoding="UTF-8"?-->
+                        <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z"></path>
+                            <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z"></path>
+                          </g>
+                        </svg>
+                      </td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                      <td class="a_bioNum"></td>
+                    </tr>
+                    <!--
+                    <tr class="bios">
+                    <td>tDead
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg fill="#369" width="18pt" height="18pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                    <path d="m73 43l7 7 20-20-20-20-7 7 8 8h-81v10h81z" />
+                    <path d="m27 57l-7-7-20 20 20 20 7-7-8-8h81v-10h-81z" />
+                    </g>
+                    </svg>
+                    </td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    <td class="a_bioNum"></td>
+                    </tr>
+                    -->
+                    <!--
+                    1. tPB2
+                    2. tPNa
+                    3. tPNf
+                    4. t2
+                    5. t3
+                    6. t4
+                    7. t5
+                    8. t6
+                    9. t7
+                    10. t8
+                    11. t9+
+                    12. tSC
+                    13. tM
+                    14. tSB
+                    15. tB
+                    16. tEB
+                    17. tHB
+                    18. tDead
+                    -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="container mt-4">
+              <div class="row"><a href="check_b.html">
+                  <button class="btn btn-info" type="button" value="検索する" style="width:240px; margin: 10px auto 20px 190px; padding: .8em 2em">登録確認</button></a></div>
+            </div>
+          </form>
+          <!-- /////-->
+          <!--
+          <div class="footer text-center">
+          <p>footer</p>
+          </div>
+          -->
+          <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+          <script src="js/datatables.min.js">     </script>
+          <script src="js/script.js"></script>
+          <script>
+            $('button').on('click', function() {
+            $('.modal').modal('show');
+            });
+            // $(".embryuoImages img").on('click', function() {
+            //   alert(this.src);
+            // });
+            $(function() {
+            $('table#t1 tbody td').filter(function() {
+            console.log(this.innerHTML);
+            return $(this).closest('tr').find('td').index(this) == 0;
+            }).on('click', function() {
+            var list = $(this).siblings('td').map(function(x) {
+            return {
+            idx: x + 1,
+            num: parseInt($(this).text())
+            }
+            }).get();
+            list.sort(function(x, y) {
+            if (x["num"] == y["num"]) return 0;
+            return x["num"] < y["num"] ? 1 : -1;
+            });
+            $(this).closest('table').find('tr').each(function() {
+            var self = $(this);
+            list.forEach(function(x) {
+            self.find('td,th').eq(x["idx"]).clone().appendTo(self);
+            });
+            self.find('td,th').filter(':gt(0):lt(' + list.length + ')').remove();
+            });
+            });
+            });
+            $(function() {
+            // let rmNum = $("td.a_bioNum");
+            // console.log("rmNum");
+            // rmNum.html = "mom";
+            var myClass = document.querySelectorAll(".bios td.a_bioNum");
+            for (var i = 0; i < myClass.length; i++) {
+            var min = 2.00;
+            var max = 84.00;
+            // parseFloat(Math.round(num3 * 100) / 100).toFixed(2);
+            var v = Math.floor(Math.random() * (max + 1 - min)).toFixed(1) + min;
+            myClass[i].innerText = v;
+            };
+            });
+            // let a_probability = parseFloat($('.a_probability').val());
+            // alert(a_probability);
+            // let tx = $(a_probability).text();
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
