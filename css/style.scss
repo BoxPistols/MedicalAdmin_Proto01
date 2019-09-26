@@ -288,7 +288,6 @@ form.lay_form {
   padding: 110px 15px 15px 75px;
   transition: all 0.2s ease-in-out;
   // min-height: 100vh;
-
   &.active {
     padding-left: 275px;
     transition: all 0.2s ease-in-out;
@@ -622,7 +621,8 @@ table.dataTable.table-sm > thead > tr > th {
 //   transform: translate(0,-25%);
 // }
 /* ---- Modal ----------------------------------- */
-.ModalArea, .ModalArea2{
+.ModalArea,
+.ModalArea2 {
   opacity: 1;
 
   .modalTrg {
@@ -651,11 +651,13 @@ table.dataTable.table-sm > thead > tr > th {
       border: 1px solid #ccc;
       border-radius: 4px;
       text-align: center;
-      padding: 12px;
+      padding: 13px;
       margin: 16px auto 0;
-      background: #ccc;
+      background: #aaa;
       color: white;
-      margin-right: 20px;
+      margin-right: 60px;
+      font-weight: 300;
+      font-size: 1.25em;
     }
 
     .next a {
@@ -666,9 +668,12 @@ table.dataTable.table-sm > thead > tr > th {
       border: 1px solid #ccc;
       border-radius: 4px;
       text-align: center;
-      padding: 12px;
+      padding: 7px;
+      // height: 50px;
       margin: 0;
       transition: 0.2s;
+      font-weight: 300;
+      font-size: 1.25em;
 
       &:hover {
         cursor: pointer;
@@ -725,7 +730,8 @@ table.dataTable.table-sm > thead > tr > th {
 
     p {
       // margin: 0 0 20px;
-      color: darkblue;
+      // color: darkblue;
+      font-size: 1.25em;
     }
 
     &.hidden {
@@ -743,6 +749,12 @@ div#example_filter {
   display: flex;
 }
 
-.pagination {
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   justify-content: flex-end;
+  margin-top: 0.5em;
+}
+
+button.btn.adaptation {
+  border: 1px solid #abe;
+  background: rgba(#e6f3f5, 0.4);
 }
