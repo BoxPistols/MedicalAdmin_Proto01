@@ -26,30 +26,6 @@ body
     .hipsum
       .jumbotron(style='')
         
-              
-        .l_user-info.py-1
-          table.display.table.inline-table.table-responsive-lg.table-sm.table-striped.cl_ye.table-bordered.-table-borderless.table-hover(id='')
-            thead
-              tr
-                th 患者ID
-                th 妻年齢
-                th 夫年齢
-                th 排卵回数
-                th ET回数
-            tbody
-              tr
-                td P0000123
-                td 35
-                td 38
-                td 4
-                td 2
-        .lay_progress.mt-4
-          ul#progress
-            li 1. IVF情報入力
-            li.active 2. 胚選択
-            li 3. 胚移植
-            li 4. 結果入力
-            
         .container.mt-4
           form.lay_form.-row.px-4
             .lay_title.mb-2.mt-2.d-flex.align-items-center
@@ -60,6 +36,7 @@ body
               
               //// Add
               .l_user-info
+              
                 table#example.display.table.inline-table.table-responsive-lg.table-hover.table-sm.table-striped.table-bordered(style='display:table;')
                   thead.thead-light
                     tr
@@ -70,10 +47,42 @@ body
                       th 新鮮/凍結
                       th 移植方法
                       th 入力状況
-                      th 編集
+                      th 
                   tbody
                     tr
                       td.text-center 1
+                      td 
+                        #ModalArea
+                          #open
+                            | 詳細をみる
+                          #mask.hidden
+                          section#modaling.hidden
+                            p
+                              | He said that that that that that boy used in the sentence was wrong.
+                              br
+                              | あの少年がその文で使ったあのthatは間違っていたと彼は言った。
+                            #close
+                              | 閉じる
+            
+
+                      td
+                        a.udl(href="#") A0123
+                      td -
+                      td 新鮮
+                      td 単一
+                      td
+                        .lay_progress
+                          ul.progress_inTable
+                            li.active 
+                            li.active
+                            li
+                            li
+
+                      td(style='width:50px')
+                        button.btn.adaptation(type='button', name='button') IVF編集
+            
+                    tr
+                      td.text-center 2
                       td 
                         a.udl(href="#") P012
                       td
@@ -109,35 +118,13 @@ body
           script(src='js/script.js')
           script.
             $('button').on('click', function() {
-            $('.modal').modal('show');
+            $('#ModalArea').modal('show');
             });
             // $(".embryuoImages img").on('click', function() {
             //   alert(this.src);
             // });
-            $(function() {
-            $('table#t1 tbody td').filter(function() {
-            console.log(this.innerHTML);
-            return $(this).closest('tr').find('td').index(this) == 0;
-            }).on('click', function() {
-            var list = $(this).siblings('td').map(function(x) {
-            return {
-            idx: x + 1,
-            num: parseInt($(this).text())
-            }
-            }).get();
-            list.sort(function(x, y) {
-            if (x["num"] == y["num"]) return 0;
-            return x["num"] < y["num"] ? 1 : -1;
-            });
-            $(this).closest('table').find('tr').each(function() {
-            var self = $(this);
-            list.forEach(function(x) {
-            self.find('td,th').eq(x["idx"]).clone().appendTo(self);
-            });
-            self.find('td,th').filter(':gt(0):lt(' + list.length + ')').remove();
-            });
-            });
-            });
+
+
             $(function() {
             // let rmNum = $("td.a_bioNum");
             // console.log("rmNum");

@@ -103,3 +103,27 @@ $(document).ready(function() {
 //     $elem.addClass('active');
 //   }
 // });
+
+
+// Modal
+const open = document.getElementById('open');
+const close = document.getElementById('close');
+const modal = document.getElementById('modaling');
+const mask = document.getElementById('mask');
+const md = $(".dataTables_wrapper, .lay_progress, .pagination,.header, .sidebar");
+
+open.addEventListener('click', function() {
+  modal.classList.remove('hidden');
+  mask.classList.remove('hidden');
+  md.hide();
+});
+close.addEventListener('click', function() {
+  modal.classList.add('hidden');
+  mask.classList.add('hidden');
+  md.show();
+});
+mask.addEventListener('click', function() {
+  modal.classList.add('hidden');
+  mask.classList.add('hidden');
+  md.show();
+});

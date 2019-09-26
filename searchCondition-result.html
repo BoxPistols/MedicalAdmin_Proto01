@@ -42,36 +42,6 @@
   <div class="main">
     <div class="hipsum">
       <div class="jumbotron">
-        <div class="l_user-info py-1">
-          <table class="display table inline-table table-responsive-lg table-sm table-striped cl_ye table-bordered -table-borderless table-hover" id="">
-            <thead>
-              <tr>
-                <th>患者ID</th>
-                <th>妻年齢</th>
-                <th>夫年齢</th>
-                <th>排卵回数</th>
-                <th>ET回数</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>P0000123</td>
-                <td>35</td>
-                <td>38</td>
-                <td>4</td>
-                <td>2</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="lay_progress mt-4">
-          <ul id="progress">
-            <li>1. IVF情報入力</li>
-            <li class="active">2. 胚選択</li>
-            <li>3. 胚移植</li>
-            <li>4. 結果入力</li>
-          </ul>
-        </div>
         <div class="container mt-4">
           <form class="lay_form -row px-4">
             <div class="lay_title mb-2 mt-2 d-flex align-items-center">
@@ -91,12 +61,42 @@
                       <th>新鮮/凍結</th>
                       <th>移植方法</th>
                       <th>入力状況</th>
-                      <th>編集</th>
+                      <th> </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td class="text-center">1</td>
+                      <td> 
+                        <div id="ModalArea">
+                          <div id="open">詳細をみる</div>
+                          <div class="hidden" id="mask"></div>
+                          <section class="hidden" id="modaling">
+                            <p>He said that that that that that boy used in the sentence was wrong.<br>あの少年がその文で使ったあのthatは間違っていたと彼は言った。</p>
+                            <div id="close">閉じる</div>
+                          </section>
+                        </div>
+                      </td>
+                      <td><a class="udl" href="#">A0123</a></td>
+                      <td>-</td>
+                      <td>新鮮</td>
+                      <td>単一</td>
+                      <td>
+                        <div class="lay_progress">
+                          <ul class="progress_inTable">
+                            <li class="active"> </li>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td style="width:50px">
+                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
                       <td> <a class="udl" href="#">P012</a></td>
                       <td><a class="udl" href="#">A0123</a></td>
                       <td>-</td>
@@ -137,35 +137,13 @@
           <script src="js/script.js"></script>
           <script>
             $('button').on('click', function() {
-            $('.modal').modal('show');
+            $('#ModalArea').modal('show');
             });
             // $(".embryuoImages img").on('click', function() {
             //   alert(this.src);
             // });
-            $(function() {
-            $('table#t1 tbody td').filter(function() {
-            console.log(this.innerHTML);
-            return $(this).closest('tr').find('td').index(this) == 0;
-            }).on('click', function() {
-            var list = $(this).siblings('td').map(function(x) {
-            return {
-            idx: x + 1,
-            num: parseInt($(this).text())
-            }
-            }).get();
-            list.sort(function(x, y) {
-            if (x["num"] == y["num"]) return 0;
-            return x["num"] < y["num"] ? 1 : -1;
-            });
-            $(this).closest('table').find('tr').each(function() {
-            var self = $(this);
-            list.forEach(function(x) {
-            self.find('td,th').eq(x["idx"]).clone().appendTo(self);
-            });
-            self.find('td,th').filter(':gt(0):lt(' + list.length + ')').remove();
-            });
-            });
-            });
+            
+            
             $(function() {
             // let rmNum = $("td.a_bioNum");
             // console.log("rmNum");
