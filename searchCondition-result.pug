@@ -24,12 +24,14 @@ body
 
   .main
     .hipsum
+      h3.row.m_title.mt-3.ml-3
+        span IVF一覧
+        
       .jumbotron(style='')
-
-        .container.mt-4
+        .container
           form.lay_form.-row.px-4
             .lay_title.mb-2.mt-2.d-flex.align-items-center
-              h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
+              //h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
                 span.ml-2.cl_green.mr-4 IVF一覧
             // <div class="m_hr pt-1 pb-2" style="margin-top: 12px"></div>
 
@@ -81,211 +83,33 @@ body
                     tr
                       td.text-center 2
                       td 
-                        a.udl(href="#") P013
+                        a.tx_udl(href="searchCondition-individual_inquiry.html") P013
+                        // 個別IVF個別照会ページへ
+                        // 個別IVF individual_inquiry
                       td
-                        a.udl(href="#") A0124
-                      td 19/06/01
+                        #ModalArea
+                          #open.tx_udl.modalTrg A0124
+                          #mask.hidden
+                          section#modaling.hidden
+                            p 患者IDページに進みますか？
+                            .buttonArea
+                              #close
+                                | 閉じる
+                              #next
+                                a(href='check_b.html') はい
+                      td -
                       td 新鮮
-                      td 単一
+                      td -
                       td
                         .lay_progress
                           ul.progress_inTable
-                            li.active 1 
+                            li.active 1
                             li.active 2
-                            li.active 3
-                            li 
+                            li
+                            li
                       td(style='width:50px')
                         button.btn.adaptation(type='button', name='button') IVF編集
 
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
-
-                    tr
-                      td.text-center 2
-                      td 
-                        a.udl(href="#") P013
-                      td
-                        a.udl(href="#") A0124
-                      td 19/06/01
-                      td 新鮮
-                      td 単一
-                      td
-                        .lay_progress
-                          ul.progress_inTable
-                            li.active 1 
-                            li.active 2
-                            li.active 3
-                            li 
-                      td(style='width:50px')
-                        button.btn.adaptation(type='button', name='button') IVF編集
 
             .container.mt-4
               .row

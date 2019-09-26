@@ -41,7 +41,8 @@ $color_gray: #3b454a;
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, rgba(30, 118, 228, 0.26) 0%,rgba(18, 201, 193, 0.38) 100%);
+  // background: linear-gradient(135deg, rgba(30, 118, 228, 0.26) 0%,rgba(18, 201, 193, 0.38) 100%);
+  background: linear-gradient(135deg, rgba(123, 133, 255, 0.26) 0%, rgba(115, 142, 141, 0.38) 100%);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
   color: #334;
@@ -82,13 +83,13 @@ p {
 }
 
 form.lay_form {
-  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.88);
   padding-bottom: 32px;
   font-size: 1.15em;
   border-radius: 6px;
   // @include bg_green;
   border: 2px solid;
-  border-color: $color_green;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -278,14 +279,15 @@ form.lay_form {
 
 .main {
   position: relative;
-  top: 110px;
+  // top: 110px;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 94vh;
-  padding: 15px 15px 15px 75px;
+  // height: 94vh;
+  padding: 110px 15px 15px 75px;
   transition: all 0.2s ease-in-out;
+  // min-height: 100vh;
 
   &.active {
     padding-left: 275px;
@@ -293,10 +295,11 @@ form.lay_form {
   }
 
   .jumbotron {
-    padding: 20px 30px 20px!important !important;
+    // padding: 20px 30px 20px!important !important;
     // border: 1px solid #dfe8f1;
     border-radius: 3px;
-    background-color: #fff;
+    // background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0);
 
     h1 {
       margin: 0 0 12px;
@@ -410,6 +413,7 @@ table {
   .custom-select {
     display: inline-block;
     width: 100%;
+    max-width: 200px;
     height: auto;
     padding: 0.375rem 1.5rem 0.35rem 0.5rem;
     /* padding: 0.375rem 1.75rem 0.375rem 0.75rem; */

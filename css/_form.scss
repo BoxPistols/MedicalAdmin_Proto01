@@ -299,10 +299,24 @@ label.btn input[type=checkbox]+label {
 
 .form {
   &_SelectGroup {
-    margin-top: 32px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
 
     .h4 {
-      color: $color_gray;
+      // color: $color_gray;
+      @include cl_gray;
+
+      i {
+        @include cl_gray;
+      }
     }
   }
+}
+
+.form-check-inline .form-check-input {
+  position: static;
+  margin-top: -3px;
+  margin-right: 0.4rem;
+  margin-left: 20px;
 }

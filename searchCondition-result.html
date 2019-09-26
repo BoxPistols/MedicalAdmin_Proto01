@@ -41,11 +41,13 @@
   </div>
   <div class="main">
     <div class="hipsum">
+      <h3 class="row m_title mt-3 ml-3"><span>IVF一覧</span></h3>
       <div class="jumbotron">
-        <div class="container mt-4">
+        <div class="container">
           <form class="lay_form -row px-4">
             <div class="lay_title mb-2 mt-2 d-flex align-items-center">
-              <h3 class="row m_title lv3 mt-4 ml-2 mb-3 d-flex align-items-center"><span class="ml-2 cl_green mr-4">IVF一覧</span></h3>
+              <!--h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-centerspan.ml-2.cl_green.mr-4 IVF一覧
+              -->
             </div>
             <!-- <div class="m_hr pt-1 pb-2" style="margin-top: 12px"></div>-->
             <div class="container mt-4">
@@ -102,228 +104,33 @@
                     </tr>
                     <tr>
                       <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
+                      <td> <a class="tx_udl" href="searchCondition-individual_inquiry.html">P013</a>
+                        <!-- 個別IVF個別照会ページへ-->
+                        <!-- 個別IVF individual_inquiry-->
+                      </td>
                       <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
+                        <div id="ModalArea">
+                          <div class="tx_udl modalTrg" id="open">A0124</div>
+                          <div class="hidden" id="mask"></div>
+                          <section class="hidden" id="modaling">
+                            <p>患者IDページに進みますか？</p>
+                            <div class="buttonArea">
+                              <div id="close">閉じる</div>
+                              <div id="next"><a href="check_b.html">はい</a></div>
+                            </div>
+                          </section>
                         </div>
                       </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
+                      <td>-</td>
                       <td>新鮮</td>
-                      <td>単一</td>
+                      <td>-</td>
                       <td>
                         <div class="lay_progress">
                           <ul class="progress_inTable">
-                            <li class="active">1 </li>
+                            <li class="active">1</li>
                             <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td style="width:50px">
-                        <button class="btn adaptation" type="button" name="button">IVF編集</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2</td>
-                      <td> <a class="udl" href="#">P013</a></td>
-                      <td><a class="udl" href="#">A0124</a></td>
-                      <td>19/06/01</td>
-                      <td>新鮮</td>
-                      <td>単一</td>
-                      <td>
-                        <div class="lay_progress">
-                          <ul class="progress_inTable">
-                            <li class="active">1 </li>
-                            <li class="active">2</li>
-                            <li class="active">3</li>
-                            <li> </li>
+                            <li></li>
+                            <li></li>
                           </ul>
                         </div>
                       </td>
