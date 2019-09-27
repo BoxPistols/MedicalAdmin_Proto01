@@ -23,24 +23,21 @@ body
   include pug/_sideBar
   // Content
   .main
+  
     .hipsum
+      h3.row.m_title.mt-3.ml-3
+        i(class="fas fa-search mr-2")
+        span IVF検索
       .jumbotron
-        .container.mt-2
+        .container
           form.lay_form.row.px-4(action="searchCondition-result.html" method="post")
-            .lay_title.mb-2.mt-2.d-flex.align-items-center
-              h3.row.m_title.lv3.mt-4.ml-2.mb-3.d-flex.align-items-center
-                span.ml-2.cl_green.mr-4
-                  i(class="fas fa-search mr-2")
-                  span IVF検索
-
-            // /.lay_title
-            .container.form-row.d-flex.justify-content-start                
-              .formSection.d-md-flex
-                .form-input.mr-4
+            .container.form-row.d-flex.justify-content-start.pt-4
+              .formSection.d-md-flex.pt-4
+                .form-input.mr-4.mt-2
                   label.form-label.mr-1(for='dev') 患者ID                    
                   input#dev.form-input(type='text', placeholder="P00001234")
 
-                .form-input
+                .form-input.mt-2
                   label.form-label.mr-1(for='dev') IFVID：ART
                   input#dev2.form-input(type='text', placeholder="0056789")
 

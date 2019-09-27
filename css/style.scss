@@ -167,6 +167,29 @@ form.lay_form {
   }
 }
 
+.l_user-info {
+  &.indexList {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+
+    ul li {
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+
+        button {
+          transition: 0.2s;
+
+          &:hover {
+            background: rgba(128, 186, 208, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
 .l_info {
   z-index: 1;
   display: block;
@@ -547,9 +570,6 @@ button.adaptation {
       &.active {
         color: #fff;
         background: #036ED9;
-        padding: 3px 0 0 4px;
-        font-size: 12px;
-        height: 24px;
         @media only screen and (max-width: 960px) {
           font-size: 0;
           padding: 0;
@@ -592,6 +612,9 @@ button.adaptation {
       &.active {
         color: #fff;
         background: #036ED9;
+        font-size: 12px;
+        height: 24px;
+        padding: 3px 0 0 4px;
 
         &:after {
           border-left-color: #036ED9;
